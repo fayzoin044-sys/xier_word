@@ -1,0 +1,33 @@
+{
+  "rule_audit": {
+    "train_source_rows": 137406,
+    "train_invalid_json_rows": 0,
+    "train_focus_samples": 9761,
+    "train_status_counts": {
+      "aligned": 6460,
+      "ambiguous": 18,
+      "conflict": 100,
+      "needs_review": 3183
+    },
+    "dev_source_rows": 25809,
+    "dev_invalid_json_rows": 0,
+    "dev_focus_samples": 6171,
+    "dev_status_counts": {
+      "aligned": 3036,
+      "ambiguous": 57,
+      "conflict": 430,
+      "needs_review": 2648
+    }
+  },
+  "semantic_review": {
+    "reviewed_samples": 118,
+    "kept": 14,
+    "relabeled": 96,
+    "removed": 8
+  },
+  "rare_class_analysis": {
+    "pending_samples": 1548,
+    "representative_samples": 133,
+    "similarity_threshold": 24
+  }
+}

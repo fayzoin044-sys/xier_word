@@ -1,0 +1,33 @@
+{
+  "clean_pool": {
+    "train_samples": 151732,
+    "dev_samples": 4400,
+    "test_samples": 4380,
+    "total_samples": 160512,
+    "train_conversations": 12436,
+    "dev_conversations": 324,
+    "test_conversations": 327
+  },
+  "conversation_overlap": {
+    "train_dev": 0,
+    "train_test": 0,
+    "dev_test": 0
+  },
+  "published_splits": {
+    "train_samples": 30000,
+    "dev_samples": 1000,
+    "test_samples": 4380
+  },
+  "balanced_training": {
+    "class_count": 12,
+    "samples_per_class": 2500,
+    "total_samples": 30000,
+    "oversampled_rows": {
+      "策略9 反馈请求": 1306,
+      "策略10 关系延续": 964,
+      "策略12 其它": 1626
+    }
+  },
+  "seed": 42,
+  "system_prompt_version": "v2_with_strategy_boundaries_and_no_fabrication"
+}
