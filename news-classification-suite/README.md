@@ -28,7 +28,9 @@ models/bert-int8/         BERT INT8 动态量化模型
 models/textcnn-distilled/ TextCNN 蒸馏权重
 src/random_forest_train.py
 src/fasttext_train.py
-src/bert_finetune.py
+src/bert_finetune.py       BERT 全量微调
+src/bert_quantize.py       BERT Linear 层动态 INT8 量化
+src/bert_textcnn_distill.py BERT 到 TextCNN 的离线知识蒸馏
 src/qwen_full_finetune.py
 src/artifact_inference.py 已发布模型的统一推理入口
 src/api.py                Flask 推理接口
@@ -57,7 +59,9 @@ python -m pip install -r requirements.txt
 ```bash
 python src/random_forest_train.py
 python src/fasttext_train.py
-python src/bert_finetune.py --model google-bert/bert-base-chinese
+python src/bert_finetune.py --base-model google-bert/bert-base-chinese
+python src/bert_quantize.py --base-model google-bert/bert-base-chinese
+python src/bert_textcnn_distill.py --base-model google-bert/bert-base-chinese
 python src/qwen_full_finetune.py --model Qwen/Qwen2.5-1.5B-Instruct --gradient-checkpointing
 ```
 
