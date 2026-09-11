@@ -13,7 +13,7 @@
 | BERT → TextCNN 蒸馏 | 约 88.7% | Git LFS |
 | BERT INT8 动态量化 | 轻量化实验 | Git LFS |
 
-其中 Qwen 使用约十分之一训练数据取得接近 BERT 的分类效果；TextCNN 蒸馏模型约 11.6 MB，相比 409 MB 的 BERT state dict 大幅缩小。
+历史实验中，BERT 使用 180,000 条训练数据，Qwen 使用 25,000 条（约 13.9%），取得接近 BERT 的分类效果；TextCNN 蒸馏模型约 11.6 MB，相比 409 MB 的 BERT state dict 大幅缩小。
 
 ## 类别
 
