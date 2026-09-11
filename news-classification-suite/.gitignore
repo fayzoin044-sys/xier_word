@@ -10,6 +10,9 @@ outputs/
 *.bin
 *.pt
 *.pth
+!models/bert-finetuned/classification_best1.bin
+!models/bert-int8/classification_quantized.pt
+!models/textcnn-distilled/student_textcnn_best.bin
 *.zip
 *.log
 *.csv
