@@ -21,7 +21,7 @@ src/api.py                   Flask 推理接口
 
 ## 数据格式
 
-仓库不包含原始新闻文本。请准备 `data/train.txt`、`data/dev.txt` 和 `data/test.txt`，每行由文本、制表符和数字标签组成：
+`data/` 目录包含 25,000 条训练数据、5,000 条验证数据和 5,000 条测试数据。每行由文本、制表符和数字标签组成：
 
 ```text
 新闻文本<TAB>0
@@ -59,4 +59,4 @@ MODEL_DIR=outputs/qwen python src/api.py
 curl -X POST http://127.0.0.1:5004/classify -H "Content-Type: application/json" -d '{"text":"示例新闻文本"}'
 ```
 
-公开仓库只包含整理后的源码与类别表，不包含原始数据、训练权重、IDE 配置、缓存、日志、内部路径或个人笔记。
+公开仓库包含整理后的源码、类别表与数据集，不包含 IDE 配置、缓存、日志、内部路径或个人笔记。
