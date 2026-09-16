@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.semgrep/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+evaluation/reports/*.json
+!evaluation/reports/.gitkeep

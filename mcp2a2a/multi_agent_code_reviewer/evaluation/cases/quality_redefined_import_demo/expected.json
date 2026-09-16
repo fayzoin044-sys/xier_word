@@ -1,0 +1,24 @@
+{
+  "id": "quality_redefined_import_demo",
+  "description": "One deterministic Ruff F811 diagnostic with passing tests.",
+  "requires_fix": true,
+  "allowed_changed_files": [
+    "geometry.py"
+  ],
+  "issues": [
+    {
+      "category": "quality",
+      "type": "unsorted_import_block",
+      "rule_id": "I001",
+      "file": "geometry.py",
+      "line": 3
+    },
+    {
+      "category": "quality",
+      "type": "redefined_import",
+      "rule_id": "F811",
+      "file": "geometry.py",
+      "line": 4
+    }
+  ]
+}

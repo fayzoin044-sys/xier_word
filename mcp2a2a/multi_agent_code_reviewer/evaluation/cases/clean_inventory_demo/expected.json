@@ -1,0 +1,7 @@
+{
+  "id": "clean_inventory_demo",
+  "description": "Clean inventory project used to measure false positives.",
+  "requires_fix": false,
+  "allowed_changed_files": [],
+  "issues": []
+}

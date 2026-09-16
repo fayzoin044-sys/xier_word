@@ -1,0 +1,8 @@
+{
+  "id": "clean_demo",
+  "description": "Clean Python project used to measure false positives.",
+  "requires_fix": false,
+  "allowed_changed_files": [],
+  "issues": []
+}
+

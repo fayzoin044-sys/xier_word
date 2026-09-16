@@ -1,6 +1,6 @@
 # AI 模型训练与应用项目合集
 
-本仓库整理了三个模型训练与应用项目，覆盖 SDXL 图像风格 LoRA 微调、大语言模型 LoRA 微调、文本多分类、知识蒸馏、INT8 量化和在线推理。源码、整理后的数据集、评估结果及可公开的最终模型产物均已提供。
+本仓库整理了四组模型训练与应用项目，覆盖 MCP/A2A 多智能体协作、SDXL 图像风格 LoRA 微调、大语言模型 LoRA 微调、文本多分类、知识蒸馏、INT8 量化和在线推理。源码、整理后的数据集、评估结果及可公开的最终模型产物均已提供。
 
 ## 项目概览
 
@@ -9,8 +9,11 @@
 | GLM-4-9B 多轮客服对话模型微调 | 12 类客服策略识别与结构化回复生成；清洗 16 万余条多轮对话，构建 3 万条类别均衡训练数据；使用 LoRA 完成多轮 SFT | 策略准确率 `42.33% → 69.50%`；Macro-F1 `0.4151 → 0.6837`；JSON Schema 合规率 `100%` | [项目说明](glm-lora-customer-service/README.md) · [LoRA Adapter](glm-lora-customer-service/artifacts/best/) · [测试结果](glm-lora-customer-service/results/) |
 | 中文文本多分类与模型轻量化 | 对比随机森林、FastText、BERT 与 Qwen2.5-1.5B；完成 BERT 全量微调、TextCNN 知识蒸馏、INT8 动态量化和 Flask 推理接口 | BERT `94.6%`；Qwen 接近 `94%`；蒸馏 TextCNN `88.7%`，模型体积约缩小 15 倍 | [项目说明](news-classification-suite/README.md) · [BERT/量化/蒸馏模型](news-classification-suite/models/) · [Qwen 模型](https://huggingface.co/zyhForHugging/qwen2.5-1.5b-chinese-news-classifier) |
 | SDXL 梵高风格 LoRA 图像微调 | 画作去重与数据划分、UNet LoRA 训练、照片图生图、同种子基础模型对比 | 358 张训练画作；2000 步；RTX 5090 训练约 74 分钟；24 张开发集对比 | [项目与效果展示](vangogh-lora/README.md) · [LoRA 权重](vangogh-lora/outputs/vangogh-sdxl-v1/) |
+| MCP + A2A 多智能体项目 | LangGraph 代码审查与修复、人工审批、旅行助手、MCP 工具集成 | 自建 14 案例历史评估：Precision/Recall 100%，修复 9/11；含失败案例 | [项目合集](mcp2a2a/README.md) · [代码审查](mcp2a2a/multi_agent_code_reviewer/README.md) |
 
 ## 快速入口
+
+- [MCP + A2A 多智能体：代码审查与旅行助手](mcp2a2a/README.md)
 
 - [SDXL 梵高风格项目：效果对比、训练记录和图生图使用方法](vangogh-lora/README.md)
 - [GLM 项目：训练、推理、评估和模型使用方法](glm-lora-customer-service/README.md)

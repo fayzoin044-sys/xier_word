@@ -1,0 +1,16 @@
+{
+  "id": "test_discount_demo",
+  "description": "A pure pricing defect discovered through a failed test.",
+  "requires_fix": true,
+  "allowed_changed_files": [
+    "pricing.py"
+  ],
+  "issues": [
+    {
+      "category": "test",
+      "type": "test_failure",
+      "test_name": "test_discounted_price",
+      "file": "tests/test_pricing.py"
+    }
+  ]
+}

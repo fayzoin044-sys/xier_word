@@ -1,0 +1,24 @@
+{
+  "id": "mixed_multi_file_demo",
+  "description": "A Ruff finding and a failed test in separate implementation files.",
+  "requires_fix": true,
+  "allowed_changed_files": [
+    "labels.py",
+    "math_service.py"
+  ],
+  "issues": [
+    {
+      "category": "quality",
+      "type": "unused_import",
+      "rule_id": "F401",
+      "file": "labels.py",
+      "line": 3
+    },
+    {
+      "category": "test",
+      "type": "test_failure",
+      "test_name": "test_average",
+      "file": "tests/test_math_service.py"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "quality_unused_variable_demo",
+  "description": "One deterministic Ruff F841 diagnostic with passing tests.",
+  "requires_fix": true,
+  "allowed_changed_files": [
+    "names.py"
+  ],
+  "issues": [
+    {
+      "category": "quality",
+      "type": "unused_variable",
+      "rule_id": "F841",
+      "file": "names.py",
+      "line": 6
+    }
+  ]
+}

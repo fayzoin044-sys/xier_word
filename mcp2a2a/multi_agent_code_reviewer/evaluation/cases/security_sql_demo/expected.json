@@ -1,0 +1,16 @@
+{
+  "id": "security_sql_demo",
+  "description": "An SQL injection risk in a sqlite3 lookup with passing tests.",
+  "requires_fix": true,
+  "allowed_changed_files": [
+    "users.py"
+  ],
+  "issues": [
+    {
+      "category": "security",
+      "type": "sql_injection",
+      "file": "users.py",
+      "line": 9
+    }
+  ]
+}

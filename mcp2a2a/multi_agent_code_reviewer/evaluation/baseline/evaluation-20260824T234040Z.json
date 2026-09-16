@@ -1,0 +1,1515 @@
+{
+  "generated_at": "2026-08-24T23:40:40.103349+00:00",
+  "approval_mode": "AUTO",
+  "max_retries": 2,
+  "metrics": {
+    "case_count": 14,
+    "expected_issues": 14,
+    "reported_issues": 14,
+    "matched_issues": 14,
+    "precision": 1.0,
+    "recall": 1.0,
+    "repair_cases": 11,
+    "repaired_cases": 9,
+    "fix_rate": 0.8181818181818182,
+    "by_category": {
+      "security": {
+        "expected": 3,
+        "reported": 3,
+        "matched": 3,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "quality": {
+        "expected": 6,
+        "reported": 6,
+        "matched": 6,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "test": {
+        "expected": 5,
+        "reported": 5,
+        "matched": 5,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    }
+  },
+  "safety_gate": "PASS",
+  "cases": [
+    {
+      "id": "clean_demo",
+      "description": "Clean Python project used to measure false positives.",
+      "requires_fix": false,
+      "expected_issues": [],
+      "observed_issues": [],
+      "detection": {
+        "expected": 0,
+        "reported": 0,
+        "matched": 0,
+        "false_positives": 0,
+        "missed": 0,
+        "matched_pairs": [],
+        "missed_expected": [],
+        "unexpected_observed": [],
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "category_detection": {
+        "security": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "quality": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "test": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "initial_decision": "PASS",
+      "approval_count": 0,
+      "patch_result": {
+        "summary": "",
+        "changed_files": [],
+        "patch": ""
+      },
+      "apply_result": {
+        "success": false,
+        "error": "",
+        "changed_files": []
+      },
+      "final_decision": "PASS",
+      "final_status": "PASS",
+      "retry_count": 0,
+      "fix_success": false,
+      "safety_violations": [],
+      "error": null,
+      "temporary_workspace_deleted": true,
+      "safety_pass": true
+    },
+    {
+      "id": "clean_inventory_demo",
+      "description": "Clean inventory project used to measure false positives.",
+      "requires_fix": false,
+      "expected_issues": [],
+      "observed_issues": [],
+      "detection": {
+        "expected": 0,
+        "reported": 0,
+        "matched": 0,
+        "false_positives": 0,
+        "missed": 0,
+        "matched_pairs": [],
+        "missed_expected": [],
+        "unexpected_observed": [],
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "category_detection": {
+        "security": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "quality": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "test": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "initial_decision": "PASS",
+      "approval_count": 0,
+      "patch_result": {
+        "summary": "",
+        "changed_files": [],
+        "patch": ""
+      },
+      "apply_result": {
+        "success": false,
+        "error": "",
+        "changed_files": []
+      },
+      "final_decision": "PASS",
+      "final_status": "PASS",
+      "retry_count": 0,
+      "fix_success": false,
+      "safety_violations": [],
+      "error": null,
+      "temporary_workspace_deleted": true,
+      "safety_pass": true
+    },
+    {
+      "id": "clean_text_demo",
+      "description": "Clean text utility project used to measure false positives.",
+      "requires_fix": false,
+      "expected_issues": [],
+      "observed_issues": [],
+      "detection": {
+        "expected": 0,
+        "reported": 0,
+        "matched": 0,
+        "false_positives": 0,
+        "missed": 0,
+        "matched_pairs": [],
+        "missed_expected": [],
+        "unexpected_observed": [],
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "category_detection": {
+        "security": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "quality": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "test": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "initial_decision": "PASS",
+      "approval_count": 0,
+      "patch_result": {
+        "summary": "",
+        "changed_files": [],
+        "patch": ""
+      },
+      "apply_result": {
+        "success": false,
+        "error": "",
+        "changed_files": []
+      },
+      "final_decision": "PASS",
+      "final_status": "PASS",
+      "retry_count": 0,
+      "fix_success": false,
+      "safety_violations": [],
+      "error": null,
+      "temporary_workspace_deleted": true,
+      "safety_pass": true
+    },
+    {
+      "id": "mixed_demo",
+      "description": "One Ruff finding plus one failing test in the same implementation file.",
+      "requires_fix": true,
+      "expected_issues": [
+        {
+          "category": "quality",
+          "type": "unused_import",
+          "rule_id": "F401",
+          "file": "calculator.py",
+          "line": 3
+        },
+        {
+          "category": "test",
+          "type": "test_failure",
+          "test_name": "test_subtract",
+          "file": "tests/test_calculator.py"
+        }
+      ],
+      "observed_issues": [
+        {
+          "category": "quality",
+          "rule_id": "F401",
+          "file": "calculator.py",
+          "line": 3,
+          "message": "`os` imported but unused"
+        },
+        {
+          "category": "test",
+          "test_name": "test_subtract",
+          "file": "tests/test_calculator.py",
+          "line": 8,
+          "status": "failed",
+          "message": "assert 8 == 2\n +  where 8 = subtract(5, 3)\ndef test_subtract() -> None:\n>       assert subtract(5, 3) == 2\nE       assert 8 == 2\nE        +  where 8 = subtract(5, 3)\n\ntests\\test_calculator.py:9: AssertionError"
+        }
+      ],
+      "detection": {
+        "expected": 2,
+        "reported": 2,
+        "matched": 2,
+        "false_positives": 0,
+        "missed": 0,
+        "matched_pairs": [
+          {
+            "expected_index": 0,
+            "observed_index": 0
+          },
+          {
+            "expected_index": 1,
+            "observed_index": 1
+          }
+        ],
+        "missed_expected": [],
+        "unexpected_observed": [],
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "category_detection": {
+        "security": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "quality": {
+          "expected": 1,
+          "reported": 1,
+          "matched": 1,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [
+            {
+              "expected_index": 0,
+              "observed_index": 0
+            }
+          ],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "test": {
+          "expected": 1,
+          "reported": 1,
+          "matched": 1,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [
+            {
+              "expected_index": 0,
+              "observed_index": 0
+            }
+          ],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "initial_decision": "NEEDS_FIX",
+      "approval_count": 1,
+      "patch_result": {
+        "summary": "删除未使用的 os 导入，并将 subtract 函数从加法改为减法以通过测试。",
+        "changed_files": [
+          "calculator.py"
+        ],
+        "patch": "--- a/calculator.py\n+++ b/calculator.py\n@@ -1,6 +1,4 @@\n \"\"\"Implementation with one quality issue and one logic defect.\"\"\"\n-\n-import os\n \n \n def add(left: int, right: int) -> int:\n@@ -8,5 +6,4 @@\n \n \n def subtract(left: int, right: int) -> int:\n-    return left + right\n-\n+    return left - right\n"
+      },
+      "apply_result": {
+        "success": true,
+        "error": "",
+        "changed_files": [
+          "calculator.py"
+        ]
+      },
+      "final_decision": "PASS",
+      "final_status": "PASS",
+      "retry_count": 0,
+      "fix_success": true,
+      "safety_violations": [],
+      "error": null,
+      "temporary_workspace_deleted": true,
+      "safety_pass": true
+    },
+    {
+      "id": "mixed_multi_file_demo",
+      "description": "A Ruff finding and a failed test in separate implementation files.",
+      "requires_fix": true,
+      "expected_issues": [
+        {
+          "category": "quality",
+          "type": "unused_import",
+          "rule_id": "F401",
+          "file": "labels.py",
+          "line": 3
+        },
+        {
+          "category": "test",
+          "type": "test_failure",
+          "test_name": "test_average",
+          "file": "tests/test_math_service.py"
+        }
+      ],
+      "observed_issues": [
+        {
+          "category": "quality",
+          "rule_id": "F401",
+          "file": "labels.py",
+          "line": 3,
+          "message": "`os` imported but unused"
+        },
+        {
+          "category": "test",
+          "test_name": "test_average",
+          "file": "tests/test_math_service.py",
+          "line": 4,
+          "status": "failed",
+          "message": "assert 12 == 4\n +  where 12 = average([2, 4, 6])\ndef test_average() -> None:\n>       assert average([2, 4, 6]) == 4\nE       assert 12 == 4\nE        +  where 12 = average([2, 4, 6])\n\ntests\\test_math_service.py:5: AssertionError"
+        }
+      ],
+      "detection": {
+        "expected": 2,
+        "reported": 2,
+        "matched": 2,
+        "false_positives": 0,
+        "missed": 0,
+        "matched_pairs": [
+          {
+            "expected_index": 0,
+            "observed_index": 0
+          },
+          {
+            "expected_index": 1,
+            "observed_index": 1
+          }
+        ],
+        "missed_expected": [],
+        "unexpected_observed": [],
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "category_detection": {
+        "security": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "quality": {
+          "expected": 1,
+          "reported": 1,
+          "matched": 1,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [
+            {
+              "expected_index": 0,
+              "observed_index": 0
+            }
+          ],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "test": {
+          "expected": 1,
+          "reported": 1,
+          "matched": 1,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [
+            {
+              "expected_index": 0,
+              "observed_index": 0
+            }
+          ],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "initial_decision": "NEEDS_FIX",
+      "approval_count": 0,
+      "patch_result": {
+        "summary": "",
+        "changed_files": [],
+        "patch": ""
+      },
+      "apply_result": {
+        "success": false,
+        "error": "",
+        "changed_files": []
+      },
+      "final_decision": "NEEDS_FIX",
+      "final_status": "RUNNING",
+      "retry_count": 0,
+      "fix_success": false,
+      "safety_violations": [],
+      "error": {
+        "type": "RuntimeError",
+        "message": "fix_node returned non-completed Task: TASK_STATE_FAILED",
+        "traceback": "Traceback (most recent call last):\n  File \"${SOURCE_ROOT}\\multi_agent_code_reviewer\\evaluation\\run_evaluation.py\", line 194, in run_case\n    workflow_result = await workflow.ainvoke(\n                      ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\aistudy\\aisoftware\\aiconda\\envs\\mcp1.29\\Lib\\site-packages\\langgraph\\pregel\\main.py\", line 4090, in ainvoke\n    async for chunk in self.astream(\n  File \"D:\\aistudy\\aisoftware\\aiconda\\envs\\mcp1.29\\Lib\\site-packages\\langgraph\\pregel\\main.py\", line 3440, in astream\n    async for _ in runner.atick(\n  File \"D:\\aistudy\\aisoftware\\aiconda\\envs\\mcp1.29\\Lib\\site-packages\\langgraph\\pregel\\_runner.py\", line 396, in atick\n    await arun_with_retry(\n  File \"D:\\aistudy\\aisoftware\\aiconda\\envs\\mcp1.29\\Lib\\site-packages\\langgraph\\pregel\\_retry.py\", line 744, in arun_with_retry\n    return await task.proc.ainvoke(task.input, config)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\aistudy\\aisoftware\\aiconda\\envs\\mcp1.29\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py\", line 756, in ainvoke\n    input = await asyncio.create_task(\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\aistudy\\aisoftware\\aiconda\\envs\\mcp1.29\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py\", line 522, in ainvoke\n    ret = await self.afunc(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"${SOURCE_ROOT}\\multi_agent_code_reviewer\\multi_agent_code_reviewer\\workflows\\review.py\", line 184, in fix_node\n    raise RuntimeError(f\"fix_node returned non-completed Task: {state_name}\")\nRuntimeError: fix_node returned non-completed Task: TASK_STATE_FAILED\nDuring task with name 'fix_node' and id '9de8de0f-f273-f496-f7cc-f6cf22fe3b51'\n"
+      },
+      "temporary_workspace_deleted": true,
+      "safety_pass": true
+    },
+    {
+      "id": "quality_demo",
+      "description": "One deterministic Ruff F401 diagnostic with passing tests.",
+      "requires_fix": true,
+      "expected_issues": [
+        {
+          "category": "quality",
+          "type": "unused_import",
+          "rule_id": "F401",
+          "file": "calculator.py",
+          "line": 3
+        }
+      ],
+      "observed_issues": [
+        {
+          "category": "quality",
+          "rule_id": "F401",
+          "file": "calculator.py",
+          "line": 3,
+          "message": "`os` imported but unused"
+        }
+      ],
+      "detection": {
+        "expected": 1,
+        "reported": 1,
+        "matched": 1,
+        "false_positives": 0,
+        "missed": 0,
+        "matched_pairs": [
+          {
+            "expected_index": 0,
+            "observed_index": 0
+          }
+        ],
+        "missed_expected": [],
+        "unexpected_observed": [],
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "category_detection": {
+        "security": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "quality": {
+          "expected": 1,
+          "reported": 1,
+          "matched": 1,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [
+            {
+              "expected_index": 0,
+              "observed_index": 0
+            }
+          ],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "test": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "initial_decision": "NEEDS_FIX",
+      "approval_count": 1,
+      "patch_result": {
+        "summary": "Remove unused `os` import from calculator.py.",
+        "changed_files": [
+          "calculator.py"
+        ],
+        "patch": "--- a/calculator.py\n+++ b/calculator.py\n@@ -1,6 +1,5 @@\n \"\"\"Implementation with one intentional unused import.\"\"\"\n \n-import os\n \n \n def add(left: int, right: int) -> int:\n"
+      },
+      "apply_result": {
+        "success": true,
+        "error": "",
+        "changed_files": [
+          "calculator.py"
+        ]
+      },
+      "final_decision": "PASS",
+      "final_status": "PASS",
+      "retry_count": 0,
+      "fix_success": true,
+      "safety_violations": [],
+      "error": null,
+      "temporary_workspace_deleted": true,
+      "safety_pass": true
+    },
+    {
+      "id": "quality_redefined_import_demo",
+      "description": "One deterministic Ruff F811 diagnostic with passing tests.",
+      "requires_fix": true,
+      "expected_issues": [
+        {
+          "category": "quality",
+          "type": "unsorted_import_block",
+          "rule_id": "I001",
+          "file": "geometry.py",
+          "line": 3
+        },
+        {
+          "category": "quality",
+          "type": "redefined_import",
+          "rule_id": "F811",
+          "file": "geometry.py",
+          "line": 4
+        }
+      ],
+      "observed_issues": [
+        {
+          "category": "quality",
+          "rule_id": "I001",
+          "file": "geometry.py",
+          "line": 3,
+          "message": "Import block is un-sorted or un-formatted"
+        },
+        {
+          "category": "quality",
+          "rule_id": "F811",
+          "file": "geometry.py",
+          "line": 4,
+          "message": "Redefinition of unused `sqrt` from line 3: `sqrt` redefined here"
+        }
+      ],
+      "detection": {
+        "expected": 2,
+        "reported": 2,
+        "matched": 2,
+        "false_positives": 0,
+        "missed": 0,
+        "matched_pairs": [
+          {
+            "expected_index": 0,
+            "observed_index": 0
+          },
+          {
+            "expected_index": 1,
+            "observed_index": 1
+          }
+        ],
+        "missed_expected": [],
+        "unexpected_observed": [],
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "category_detection": {
+        "security": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "quality": {
+          "expected": 2,
+          "reported": 2,
+          "matched": 2,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [
+            {
+              "expected_index": 0,
+              "observed_index": 0
+            },
+            {
+              "expected_index": 1,
+              "observed_index": 1
+            }
+          ],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "test": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "initial_decision": "NEEDS_FIX",
+      "approval_count": 1,
+      "patch_result": {
+        "summary": "Removed the duplicate `from math import sqrt` import in geometry.py, resolving the unused redefinition and import sorting issue.",
+        "changed_files": [
+          "geometry.py"
+        ],
+        "patch": "--- a/geometry.py\n+++ b/geometry.py\n@@ -1,6 +1,5 @@\n \"\"\"Geometry helper containing one intentional duplicate import.\"\"\"\n \n-from math import sqrt\n from math import sqrt\n \n \n"
+      },
+      "apply_result": {
+        "success": true,
+        "error": "",
+        "changed_files": [
+          "geometry.py"
+        ]
+      },
+      "final_decision": "PASS",
+      "final_status": "PASS",
+      "retry_count": 0,
+      "fix_success": true,
+      "safety_violations": [],
+      "error": null,
+      "temporary_workspace_deleted": true,
+      "safety_pass": true
+    },
+    {
+      "id": "quality_unused_variable_demo",
+      "description": "One deterministic Ruff F841 diagnostic with passing tests.",
+      "requires_fix": true,
+      "expected_issues": [
+        {
+          "category": "quality",
+          "type": "unused_variable",
+          "rule_id": "F841",
+          "file": "names.py",
+          "line": 6
+        }
+      ],
+      "observed_issues": [
+        {
+          "category": "quality",
+          "rule_id": "F841",
+          "file": "names.py",
+          "line": 6,
+          "message": "Local variable `debug_message` is assigned to but never used"
+        }
+      ],
+      "detection": {
+        "expected": 1,
+        "reported": 1,
+        "matched": 1,
+        "false_positives": 0,
+        "missed": 0,
+        "matched_pairs": [
+          {
+            "expected_index": 0,
+            "observed_index": 0
+          }
+        ],
+        "missed_expected": [],
+        "unexpected_observed": [],
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "category_detection": {
+        "security": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "quality": {
+          "expected": 1,
+          "reported": 1,
+          "matched": 1,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [
+            {
+              "expected_index": 0,
+              "observed_index": 0
+            }
+          ],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "test": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "initial_decision": "NEEDS_FIX",
+      "approval_count": 1,
+      "patch_result": {
+        "summary": "删除 never used 的局部变量 debug_message 赋值。",
+        "changed_files": [
+          "names.py"
+        ],
+        "patch": "--- a/names.py\n+++ b/names.py\n@@ -3,5 +3,4 @@\n \n def full_name(first: str, last: str) -> str:\n     result = f\"{first} {last}\"\n-    debug_message = f\"formatted={result}\"\n     return result\n"
+      },
+      "apply_result": {
+        "success": true,
+        "error": "",
+        "changed_files": [
+          "names.py"
+        ]
+      },
+      "final_decision": "PASS",
+      "final_status": "PASS",
+      "retry_count": 0,
+      "fix_success": true,
+      "safety_violations": [],
+      "error": null,
+      "temporary_workspace_deleted": true,
+      "safety_pass": true
+    },
+    {
+      "id": "security_demo",
+      "description": "One deliberate shell injection risk with otherwise clean tests.",
+      "requires_fix": true,
+      "expected_issues": [
+        {
+          "category": "security",
+          "type": "command_injection",
+          "file": "app.py",
+          "line": 9
+        }
+      ],
+      "observed_issues": [
+        {
+          "category": "security",
+          "rule_id": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+          "file": "app.py",
+          "line": 9,
+          "message": "Found 'subprocess' function 'run' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead."
+        }
+      ],
+      "detection": {
+        "expected": 1,
+        "reported": 1,
+        "matched": 1,
+        "false_positives": 0,
+        "missed": 0,
+        "matched_pairs": [
+          {
+            "expected_index": 0,
+            "observed_index": 0
+          }
+        ],
+        "missed_expected": [],
+        "unexpected_observed": [],
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "category_detection": {
+        "security": {
+          "expected": 1,
+          "reported": 1,
+          "matched": 1,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [
+            {
+              "expected_index": 0,
+              "observed_index": 0
+            }
+          ],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "quality": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "test": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "initial_decision": "NEEDS_FIX",
+      "approval_count": 0,
+      "patch_result": {
+        "summary": "",
+        "changed_files": [],
+        "patch": ""
+      },
+      "apply_result": {
+        "success": false,
+        "error": "",
+        "changed_files": []
+      },
+      "final_decision": "NEEDS_FIX",
+      "final_status": "RUNNING",
+      "retry_count": 0,
+      "fix_success": false,
+      "safety_violations": [],
+      "error": {
+        "type": "RuntimeError",
+        "message": "fix_node returned non-completed Task: TASK_STATE_FAILED",
+        "traceback": "Traceback (most recent call last):\n  File \"${SOURCE_ROOT}\\multi_agent_code_reviewer\\evaluation\\run_evaluation.py\", line 194, in run_case\n    workflow_result = await workflow.ainvoke(\n                      ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\aistudy\\aisoftware\\aiconda\\envs\\mcp1.29\\Lib\\site-packages\\langgraph\\pregel\\main.py\", line 4090, in ainvoke\n    async for chunk in self.astream(\n  File \"D:\\aistudy\\aisoftware\\aiconda\\envs\\mcp1.29\\Lib\\site-packages\\langgraph\\pregel\\main.py\", line 3440, in astream\n    async for _ in runner.atick(\n  File \"D:\\aistudy\\aisoftware\\aiconda\\envs\\mcp1.29\\Lib\\site-packages\\langgraph\\pregel\\_runner.py\", line 396, in atick\n    await arun_with_retry(\n  File \"D:\\aistudy\\aisoftware\\aiconda\\envs\\mcp1.29\\Lib\\site-packages\\langgraph\\pregel\\_retry.py\", line 744, in arun_with_retry\n    return await task.proc.ainvoke(task.input, config)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\aistudy\\aisoftware\\aiconda\\envs\\mcp1.29\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py\", line 756, in ainvoke\n    input = await asyncio.create_task(\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\aistudy\\aisoftware\\aiconda\\envs\\mcp1.29\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py\", line 522, in ainvoke\n    ret = await self.afunc(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"${SOURCE_ROOT}\\multi_agent_code_reviewer\\multi_agent_code_reviewer\\workflows\\review.py\", line 184, in fix_node\n    raise RuntimeError(f\"fix_node returned non-completed Task: {state_name}\")\nRuntimeError: fix_node returned non-completed Task: TASK_STATE_FAILED\nDuring task with name 'fix_node' and id '43ce5ffa-0762-40e1-0979-ce5ed11c653a'\n"
+      },
+      "temporary_workspace_deleted": true,
+      "safety_pass": true
+    },
+    {
+      "id": "security_ping_demo",
+      "description": "A shell injection risk in a ping wrapper with passing tests.",
+      "requires_fix": true,
+      "expected_issues": [
+        {
+          "category": "security",
+          "type": "command_injection",
+          "file": "network.py",
+          "line": 9
+        }
+      ],
+      "observed_issues": [
+        {
+          "category": "security",
+          "rule_id": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+          "file": "network.py",
+          "line": 9,
+          "message": "Found 'subprocess' function 'run' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead."
+        }
+      ],
+      "detection": {
+        "expected": 1,
+        "reported": 1,
+        "matched": 1,
+        "false_positives": 0,
+        "missed": 0,
+        "matched_pairs": [
+          {
+            "expected_index": 0,
+            "observed_index": 0
+          }
+        ],
+        "missed_expected": [],
+        "unexpected_observed": [],
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "category_detection": {
+        "security": {
+          "expected": 1,
+          "reported": 1,
+          "matched": 1,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [
+            {
+              "expected_index": 0,
+              "observed_index": 0
+            }
+          ],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "quality": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "test": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "initial_decision": "NEEDS_FIX",
+      "approval_count": 1,
+      "patch_result": {
+        "summary": "Fix subprocess shell injection by replacing shell=True command string with a list of program and arguments, removing shell=True.",
+        "changed_files": [
+          "network.py"
+        ],
+        "patch": "--- a/network.py\n+++ b/network.py\n@@ -5,8 +5,7 @@\n \n def ping_host(host: str) -> int:\n     result = subprocess.run(\n-        f\"ping -n 1 {host}\",\n-        shell=True,\n+        [\"ping\", \"-n\", \"1\", host],\n         capture_output=True,\n         text=True,\n         check=False,\n"
+      },
+      "apply_result": {
+        "success": true,
+        "error": "",
+        "changed_files": [
+          "network.py"
+        ]
+      },
+      "final_decision": "PASS",
+      "final_status": "PASS",
+      "retry_count": 0,
+      "fix_success": true,
+      "safety_violations": [],
+      "error": null,
+      "temporary_workspace_deleted": true,
+      "safety_pass": true
+    },
+    {
+      "id": "security_sql_demo",
+      "description": "An SQL injection risk in a sqlite3 lookup with passing tests.",
+      "requires_fix": true,
+      "expected_issues": [
+        {
+          "category": "security",
+          "type": "sql_injection",
+          "file": "users.py",
+          "line": 9
+        }
+      ],
+      "observed_issues": [
+        {
+          "category": "security",
+          "rule_id": "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query",
+          "file": "users.py",
+          "line": 9,
+          "message": "Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy provides TextualSQL to easily used prepared statement with named parameters. For complex SQL composition, use SQL Expression Language or Schema Definition Language. In most cases, SQLAlchemy ORM will be a better option."
+        }
+      ],
+      "detection": {
+        "expected": 1,
+        "reported": 1,
+        "matched": 1,
+        "false_positives": 0,
+        "missed": 0,
+        "matched_pairs": [
+          {
+            "expected_index": 0,
+            "observed_index": 0
+          }
+        ],
+        "missed_expected": [],
+        "unexpected_observed": [],
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "category_detection": {
+        "security": {
+          "expected": 1,
+          "reported": 1,
+          "matched": 1,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [
+            {
+              "expected_index": 0,
+              "observed_index": 0
+            }
+          ],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "quality": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "test": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "initial_decision": "NEEDS_FIX",
+      "approval_count": 1,
+      "patch_result": {
+        "summary": "将 users.py 中拼接用户名的 SQL 查询改为使用 sqlite3 参数化查询，以消除 SQL 注入风险。",
+        "changed_files": [
+          "users.py"
+        ],
+        "patch": "--- a/users.py\n+++ b/users.py\n@@ -5,5 +5,5 @@\n \n def find_user(connection: sqlite3.Connection, username: str):\n     cursor = connection.cursor()\n-    query = \"SELECT name FROM users WHERE name = '\" + username + \"'\"\n-    return cursor.execute(query).fetchone()\n+    query = \"SELECT name FROM users WHERE name = ?\"\n+    return cursor.execute(query, (username,)).fetchone()\n"
+      },
+      "apply_result": {
+        "success": true,
+        "error": "",
+        "changed_files": [
+          "users.py"
+        ]
+      },
+      "final_decision": "PASS",
+      "final_status": "PASS",
+      "retry_count": 0,
+      "fix_success": true,
+      "safety_violations": [],
+      "error": null,
+      "temporary_workspace_deleted": true,
+      "safety_pass": true
+    },
+    {
+      "id": "test_discount_demo",
+      "description": "A pure pricing defect discovered through a failed test.",
+      "requires_fix": true,
+      "expected_issues": [
+        {
+          "category": "test",
+          "type": "test_failure",
+          "test_name": "test_discounted_price",
+          "file": "tests/test_pricing.py"
+        }
+      ],
+      "observed_issues": [
+        {
+          "category": "test",
+          "test_name": "test_discounted_price",
+          "file": "tests/test_pricing.py",
+          "line": 4,
+          "status": "failed",
+          "message": "assert 120.0 == 80\n +  where 120.0 = discounted_price(100, 20)\ndef test_discounted_price() -> None:\n>       assert discounted_price(100, 20) == 80\nE       assert 120.0 == 80\nE        +  where 120.0 = discounted_price(100, 20)\n\ntests\\test_pricing.py:5: AssertionError"
+        }
+      ],
+      "detection": {
+        "expected": 1,
+        "reported": 1,
+        "matched": 1,
+        "false_positives": 0,
+        "missed": 0,
+        "matched_pairs": [
+          {
+            "expected_index": 0,
+            "observed_index": 0
+          }
+        ],
+        "missed_expected": [],
+        "unexpected_observed": [],
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "category_detection": {
+        "security": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "quality": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "test": {
+          "expected": 1,
+          "reported": 1,
+          "matched": 1,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [
+            {
+              "expected_index": 0,
+              "observed_index": 0
+            }
+          ],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "initial_decision": "NEEDS_FIX",
+      "approval_count": 1,
+      "patch_result": {
+        "summary": "修复 discounted_price 函数中的算术错误，将加法改为减法以正确计算折扣价。",
+        "changed_files": [
+          "pricing.py"
+        ],
+        "patch": "--- a/pricing.py\n+++ b/pricing.py\n@@ -2,4 +2,4 @@\n \n \n def discounted_price(price: float, percent: float) -> float:\n-    return price + price * percent / 100\n+    return price - price * percent / 100\n"
+      },
+      "apply_result": {
+        "success": true,
+        "error": "",
+        "changed_files": [
+          "pricing.py"
+        ]
+      },
+      "final_decision": "PASS",
+      "final_status": "PASS",
+      "retry_count": 0,
+      "fix_success": true,
+      "safety_violations": [],
+      "error": null,
+      "temporary_workspace_deleted": true,
+      "safety_pass": true
+    },
+    {
+      "id": "test_failure_demo",
+      "description": "A pure implementation defect with no Security or Ruff finding.",
+      "requires_fix": true,
+      "expected_issues": [
+        {
+          "category": "test",
+          "type": "test_failure",
+          "test_name": "test_subtract",
+          "file": "tests/test_calculator.py"
+        }
+      ],
+      "observed_issues": [
+        {
+          "category": "test",
+          "test_name": "test_subtract",
+          "file": "tests/test_calculator.py",
+          "line": 8,
+          "status": "failed",
+          "message": "assert 8 == 2\n +  where 8 = subtract(5, 3)\ndef test_subtract() -> None:\n>       assert subtract(5, 3) == 2\nE       assert 8 == 2\nE        +  where 8 = subtract(5, 3)\n\ntests\\test_calculator.py:9: AssertionError"
+        }
+      ],
+      "detection": {
+        "expected": 1,
+        "reported": 1,
+        "matched": 1,
+        "false_positives": 0,
+        "missed": 0,
+        "matched_pairs": [
+          {
+            "expected_index": 0,
+            "observed_index": 0
+          }
+        ],
+        "missed_expected": [],
+        "unexpected_observed": [],
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "category_detection": {
+        "security": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "quality": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "test": {
+          "expected": 1,
+          "reported": 1,
+          "matched": 1,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [
+            {
+              "expected_index": 0,
+              "observed_index": 0
+            }
+          ],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "initial_decision": "NEEDS_FIX",
+      "approval_count": 1,
+      "patch_result": {
+        "summary": "修复 calculator.subtract 实现，将错误的加法改为减法，使测试通过。",
+        "changed_files": [
+          "calculator.py"
+        ],
+        "patch": "--- a/calculator.py\n+++ b/calculator.py\n@@ -6,5 +6,5 @@\n \n \n def subtract(left: int, right: int) -> int:\n-    return left + right\n+    return left - right\n \n"
+      },
+      "apply_result": {
+        "success": true,
+        "error": "",
+        "changed_files": [
+          "calculator.py"
+        ]
+      },
+      "final_decision": "PASS",
+      "final_status": "PASS",
+      "retry_count": 0,
+      "fix_success": true,
+      "safety_violations": [],
+      "error": null,
+      "temporary_workspace_deleted": true,
+      "safety_pass": true
+    },
+    {
+      "id": "test_src_layout_demo",
+      "description": "A pure total-calculation defect in a src-layout package.",
+      "requires_fix": true,
+      "expected_issues": [
+        {
+          "category": "test",
+          "type": "test_failure",
+          "test_name": "test_order_total",
+          "file": "tests/test_totals.py"
+        }
+      ],
+      "observed_issues": [
+        {
+          "category": "test",
+          "test_name": "test_order_total",
+          "file": "tests/test_totals.py",
+          "line": 4,
+          "status": "failed",
+          "message": "assert 36 == 35\n +  where 36 = order_total([10, 20, 5])\ndef test_order_total() -> None:\n>       assert order_total([10, 20, 5]) == 35\nE       assert 36 == 35\nE        +  where 36 = order_total([10, 20, 5])\n\ntests\\test_totals.py:5: AssertionError"
+        }
+      ],
+      "detection": {
+        "expected": 1,
+        "reported": 1,
+        "matched": 1,
+        "false_positives": 0,
+        "missed": 0,
+        "matched_pairs": [
+          {
+            "expected_index": 0,
+            "observed_index": 0
+          }
+        ],
+        "missed_expected": [],
+        "unexpected_observed": [],
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "category_detection": {
+        "security": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "quality": {
+          "expected": 0,
+          "reported": 0,
+          "matched": 0,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "test": {
+          "expected": 1,
+          "reported": 1,
+          "matched": 1,
+          "false_positives": 0,
+          "missed": 0,
+          "matched_pairs": [
+            {
+              "expected_index": 0,
+              "observed_index": 0
+            }
+          ],
+          "missed_expected": [],
+          "unexpected_observed": [],
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "initial_decision": "NEEDS_FIX",
+      "approval_count": 1,
+      "patch_result": {
+        "summary": "修复 order_total 中的多余 +1，使合计等于传入价格的总和。",
+        "changed_files": [
+          "src/shop/totals.py"
+        ],
+        "patch": "--- a/src/shop/totals.py\n+++ b/src/shop/totals.py\n@@ -2,4 +2,4 @@\n \n \n def order_total(prices: list[int]) -> int:\n-    return sum(prices) + 1\n+    return sum(prices)\n"
+      },
+      "apply_result": {
+        "success": true,
+        "error": "",
+        "changed_files": [
+          "src/shop/totals.py"
+        ]
+      },
+      "final_decision": "PASS",
+      "final_status": "PASS",
+      "retry_count": 0,
+      "fix_success": true,
+      "safety_violations": [],
+      "error": null,
+      "temporary_workspace_deleted": true,
+      "safety_pass": true
+    }
+  ]
+}

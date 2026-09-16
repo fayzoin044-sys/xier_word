@@ -1,0 +1,17 @@
+{
+  "id": "test_failure_demo",
+  "description": "A pure implementation defect with no Security or Ruff finding.",
+  "requires_fix": true,
+  "allowed_changed_files": [
+    "calculator.py"
+  ],
+  "issues": [
+    {
+      "category": "test",
+      "type": "test_failure",
+      "test_name": "test_subtract",
+      "file": "tests/test_calculator.py"
+    }
+  ]
+}
+

@@ -1,0 +1,16 @@
+{
+  "id": "security_ping_demo",
+  "description": "A shell injection risk in a ping wrapper with passing tests.",
+  "requires_fix": true,
+  "allowed_changed_files": [
+    "network.py"
+  ],
+  "issues": [
+    {
+      "category": "security",
+      "type": "command_injection",
+      "file": "network.py",
+      "line": 9
+    }
+  ]
+}

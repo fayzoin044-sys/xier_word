@@ -1,0 +1,24 @@
+{
+  "id": "mixed_demo",
+  "description": "One Ruff finding plus one failing test in the same implementation file.",
+  "requires_fix": true,
+  "allowed_changed_files": [
+    "calculator.py"
+  ],
+  "issues": [
+    {
+      "category": "quality",
+      "type": "unused_import",
+      "rule_id": "F401",
+      "file": "calculator.py",
+      "line": 3
+    },
+    {
+      "category": "test",
+      "type": "test_failure",
+      "test_name": "test_subtract",
+      "file": "tests/test_calculator.py"
+    }
+  ]
+}
+
