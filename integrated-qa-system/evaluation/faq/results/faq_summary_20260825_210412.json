@@ -1,0 +1,848 @@
+{
+  "generated_at": "2026-08-25T21:04:12-06:00",
+  "dataset": "${PROJECT_ROOT}\\evaluation\\faq\\data\\faq_golden.jsonl",
+  "faq_csv": "${PROJECT_ROOT}\\mysql_qa\\data\\JP学科知识问答.csv",
+  "corpus_audit": {
+    "row_count": 467,
+    "unique_normalized_question_count": 462,
+    "duplicate_group_count": 5,
+    "duplicate_row_count": 10,
+    "conflicting_answer_group_count": 1,
+    "duplicate_groups": [
+      {
+        "normalized_question": "python -m",
+        "count": 2,
+        "row_numbers": [
+          86,
+          364
+        ],
+        "original_questions": [
+          "python -m",
+          "python -m"
+        ],
+        "answer_variant_count": 1,
+        "has_conflicting_answers": false
+      },
+      {
+        "normalized_question": "non-ascii character '\\xe5' in",
+        "count": 2,
+        "row_numbers": [
+          113,
+          365
+        ],
+        "original_questions": [
+          "Non-ASCII character '\\xe5' in",
+          "Non-ASCII character '\\xe5' in"
+        ],
+        "answer_variant_count": 1,
+        "has_conflicting_answers": false
+      },
+      {
+        "normalized_question": "ubuntu pip 安装包 timeout",
+        "count": 2,
+        "row_numbers": [
+          236,
+          264
+        ],
+        "original_questions": [
+          "ubuntu pip 安装包 timeout",
+          "ubuntu pip 安装包 timeout"
+        ],
+        "answer_variant_count": 1,
+        "has_conflicting_answers": false
+      },
+      {
+        "normalized_question": "回车和换行符",
+        "count": 2,
+        "row_numbers": [
+          248,
+          366
+        ],
+        "original_questions": [
+          "回车和换行符",
+          "回车和换行符"
+        ],
+        "answer_variant_count": 1,
+        "has_conflicting_answers": false
+      },
+      {
+        "normalized_question": "rabbitmq连接不上",
+        "count": 2,
+        "row_numbers": [
+          386,
+          397
+        ],
+        "original_questions": [
+          "rabbitmq连接不上",
+          "rabbitMQ连接不上"
+        ],
+        "answer_variant_count": 2,
+        "has_conflicting_answers": true
+      }
+    ]
+  },
+  "summaries": [
+    {
+      "threshold": 0.8,
+      "total_cases": 45,
+      "faq_expected_cases": 30,
+      "rag_expected_cases": 15,
+      "overall_correct_count": 43,
+      "overall_accuracy": 0.9555555555555556,
+      "route_accuracy": 0.9555555555555556,
+      "top1_accuracy": 0.9666666666666667,
+      "accepted_answer_accuracy": 0.9666666666666667,
+      "accepted_faq_precision": 0.9666666666666667,
+      "false_rejection_count": 1,
+      "false_rejection_rate": 0.03333333333333333,
+      "wrong_faq_match_count": 0,
+      "wrong_faq_match_rate": 0.0,
+      "hard_negative_rejection_count": 14,
+      "hard_negative_rejection_accuracy": 0.9333333333333333,
+      "false_acceptance_count": 1,
+      "false_acceptance_rate": 0.06666666666666667,
+      "case_types": {
+        "exact": {
+          "count": 15,
+          "overall_correct_count": 15,
+          "overall_accuracy": 1.0,
+          "average_softmax_top1_score": 0.9999814513432048
+        },
+        "hard_negative": {
+          "count": 15,
+          "overall_correct_count": 14,
+          "overall_accuracy": 0.9333333333333333,
+          "average_softmax_top1_score": 0.4062187477386098
+        },
+        "paraphrase": {
+          "count": 15,
+          "overall_correct_count": 14,
+          "overall_accuracy": 0.9333333333333333,
+          "average_softmax_top1_score": 0.9332017217122037
+        }
+      },
+      "error_counts": {
+        "false_acceptance": 1,
+        "false_rejection": 1
+      },
+      "full_corpus_self_check": {
+        "count": 467,
+        "top1_correct_count": 466,
+        "top1_accuracy": 0.9978586723768736,
+        "accepted_correct_count": 457,
+        "accepted_answer_accuracy": 0.9785867237687366,
+        "failure_count": 10,
+        "failures": [
+          {
+            "row_number": 86,
+            "question": "python -m",
+            "predicted_standard_question": "python -m",
+            "softmax_top1_score": 0.49991549272332675,
+            "raw_bm25_top1_score": 15.243368247561765,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 113,
+            "question": "Non-ASCII character '\\xe5' in",
+            "predicted_standard_question": "Non-ASCII character '\\xe5' in",
+            "softmax_top1_score": 0.4999999999999849,
+            "raw_bm25_top1_score": 43.60113132854996,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 236,
+            "question": "ubuntu pip 安装包 timeout",
+            "predicted_standard_question": "ubuntu pip 安装包 timeout",
+            "softmax_top1_score": 0.49999997389978185,
+            "raw_bm25_top1_score": 23.514190110599003,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 248,
+            "question": "回车和换行符",
+            "predicted_standard_question": "回车和换行符",
+            "softmax_top1_score": 0.4999958218775042,
+            "raw_bm25_top1_score": 18.07284026088178,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 264,
+            "question": "ubuntu pip 安装包 timeout",
+            "predicted_standard_question": "ubuntu pip 安装包 timeout",
+            "softmax_top1_score": 0.49999997389978185,
+            "raw_bm25_top1_score": 23.514190110599003,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 364,
+            "question": "python -m",
+            "predicted_standard_question": "python -m",
+            "softmax_top1_score": 0.49991549272332675,
+            "raw_bm25_top1_score": 15.243368247561765,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 365,
+            "question": "Non-ASCII character '\\xe5' in",
+            "predicted_standard_question": "Non-ASCII character '\\xe5' in",
+            "softmax_top1_score": 0.4999999999999849,
+            "raw_bm25_top1_score": 43.60113132854996,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 366,
+            "question": "回车和换行符",
+            "predicted_standard_question": "回车和换行符",
+            "softmax_top1_score": 0.4999958218775042,
+            "raw_bm25_top1_score": 18.07284026088178,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 386,
+            "question": "rabbitmq连接不上",
+            "predicted_standard_question": "rabbitmq连接不上",
+            "softmax_top1_score": 0.499998015401854,
+            "raw_bm25_top1_score": 19.42305303177647,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 397,
+            "question": "rabbitMQ连接不上",
+            "predicted_standard_question": "rabbitmq连接不上",
+            "softmax_top1_score": 0.499998015401854,
+            "raw_bm25_top1_score": 19.42305303177647,
+            "top1_correct": false,
+            "accepted_by_threshold": false
+          }
+        ]
+      }
+    },
+    {
+      "threshold": 0.85,
+      "total_cases": 45,
+      "faq_expected_cases": 30,
+      "rag_expected_cases": 15,
+      "overall_correct_count": 43,
+      "overall_accuracy": 0.9555555555555556,
+      "route_accuracy": 0.9555555555555556,
+      "top1_accuracy": 0.9666666666666667,
+      "accepted_answer_accuracy": 0.9666666666666667,
+      "accepted_faq_precision": 0.9666666666666667,
+      "false_rejection_count": 1,
+      "false_rejection_rate": 0.03333333333333333,
+      "wrong_faq_match_count": 0,
+      "wrong_faq_match_rate": 0.0,
+      "hard_negative_rejection_count": 14,
+      "hard_negative_rejection_accuracy": 0.9333333333333333,
+      "false_acceptance_count": 1,
+      "false_acceptance_rate": 0.06666666666666667,
+      "case_types": {
+        "exact": {
+          "count": 15,
+          "overall_correct_count": 15,
+          "overall_accuracy": 1.0,
+          "average_softmax_top1_score": 0.9999814513432048
+        },
+        "hard_negative": {
+          "count": 15,
+          "overall_correct_count": 14,
+          "overall_accuracy": 0.9333333333333333,
+          "average_softmax_top1_score": 0.4062187477386098
+        },
+        "paraphrase": {
+          "count": 15,
+          "overall_correct_count": 14,
+          "overall_accuracy": 0.9333333333333333,
+          "average_softmax_top1_score": 0.9332017217122037
+        }
+      },
+      "error_counts": {
+        "false_acceptance": 1,
+        "false_rejection": 1
+      },
+      "full_corpus_self_check": {
+        "count": 467,
+        "top1_correct_count": 466,
+        "top1_accuracy": 0.9978586723768736,
+        "accepted_correct_count": 456,
+        "accepted_answer_accuracy": 0.9764453961456103,
+        "failure_count": 11,
+        "failures": [
+          {
+            "row_number": 86,
+            "question": "python -m",
+            "predicted_standard_question": "python -m",
+            "softmax_top1_score": 0.49991549272332675,
+            "raw_bm25_top1_score": 15.243368247561765,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 111,
+            "question": "虚拟环境使用",
+            "predicted_standard_question": "虚拟环境使用",
+            "softmax_top1_score": 0.8314599338770632,
+            "raw_bm25_top1_score": 10.073474911739993,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 113,
+            "question": "Non-ASCII character '\\xe5' in",
+            "predicted_standard_question": "Non-ASCII character '\\xe5' in",
+            "softmax_top1_score": 0.4999999999999849,
+            "raw_bm25_top1_score": 43.60113132854996,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 236,
+            "question": "ubuntu pip 安装包 timeout",
+            "predicted_standard_question": "ubuntu pip 安装包 timeout",
+            "softmax_top1_score": 0.49999997389978185,
+            "raw_bm25_top1_score": 23.514190110599003,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 248,
+            "question": "回车和换行符",
+            "predicted_standard_question": "回车和换行符",
+            "softmax_top1_score": 0.4999958218775042,
+            "raw_bm25_top1_score": 18.07284026088178,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 264,
+            "question": "ubuntu pip 安装包 timeout",
+            "predicted_standard_question": "ubuntu pip 安装包 timeout",
+            "softmax_top1_score": 0.49999997389978185,
+            "raw_bm25_top1_score": 23.514190110599003,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 364,
+            "question": "python -m",
+            "predicted_standard_question": "python -m",
+            "softmax_top1_score": 0.49991549272332675,
+            "raw_bm25_top1_score": 15.243368247561765,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 365,
+            "question": "Non-ASCII character '\\xe5' in",
+            "predicted_standard_question": "Non-ASCII character '\\xe5' in",
+            "softmax_top1_score": 0.4999999999999849,
+            "raw_bm25_top1_score": 43.60113132854996,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 366,
+            "question": "回车和换行符",
+            "predicted_standard_question": "回车和换行符",
+            "softmax_top1_score": 0.4999958218775042,
+            "raw_bm25_top1_score": 18.07284026088178,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 386,
+            "question": "rabbitmq连接不上",
+            "predicted_standard_question": "rabbitmq连接不上",
+            "softmax_top1_score": 0.499998015401854,
+            "raw_bm25_top1_score": 19.42305303177647,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 397,
+            "question": "rabbitMQ连接不上",
+            "predicted_standard_question": "rabbitmq连接不上",
+            "softmax_top1_score": 0.499998015401854,
+            "raw_bm25_top1_score": 19.42305303177647,
+            "top1_correct": false,
+            "accepted_by_threshold": false
+          }
+        ]
+      }
+    },
+    {
+      "threshold": 0.86,
+      "total_cases": 45,
+      "faq_expected_cases": 30,
+      "rag_expected_cases": 15,
+      "overall_correct_count": 44,
+      "overall_accuracy": 0.9777777777777777,
+      "route_accuracy": 0.9777777777777777,
+      "top1_accuracy": 0.9666666666666667,
+      "accepted_answer_accuracy": 0.9666666666666667,
+      "accepted_faq_precision": 1.0,
+      "false_rejection_count": 1,
+      "false_rejection_rate": 0.03333333333333333,
+      "wrong_faq_match_count": 0,
+      "wrong_faq_match_rate": 0.0,
+      "hard_negative_rejection_count": 15,
+      "hard_negative_rejection_accuracy": 1.0,
+      "false_acceptance_count": 0,
+      "false_acceptance_rate": 0.0,
+      "case_types": {
+        "exact": {
+          "count": 15,
+          "overall_correct_count": 15,
+          "overall_accuracy": 1.0,
+          "average_softmax_top1_score": 0.9999814513432048
+        },
+        "hard_negative": {
+          "count": 15,
+          "overall_correct_count": 15,
+          "overall_accuracy": 1.0,
+          "average_softmax_top1_score": 0.4062187477386098
+        },
+        "paraphrase": {
+          "count": 15,
+          "overall_correct_count": 14,
+          "overall_accuracy": 0.9333333333333333,
+          "average_softmax_top1_score": 0.9332017217122037
+        }
+      },
+      "error_counts": {
+        "false_rejection": 1
+      },
+      "full_corpus_self_check": {
+        "count": 467,
+        "top1_correct_count": 466,
+        "top1_accuracy": 0.9978586723768736,
+        "accepted_correct_count": 456,
+        "accepted_answer_accuracy": 0.9764453961456103,
+        "failure_count": 11,
+        "failures": [
+          {
+            "row_number": 86,
+            "question": "python -m",
+            "predicted_standard_question": "python -m",
+            "softmax_top1_score": 0.49991549272332675,
+            "raw_bm25_top1_score": 15.243368247561765,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 111,
+            "question": "虚拟环境使用",
+            "predicted_standard_question": "虚拟环境使用",
+            "softmax_top1_score": 0.8314599338770632,
+            "raw_bm25_top1_score": 10.073474911739993,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 113,
+            "question": "Non-ASCII character '\\xe5' in",
+            "predicted_standard_question": "Non-ASCII character '\\xe5' in",
+            "softmax_top1_score": 0.4999999999999849,
+            "raw_bm25_top1_score": 43.60113132854996,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 236,
+            "question": "ubuntu pip 安装包 timeout",
+            "predicted_standard_question": "ubuntu pip 安装包 timeout",
+            "softmax_top1_score": 0.49999997389978185,
+            "raw_bm25_top1_score": 23.514190110599003,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 248,
+            "question": "回车和换行符",
+            "predicted_standard_question": "回车和换行符",
+            "softmax_top1_score": 0.4999958218775042,
+            "raw_bm25_top1_score": 18.07284026088178,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 264,
+            "question": "ubuntu pip 安装包 timeout",
+            "predicted_standard_question": "ubuntu pip 安装包 timeout",
+            "softmax_top1_score": 0.49999997389978185,
+            "raw_bm25_top1_score": 23.514190110599003,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 364,
+            "question": "python -m",
+            "predicted_standard_question": "python -m",
+            "softmax_top1_score": 0.49991549272332675,
+            "raw_bm25_top1_score": 15.243368247561765,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 365,
+            "question": "Non-ASCII character '\\xe5' in",
+            "predicted_standard_question": "Non-ASCII character '\\xe5' in",
+            "softmax_top1_score": 0.4999999999999849,
+            "raw_bm25_top1_score": 43.60113132854996,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 366,
+            "question": "回车和换行符",
+            "predicted_standard_question": "回车和换行符",
+            "softmax_top1_score": 0.4999958218775042,
+            "raw_bm25_top1_score": 18.07284026088178,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 386,
+            "question": "rabbitmq连接不上",
+            "predicted_standard_question": "rabbitmq连接不上",
+            "softmax_top1_score": 0.499998015401854,
+            "raw_bm25_top1_score": 19.42305303177647,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 397,
+            "question": "rabbitMQ连接不上",
+            "predicted_standard_question": "rabbitmq连接不上",
+            "softmax_top1_score": 0.499998015401854,
+            "raw_bm25_top1_score": 19.42305303177647,
+            "top1_correct": false,
+            "accepted_by_threshold": false
+          }
+        ]
+      }
+    },
+    {
+      "threshold": 0.9,
+      "total_cases": 45,
+      "faq_expected_cases": 30,
+      "rag_expected_cases": 15,
+      "overall_correct_count": 44,
+      "overall_accuracy": 0.9777777777777777,
+      "route_accuracy": 0.9777777777777777,
+      "top1_accuracy": 0.9666666666666667,
+      "accepted_answer_accuracy": 0.9666666666666667,
+      "accepted_faq_precision": 1.0,
+      "false_rejection_count": 1,
+      "false_rejection_rate": 0.03333333333333333,
+      "wrong_faq_match_count": 0,
+      "wrong_faq_match_rate": 0.0,
+      "hard_negative_rejection_count": 15,
+      "hard_negative_rejection_accuracy": 1.0,
+      "false_acceptance_count": 0,
+      "false_acceptance_rate": 0.0,
+      "case_types": {
+        "exact": {
+          "count": 15,
+          "overall_correct_count": 15,
+          "overall_accuracy": 1.0,
+          "average_softmax_top1_score": 0.9999814513432048
+        },
+        "hard_negative": {
+          "count": 15,
+          "overall_correct_count": 15,
+          "overall_accuracy": 1.0,
+          "average_softmax_top1_score": 0.4062187477386098
+        },
+        "paraphrase": {
+          "count": 15,
+          "overall_correct_count": 14,
+          "overall_accuracy": 0.9333333333333333,
+          "average_softmax_top1_score": 0.9332017217122037
+        }
+      },
+      "error_counts": {
+        "false_rejection": 1
+      },
+      "full_corpus_self_check": {
+        "count": 467,
+        "top1_correct_count": 466,
+        "top1_accuracy": 0.9978586723768736,
+        "accepted_correct_count": 456,
+        "accepted_answer_accuracy": 0.9764453961456103,
+        "failure_count": 11,
+        "failures": [
+          {
+            "row_number": 86,
+            "question": "python -m",
+            "predicted_standard_question": "python -m",
+            "softmax_top1_score": 0.49991549272332675,
+            "raw_bm25_top1_score": 15.243368247561765,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 111,
+            "question": "虚拟环境使用",
+            "predicted_standard_question": "虚拟环境使用",
+            "softmax_top1_score": 0.8314599338770632,
+            "raw_bm25_top1_score": 10.073474911739993,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 113,
+            "question": "Non-ASCII character '\\xe5' in",
+            "predicted_standard_question": "Non-ASCII character '\\xe5' in",
+            "softmax_top1_score": 0.4999999999999849,
+            "raw_bm25_top1_score": 43.60113132854996,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 236,
+            "question": "ubuntu pip 安装包 timeout",
+            "predicted_standard_question": "ubuntu pip 安装包 timeout",
+            "softmax_top1_score": 0.49999997389978185,
+            "raw_bm25_top1_score": 23.514190110599003,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 248,
+            "question": "回车和换行符",
+            "predicted_standard_question": "回车和换行符",
+            "softmax_top1_score": 0.4999958218775042,
+            "raw_bm25_top1_score": 18.07284026088178,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 264,
+            "question": "ubuntu pip 安装包 timeout",
+            "predicted_standard_question": "ubuntu pip 安装包 timeout",
+            "softmax_top1_score": 0.49999997389978185,
+            "raw_bm25_top1_score": 23.514190110599003,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 364,
+            "question": "python -m",
+            "predicted_standard_question": "python -m",
+            "softmax_top1_score": 0.49991549272332675,
+            "raw_bm25_top1_score": 15.243368247561765,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 365,
+            "question": "Non-ASCII character '\\xe5' in",
+            "predicted_standard_question": "Non-ASCII character '\\xe5' in",
+            "softmax_top1_score": 0.4999999999999849,
+            "raw_bm25_top1_score": 43.60113132854996,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 366,
+            "question": "回车和换行符",
+            "predicted_standard_question": "回车和换行符",
+            "softmax_top1_score": 0.4999958218775042,
+            "raw_bm25_top1_score": 18.07284026088178,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 386,
+            "question": "rabbitmq连接不上",
+            "predicted_standard_question": "rabbitmq连接不上",
+            "softmax_top1_score": 0.499998015401854,
+            "raw_bm25_top1_score": 19.42305303177647,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 397,
+            "question": "rabbitMQ连接不上",
+            "predicted_standard_question": "rabbitmq连接不上",
+            "softmax_top1_score": 0.499998015401854,
+            "raw_bm25_top1_score": 19.42305303177647,
+            "top1_correct": false,
+            "accepted_by_threshold": false
+          }
+        ]
+      }
+    },
+    {
+      "threshold": 0.95,
+      "total_cases": 45,
+      "faq_expected_cases": 30,
+      "rag_expected_cases": 15,
+      "overall_correct_count": 42,
+      "overall_accuracy": 0.9333333333333333,
+      "route_accuracy": 0.9333333333333333,
+      "top1_accuracy": 0.9666666666666667,
+      "accepted_answer_accuracy": 0.9,
+      "accepted_faq_precision": 1.0,
+      "false_rejection_count": 3,
+      "false_rejection_rate": 0.1,
+      "wrong_faq_match_count": 0,
+      "wrong_faq_match_rate": 0.0,
+      "hard_negative_rejection_count": 15,
+      "hard_negative_rejection_accuracy": 1.0,
+      "false_acceptance_count": 0,
+      "false_acceptance_rate": 0.0,
+      "case_types": {
+        "exact": {
+          "count": 15,
+          "overall_correct_count": 15,
+          "overall_accuracy": 1.0,
+          "average_softmax_top1_score": 0.9999814513432048
+        },
+        "hard_negative": {
+          "count": 15,
+          "overall_correct_count": 15,
+          "overall_accuracy": 1.0,
+          "average_softmax_top1_score": 0.4062187477386098
+        },
+        "paraphrase": {
+          "count": 15,
+          "overall_correct_count": 12,
+          "overall_accuracy": 0.8,
+          "average_softmax_top1_score": 0.9332017217122037
+        }
+      },
+      "error_counts": {
+        "false_rejection": 3
+      },
+      "full_corpus_self_check": {
+        "count": 467,
+        "top1_correct_count": 466,
+        "top1_accuracy": 0.9978586723768736,
+        "accepted_correct_count": 455,
+        "accepted_answer_accuracy": 0.974304068522484,
+        "failure_count": 12,
+        "failures": [
+          {
+            "row_number": 86,
+            "question": "python -m",
+            "predicted_standard_question": "python -m",
+            "softmax_top1_score": 0.49991549272332675,
+            "raw_bm25_top1_score": 15.243368247561765,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 111,
+            "question": "虚拟环境使用",
+            "predicted_standard_question": "虚拟环境使用",
+            "softmax_top1_score": 0.8314599338770632,
+            "raw_bm25_top1_score": 10.073474911739993,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 113,
+            "question": "Non-ASCII character '\\xe5' in",
+            "predicted_standard_question": "Non-ASCII character '\\xe5' in",
+            "softmax_top1_score": 0.4999999999999849,
+            "raw_bm25_top1_score": 43.60113132854996,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 236,
+            "question": "ubuntu pip 安装包 timeout",
+            "predicted_standard_question": "ubuntu pip 安装包 timeout",
+            "softmax_top1_score": 0.49999997389978185,
+            "raw_bm25_top1_score": 23.514190110599003,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 248,
+            "question": "回车和换行符",
+            "predicted_standard_question": "回车和换行符",
+            "softmax_top1_score": 0.4999958218775042,
+            "raw_bm25_top1_score": 18.07284026088178,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 264,
+            "question": "ubuntu pip 安装包 timeout",
+            "predicted_standard_question": "ubuntu pip 安装包 timeout",
+            "softmax_top1_score": 0.49999997389978185,
+            "raw_bm25_top1_score": 23.514190110599003,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 364,
+            "question": "python -m",
+            "predicted_standard_question": "python -m",
+            "softmax_top1_score": 0.49991549272332675,
+            "raw_bm25_top1_score": 15.243368247561765,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 365,
+            "question": "Non-ASCII character '\\xe5' in",
+            "predicted_standard_question": "Non-ASCII character '\\xe5' in",
+            "softmax_top1_score": 0.4999999999999849,
+            "raw_bm25_top1_score": 43.60113132854996,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 366,
+            "question": "回车和换行符",
+            "predicted_standard_question": "回车和换行符",
+            "softmax_top1_score": 0.4999958218775042,
+            "raw_bm25_top1_score": 18.07284026088178,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 386,
+            "question": "rabbitmq连接不上",
+            "predicted_standard_question": "rabbitmq连接不上",
+            "softmax_top1_score": 0.499998015401854,
+            "raw_bm25_top1_score": 19.42305303177647,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 397,
+            "question": "rabbitMQ连接不上",
+            "predicted_standard_question": "rabbitmq连接不上",
+            "softmax_top1_score": 0.499998015401854,
+            "raw_bm25_top1_score": 19.42305303177647,
+            "top1_correct": false,
+            "accepted_by_threshold": false
+          },
+          {
+            "row_number": 416,
+            "question": "fescar-server",
+            "predicted_standard_question": "fescar-server",
+            "softmax_top1_score": 0.9067228739236324,
+            "raw_bm25_top1_score": 17.740373736668186,
+            "top1_correct": true,
+            "accepted_by_threshold": false
+          }
+        ]
+      }
+    }
+  ]
+}

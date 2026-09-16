@@ -1,6 +1,6 @@
 # AI 模型训练与应用项目合集
 
-本仓库整理了四组模型训练与应用项目，覆盖 MCP/A2A 多智能体协作、SDXL 图像风格 LoRA 微调、大语言模型 LoRA 微调、文本多分类、知识蒸馏、INT8 量化和在线推理。源码、整理后的数据集、评估结果及可公开的最终模型产物均已提供。
+本仓库整理了五组模型训练与应用项目，覆盖 FAQ/RAG 混合问答、MCP/A2A 多智能体协作、SDXL 图像风格 LoRA 微调、大语言模型 LoRA 微调、文本多分类、知识蒸馏、INT8 量化和在线推理。源码、整理后的数据集、评估结果及可公开的最终模型产物均已提供。
 
 ## 项目概览
 
@@ -10,8 +10,11 @@
 | 中文文本多分类与模型轻量化 | 对比随机森林、FastText、BERT 与 Qwen2.5-1.5B；完成 BERT 全量微调、TextCNN 知识蒸馏、INT8 动态量化和 Flask 推理接口 | BERT `94.6%`；Qwen 接近 `94%`；蒸馏 TextCNN `88.7%`，模型体积约缩小 15 倍 | [项目说明](news-classification-suite/README.md) · [BERT/量化/蒸馏模型](news-classification-suite/models/) · [Qwen 模型](https://huggingface.co/zyhForHugging/qwen2.5-1.5b-chinese-news-classifier) |
 | SDXL 梵高风格 LoRA 图像微调 | 画作去重与数据划分、UNet LoRA 训练、照片图生图、同种子基础模型对比 | 358 张训练画作；2000 步；RTX 5090 训练约 74 分钟；24 张开发集对比 | [项目与效果展示](vangogh-lora/README.md) · [LoRA 权重](vangogh-lora/outputs/vangogh-sdxl-v1/) |
 | 多智能体代码审查与修复 | MCP 工具集成、A2A 协作、LangGraph 编排、人工审批与修复验证 | 历史评估集：Precision/Recall 100%，修复成功率 81.82%；结果限于该评估范围 | [项目介绍](mcp2a2a/README.md) · [代码审查](mcp2a2a/multi_agent_code_reviewer/README.md) |
+| FAQ + Milvus RAG 智能问答 | Redis/MySQL FAQ、BERT 查询分类、父子分块、BGE 混合检索与重排、多策略生成 | FAQ 离线总体正确率 95.56%；历史检索 Hit@1 83.33% → 95.83%，结果限于对应评估配置 | [项目说明](integrated-qa-system/README.md) · [评估记录](integrated-qa-system/evaluation/) |
 
 ## 快速入口
+
+- [FAQ + Milvus RAG：系统架构、脱敏配置与运行说明](integrated-qa-system/README.md)
 
 - [多智能体代码审查与修复](mcp2a2a/README.md)
 

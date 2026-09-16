@@ -1,0 +1,52 @@
+[
+  {
+    "parent_index": 0,
+    "parent_id": "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+    "content": "LLM背景知识介绍\n \n学习⽬标\n \n了解LLM背景的知识\n掌握什么是语⾔模型\n1 ⼤语⾔模型 (LLM) 背景\n \n⼤语⾔模型 (英⽂：Large Language Model，缩写LLM) 是⼀种⼈⼯智能模型, 旨在理解和⽣成⼈类语⾔.\n⼤语⾔模型可以处理多种⾃然语⾔任务，如⽂本分类、问答、翻译、对话等等.\n通常, ⼤语⾔模型 (LLM) 是指包含数千亿 (或更多) 参数的语⾔模型(⽬前定义参数量超过10B的模型为⼤\n语⾔模型)，这些参数是在⼤量⽂本数据上训练的，例如模型 GPT-3、ChatGPT、PaLM、BLOOM和\nLLaMA等.\n截⽌23年，语⾔模型发展⾛过了三个阶段：\n第⼀阶段 ：设计⼀系列的⾃监督训练⽬标（MLM、NSP等），设计新颖的模型架构\n（Transformer），遵循Pre-training和Fine-tuning范式。典型代表是BERT、GPT、XLNet等；\n第⼆阶段 ：逐步扩⼤模型参数和训练语料规模，探索不同类型的架构。典型代表是BART、T5、\nGPT-3等；\n第三阶段 ：⾛向AIGC（Artiﬁcial Intelligent Generated Content）时代，模型参数规模步⼊千万"
+  },
+  {
+    "parent_index": 1,
+    "parent_id": "parent_cdaceb91ff16f147c0d9d7210a93f504",
+    "content": "亿，模型架构为⾃回归架构，⼤模型⾛向对话式、⽣成式、多模态时代，更加注重与⼈类交互进⾏\n对⻬，实现可靠、安全、⽆毒的模型。典型代表是InstructionGPT、ChatGPT、Bard、GPT-4等。\n2 语⾔模型 (Language Model, LM)\n \n语⾔模型（Language Model）旨在建模词汇序列的⽣成概率，提升机器的语⾔智能⽔平，使机器能够\n模拟⼈类说话、写作的模式进⾏⾃动⽂本输出。\n通俗理解: ⽤来计算⼀个句⼦的概率的模型，也就是判断⼀句话是否是⼈话的概率.\n标准定义：对于某个句⼦序列, 如S = {W1, W2, W3, …, Wn}, 语⾔模型就是计算该序列发⽣的概率, 即\nP(S). 如果给定的词序列符合语⽤习惯, 则给出⾼概率, 否则给出低概率.\n举例说明：\n假设我们要为中⽂创建⼀个语⾔模型，\n表示词典，\n={⿊⻢、程序、员、来、学习}，\n 属于\n。语⾔模型描述：给定词典\n, 能够计算出任意单词序列\n是⼀句话的概\n率\n, 其中\n那么如何计算⼀个句⼦的\n呢？最简单的⽅法就是计数，假设数据集中共有\n个句⼦，我们可\n以统计⼀下数据集中\n每个句⼦出现的次数，如果假设为，则\n. 那么可以想象⼀下，这个模型的预测能⼒⼏乎为0，⼀旦单词序列没在之前数据集中\n出现过，模型的输出概率就是0，显然相当不合理。\n我们可以根据概率论中的链式法则，将\n可以表示为：\n如果能计算\n，那么就能轻松得到\n, 所以在某些⽂献\n中，我们也可以看到语⾔模型的另外⼀个定义：能够计算出\n的模型就是语⾔模\n型。\n从⽂本⽣成⻆度，也可以这样定义语⾔模型：给定⼀个短语（⼀个词组或者⼀句话），语⾔模型可以⽣\n成（预测）接下来的⼀个词。\n基于语⾔模型技术的发展，可以将语⾔模型分为四种类型：\n基于规则和统计的语⾔模型\n神经语⾔模型\n预训练语⾔模型\n⼤语⾔模型\n2.1 基于规则和统计的语⾔模型（N-gram）\n \n由⼈⼯设计特征并使⽤统计⽅法对固定⻓度的⽂本窗⼝序列进⾏建模分析，这种建模⽅式也被称为N-\ngram语⾔模型。在上述例⼦中计算句⼦序列概率我们使⽤链式法则计算， 该⽅法存在两个缺陷：\n参数空间过⼤：条件概率\n的可能性太多，⽆法估算，也不⼀定有⽤\n数据稀疏严重：许多词对的组合，在语料库中都没有出现，依据最⼤似然估计得到的概率为0"
+  },
+  {
+    "parent_index": 2,
+    "parent_id": "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+    "content": "为了解决上述问题，引⼊⻢尔科夫假设：随意⼀个词出现的概率只与它前⾯出现的有限的⼀个或者⼏个\n词有关。\n如果⼀个词的出现与它周围的词是独⽴的，那么我们就称之为unigram也就是⼀元语⾔模型.\n如果⼀个词的出现仅依赖于它前⾯出现的⼀个词，那么我们就称之为bigram.\n如果⼀个词的出现仅依赖于它前⾯出现的两个词，那么我们就称之为trigram.\n⼀般来说，N元模型就是假设当前词的出现概率只与它前⾯的N-1个词有关，⽽这些概率参数都是\n可以通过⼤规模语料库来计算，⽐如三元概率：\n在实践中⽤的最多的就是bigram和trigram，接下来以bigram语⾔模型为例，理解其⼯作原理：\n⾸先我们准备⼀个语料库（简单理解让模型学习的数据集），为了计算对应的⼆元模型的参数，即\n，我们要先计数即\n，然后计数 \n , 再⽤除法可得到概率。\n 计数结果如下：\n 的计数结果如下:\n那么bigram语⾔模型针对上述语料的参数计算结果如何实现？假如，我想计算\n! \" #\n ,\n计算过程如下显示：（其他参数计算过程类似）\n! \" #\n#\n!\n#\n如果针对这个语料库的⼆元模型（bigram）建⽴好之后，就可以实现我们的⽬标计算。\n计算⼀个句⼦的概率，举例如下：\n# ! $ % & '\n! \" #\n$ \" !\n% \" $\n& ' \" %\n预测⼀句话最可能出现的下⼀个词汇，⽐如：我想去打【mask】? 思考：mask = 篮球 或者 mask\n= 晚饭。\n# ! $ % & '\n# ! $ % ( )\n可以看出\n# ! $ % & '\n# ! $ % ( ) ，因此mask = 篮球，对⽐真实语境下，也符合⼈类习\n惯。\nN-gram语⾔模型的特点：\n优点：采⽤极⼤似然估计, 参数易训练; 完全包含了前n-1个词的全部信息; 可解释性强, 直观易理\n解。\n缺点：缺乏⻓期以来，只能建模到前n-1个词; 随着n的增⼤，参数空间呈指数增⻓；数据稀疏，难\n免会出现OOV问题; 单纯的基于统计频次，泛化能⼒差.\n2.2 神经⽹络语⾔模型\n \n伴随着神经⽹络技术的发展，⼈们开始尝试使⽤神经⽹络来建⽴语⾔模型进⽽解决N-gram语⾔模型存\n在的问题。"
+  },
+  {
+    "parent_index": 3,
+    "parent_id": "parent_9df26536d931e253259602b2330ac6e5",
+    "content": "上图属于⼀个最基础的神经⽹络架构：\n模型的输⼊：\n就是前n-1个词。现在需要根据这已知的n-1个词预测下⼀个\n词\n。\n表示\n所对应的词向量.\n⽹络的第⼀层（输⼊层）是将\n这n-1个向量⾸尾拼接起来形成\n⼀个\n⼤⼩的向量，记作.\n⽹络的第⼆层（隐藏层）就如同普通的神经⽹络，直接使⽤⼀个全连接层, 通过全连接层后再使⽤\n这个激活函数进⾏处理。\n⽹络的第三层（输出层）⼀共有\n个节点 (\n 代表语料的词汇)，本质上这个输出层也是⼀个全连接\n层。每个输出节点\n表示下⼀个词语为  的未归⼀化log 概率。最后使⽤ softmax 激活函数将输出\n值进⾏归⼀化。得到最⼤概率值，就是我们需要预测的结果。\n神经⽹络特点：\n优点：利⽤神经⽹络去建模当前词出现的概率与其前 n-1 个词之间的约束关系，很显然这种⽅式相\n⽐ n-gram 具有更好的泛化能⼒，只要词表征⾜够好。从⽽很⼤程度地降低了数据稀疏带来的问\n题。\n缺点：对⻓序列的建模能⼒有限，可能会出现⻓距离遗忘以及训练时的梯度消失等问题，构建的模\n型难以进⾏稳定的⻓⽂本输出。\n2.3 基于Transformer的预训练语⾔模型\n \nTransformer模型由⼀些编码器和解码器层组成（⻅图），学习复杂语义信息的能⼒强，很多主流预训\n练模型在提取特征时都会选择Transformer结构，并产⽣了⼀系列的基于Transformer的预训练模型，\n包括GPT、BERT、T5等.这些模型能够从⼤量的通⽤⽂本数据中学习⼤量的语⾔表示，并将这些知识运\n⽤到下游任务中，获得了较好的效果.\n预训练语⾔模型的使⽤⽅式：\n预训练：预训练指建⽴基本的模型，先在⼀些⽐较基础的数据集、语料库上进⾏训练，然后按照具\n体任务训练，学习数据的普遍特征。\n微调：微调指在具体的下游任务中使⽤预训练好的模型进⾏迁移学习，以获取更好的泛化效果。\n预训练语⾔模型的特点：\n优点：更强⼤的泛化能⼒，丰富的语义表示，可以有效防⽌过拟合。\n缺点：计算资源需求⼤，可解释性差等\n2.4 ⼤语⾔模型"
+  },
+  {
+    "parent_index": 4,
+    "parent_id": "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+    "content": "随着对预训练语⾔模型研究的开展，⼈们逐渐发现可能存在⼀种标度定律（Scaling Law），即随着预训\n练模型参数的指数级提升，其语⾔模型性能也会线性上升。2020年，OpenAI发布了参数量⾼达1750亿\n的GPT-3，⾸次展示了⼤语⾔模型的性能。\n相较于此前的参数量较⼩的预训练语⾔模型，例如，3.3亿参数的Bert-large和17亿参数的GPT-2，GPT-\n3展现了在Few-shot语⾔任务能⼒上的⻜跃，并具备了预训练语⾔模型不具备的⼀些能⼒。后续将这种\n现象称为能⼒涌现。例如，GPT-3能进⾏上下⽂学习，在不调整权重的情况下仅依据⽤户给出的任务示\n例完成后续任务。这种能⼒⽅⾯的⻜跃引发研究界在⼤语⾔模型上的研究热潮，各⼤科技巨头纷纷推出\n参数量巨⼤的语⾔模型，例如，Meta公司1300亿参数量的LLaMA模型以及⾕歌公司5400亿参数量的\nPaLM。国内如百度推出的⽂⼼⼀⾔ERNIE系列、清华⼤学团队推出的GLM系列，等等。\n⼤语⾔模型的特点：\n优点：像“⼈类”⼀样智能，具备了能与⼈类沟通聊天的能⼒，甚⾄具备了使⽤插件进⾏⾃动信息检\n索的能⼒\n缺点：参数量⼤，算⼒要求⾼、⽣成部分有害的、有偏⻅的内容等等\n3 语⾔模型的评估指标\n \n3.1 BLEU\n \nBLEU （双语评估替补）分数是评估⼀种语⾔翻译成另⼀种语⾔的⽂本质量的指标。它将“质量”的好坏\n定义为与⼈类翻译结果的⼀致性程度。\nBLEU算法实际上就是在判断两个句⼦的相似程度. BLEU 的分数取值范围是 0～1，分数越接近1，说明\n翻译的质量越⾼。\nBLEU有许多变种，根据n-gram 可以划分成多种评价指标，常⻅的评价指标有BLEU-1、BLEU-2、\nBLEU-3、BLEU-4四种，其中n-gram 指的是连续的单词个数为n，BLEU-1衡量的是单词级别的准确\n性，更⾼阶的BLEU可以衡量句⼦的流畅性.实践中，通常是取N=1~4，然后对进⾏加权平均。\n下⾯举例说计算过程：\n基本步骤：\n分别计算预测⽂本和⽬标⽂本的N-grams模型，然后统计其匹配的个数，计算匹配度:\n公式：预测⽂本中正确预测的 n−gram 的个数 /预测⽂本中所有n−gram 的个数\n假设分别给出⼀个预测⽂本和⽬标⽂本如下：\n使⽤1-gram进⾏匹配\n预测⽂本: It is a nice day today\n⽬标⽂本: today is a nice day"
+  },
+  {
+    "parent_index": 5,
+    "parent_id": "parent_3dca2b6a72e080d6b0053da1d46e18bb",
+    "content": "使⽤2-gram进⾏匹配\n使⽤3-gram进⾏匹配\n使⽤4-gram进⾏匹配\n上述例⼦会出现⼀种极端情况，请看下⾯示例：\n将计算某个词正确预测次数的⽅法改为计算某个词在⽂本中出现的最⼩次数,如下所示的公式：\n其中表示在预测⽂本中出现的第个词语, \n则代表在预测⽂本中这个词语出现的次数，⽽\n则代\n表在⽬标⽂本中这个词语出现的次数。\npython代码实现：\n预测⽂本: {it, is, a, nice, day, today}\n⽬标⽂本: {today, is, a, nice, day}\n结果:\n  其中{today, is, a, nice, day}匹配，所以匹配度为5/6\n预测⽂本: {it is, is a, a nice, nice day, day today}\n⽬标⽂本: {today is, is a, a nice, nice day}\n结果:\n  其中{is a, a nice, nice day}匹配，所以匹配度为3/5\n预测⽂本: {it is a, is a nice, a nice day, nice day today}\n⽬标⽂本: {today is a, is a nice, a nice day}\n结果:\n  其中{is a nice, a nice day}匹配，所以匹配度为2/4\n预测⽂本: {it is a nice, is a nice day, a nice day today}\n⽬标⽂本: {today is a nice, is a nice day}\n结果:\n  其中{is a nice day}匹配，所以匹配度为1/3\n预测⽂本: the the the the\n⽬标⽂本: The cat is standing on the ground\n如果按照1-gram的⽅法进⾏匹配，则匹配度为1，显然是不合理的，所以计算某个词的出现次数进⾏改进\n# 第⼀步安装nltk的包-->pip install nltk\nfrom nltk.translate.bleu_score import sentence_bleu"
+  },
+  {
+    "parent_index": 6,
+    "parent_id": "parent_57655b74a91b91b0697bb3274ef19b20",
+    "content": "3.2 ROUGE\n \nROUGE指标是在机器翻译、⾃动摘要、问答⽣成等领域常⻅的评估指标。ROUGE通过将模型⽣成的摘\n要或者回答与参考答案（⼀般是⼈⼯⽣成的）进⾏⽐较计算，得到对应的得分。\nROUGE指标与BLEU指标⾮常类似，均可⽤来衡量⽣成结果和标准结果的匹配程度，不同的是ROUGE基\n于召回率，BLEU更看重准确率。\nROUGE分为四种⽅法：ROUGE-N, ROUGE-L, ROUGE-W, ROUGE-S.\n下⾯举例说计算过程（这⾥只介绍ROUGE_N）：\n基本步骤：\nRouge-N实际上是将模型⽣成的结果和标准结果按N-gram拆分后，计算召回率\n假设模型预测⽂本和⼀个⽬标⽂本如下：\ndef cumulative_bleu(reference, candidate):\n    bleu_1_gram = sentence_bleu(reference, candidate, weights=(1, 0, 0, 0))\n    bleu_2_gram = sentence_bleu(reference, candidate, weights=(0.5, 0.5, 0, \n0))\n    bleu_3_gram = sentence_bleu(reference, candidate, weights=(0.33, 0.33, \n0.33, 0))\n    bleu_4_gram = sentence_bleu(reference, candidate, weights=(0.25, 0.25, \n0.25, 0.25))\n    # print('bleu 1-gram: %f' % bleu_1_gram)\n    # print('bleu 2-gram: %f' % bleu_2_gram)\n    # print('bleu 3-gram: %f' % bleu_3_gram)\n    # print('bleu 4-gram: %f' % bleu_4_gram)\n    return bleu_1_gram, bleu_2_gram, bleu_3_gram, bleu_4_gram\n# 预测⽂本\ncandidate_text = [\"This\", \"is\",  \"some\",  \"generated\", \"text\"]\n# ⽬标⽂本列表\nreference_texts = [[\"This\", \"is\",  \"a\",  \"reference\", \"text\"],\n                   [\"This\", \"is\",  \"another\", \"reference\", \"text\"]]\n# 计算 Bleu 指标"
+  },
+  {
+    "parent_index": 7,
+    "parent_id": "parent_0278d73908828c2c85532921cc5030f6",
+    "content": "# 计算 Bleu 指标\nc_bleu = cumulative_bleu(reference_texts, candidate_text)\n# 打印结果\nprint(\"The Bleu score is:\", c_bleu)\n# The Bleu score is: (0.6, 0.387, 1.5949011744633917e-102, 9.283142785759642e-\n155)"
+  },
+  {
+    "parent_index": 8,
+    "parent_id": "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+    "content": "使⽤ROUGE-1进⾏匹配\n通过类似的⽅法，可以计算出其他ROUGE指标（如ROUGE-2、ROUGE-L、ROUGE-S）的评分，\n从⽽综合评估系统⽣成的⽂本质量。\npython代码实现：\n3.3 困惑度PPL(perplexity)\n \nPPL⽤来度量⼀个概率分布或概率模型预测样本的好坏程度。\nPPL基本思想:\n给测试集的句⼦赋予较⾼概率值的语⾔模型较好,当语⾔模型训练完之后，测试集中的句⼦都是正\n常的句⼦，那么训练好的模型就是在测试集上的概率越⾼越好.\n基本公式（两种⽅式）：\n预测⽂本: It is a nice day today\n⽬标⽂本: Today is a nice day\n预测⽂本: {it, is, a, nice, day, today}\n⽬标⽂本: {today, is, a, nice, day}\n结果:\n  :其中{today, is, a, nice, day}匹配，所以匹配度为5/5=1,这说明⽣成的内容完全覆盖了参考\n⽂本中的所有单词，质量较⾼。\n# 第⼀步：安装rouge-->pip install rouge\nfrom rouge import Rouge\n# 预测⽂本\ngenerated_text = \"This is some generated text.\"\n# ⽬标⽂本列表\nreference_texts = [\"This is a reference text.\", \"This is another generated \nreference text.\"]\n# 计算 ROUGE 指标\nrouge = Rouge()\nscores = rouge.get_scores(generated_text, reference_texts[1])\n# 打印结果\nprint(\"ROUGE-1 precision:\", scores[0][\"rouge-1\"][\"p\"])\nprint(\"ROUGE-1 recall:\", scores[0][\"rouge-1\"][\"r\"])\nprint(\"ROUGE-1 F1 score:\", scores[0][\"rouge-1\"][\"f\"])\n# ROUGE-1 precision: 0.8\n# ROUGE-1 recall: 0.6666666666666666\n# ROUGE-1 F1 score: 0.7272727223140496"
+  },
+  {
+    "parent_index": 9,
+    "parent_id": "parent_c998db368181f9d05ba01d89e0794f0e",
+    "content": "由公式可知，句⼦概率越⼤，语⾔模型越好，迷惑度越⼩。\npython代码实现：\n⼩结总结\n \n本⼩节主要介绍LLM的背景知识，了解⽬前LLM发展基本历程\n对语⾔模型的类别分别进⾏了介绍，如基于统计的N-gram模型，以及深度学习的神经⽹络模型\nimport math\n# 定义语料库\nsentences = [\n['I', 'have', 'a', 'pen'],\n['He', 'has', 'a', 'book'],\n['She', 'has', 'a', 'cat']\n]\n# 定义语⾔模型\nunigram = {\n'I': 1/12,\n'have': 1/12,\n'a': 3/12,\n'pen': 1/12,\n'He': 1/12,\n'has': 2/12,\n'book': 1/12,\n'She': 1/12,\n'cat': 1/12\n}\n# 计算困惑度\nperplexity = 0\nfor sentence in sentences:\n    sentence_prob = 1\n    for word in sentence:\n        sentence_prob *= unigram[word]\n    sentence_perplexity = 1/sentence_prob\n    perplexity += math.log(sentence_perplexity, 2) #以2为底\nperplexity = 2 ** (-perplexity/len(sentences))\nprint('困惑度为：', perplexity)\n# 困惑度为： 0.0002296"
+  }
+]

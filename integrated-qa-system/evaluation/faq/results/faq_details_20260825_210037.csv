@@ -1,0 +1,217 @@
+threshold,id,case_type,query,expected_route,actual_route,expected_standard_question,predicted_standard_question,softmax_top1_score,raw_bm25_top1_score,route_correct,top1_correct,answer_correct,overall_correct,error_type,notes
+0.8,exact_001,exact,redis端口和连接,faq,faq,redis端口和连接,redis端口和连接,0.9999898396503487,19.528923988845122,True,True,True,True,,标准问题原句
+0.8,exact_002,exact,windows如何安装redis,faq,faq,windows如何安装redis,windows如何安装redis,0.9998178304411949,17.560250813608327,True,True,True,True,,标准问题原句
+0.8,exact_003,exact,linux下面查看端口占用,faq,faq,linux下面查看端口占用,linux下面查看端口占用,0.9999984738598092,27.329318821876665,True,True,True,True,,标准问题原句
+0.8,exact_004,exact,http中GET与POST请求区别,faq,faq,http中GET与POST请求区别,http中GET与POST请求区别,0.9999999999267326,33.110135883216095,True,True,True,True,,标准问题原句
+0.8,exact_005,exact,tcp服务器和客户端是什么意思,faq,faq,tcp服务器和客户端是什么意思,tcp服务器和客户端是什么意思,0.9999999958056474,30.765451339947816,True,True,True,True,,标准问题原句
+0.8,exact_006,exact,如何创建线程安全的单例对象,faq,faq,如何创建线程安全的单例对象,如何创建线程安全的单例对象,0.9999999998751019,30.958247196575346,True,True,True,True,,标准问题原句
+0.8,exact_007,exact,父进程会不会等待子进程结束才结束,faq,faq,父进程会不会等待子进程结束才结束,父进程会不会等待子进程结束才结束,1.0,55.4848839609247,True,True,True,True,,标准问题原句
+0.8,exact_008,exact,字符串类型和数字类型怎么比较大小,faq,faq,字符串类型和数字类型怎么比较大小,字符串类型和数字类型怎么比较大小,0.9999999999628182,38.38377472423805,True,True,True,True,,标准问题原句
+0.8,exact_009,exact,如何判断字符串中含有特殊字符,faq,faq,如何判断字符串中含有特殊字符,如何判断字符串中含有特殊字符,0.9999999942036906,27.98564160185841,True,True,True,True,,标准问题原句
+0.8,exact_010,exact,列表推导式单条件判断与2个条件判断使用,faq,faq,列表推导式单条件判断与2个条件判断使用,列表推导式单条件判断与2个条件判断使用,1.0,56.26305643243953,True,True,True,True,,标准问题原句
+0.8,exact_011,exact,docker 创建容器的参数,faq,faq,docker 创建容器的参数,docker 创建容器的参数,0.9999999244902348,24.062602425847928,True,True,True,True,,标准问题原句
+0.8,exact_012,exact,MySQL 全局变量查询,faq,faq,MySQL 全局变量查询,MySQL 全局变量查询,0.9999186342084497,17.63492974695424,True,True,True,True,,标准问题原句
+0.8,exact_013,exact,Java中变量与常量的区别是什么?,faq,faq,Java中变量与常量的区别是什么?,Java中变量与常量的区别是什么?,0.9999970777245158,31.23738395994077,True,True,True,True,,标准问题原句
+0.8,exact_014,exact,"数据库,明明关联会降低查询性能，为什么还会分出这么多表",faq,faq,"数据库,明明关联会降低查询性能，为什么还会分出这么多表","数据库,明明关联会降低查询性能，为什么还会分出这么多表",1.0,51.79776826919171,True,True,True,True,,标准问题原句
+0.8,exact_015,exact,PyCharm只能以单元测试方式运行python代码怎么解决,faq,faq,PyCharm只能以单元测试方式运行python代码怎么解决,PyCharm只能以单元测试方式运行python代码怎么解决,0.999999999999529,37.76611965210161,True,True,True,True,,标准问题原句
+0.8,paraphrase_001,paraphrase,Redis默认使用哪个端口，客户端怎样连接？,faq,faq,redis端口和连接,redis端口和连接,0.9946416414857859,15.707622819796384,True,True,True,True,,端口与连接同义改写
+0.8,paraphrase_002,paraphrase,Windows系统上怎么安装Redis？,faq,faq,windows如何安装redis,windows如何安装redis,0.9485918152208787,14.30114776259773,True,True,True,True,,操作系统与安装同义改写
+0.8,paraphrase_003,paraphrase,Linux中怎么查看是哪个程序占用了端口？,faq,faq,linux下面查看端口占用,linux下面查看端口占用,0.9997050588688393,22.065642300783185,True,True,True,True,,端口占用同义改写
+0.8,paraphrase_004,paraphrase,GET请求和POST请求有什么区别？,faq,faq,http中GET与POST请求区别,http中GET与POST请求区别,0.999999535424855,26.198367498021828,True,True,True,True,,HTTP问题同义改写
+0.8,paraphrase_005,paraphrase,TCP里的服务端和客户端分别代表什么？,faq,faq,tcp服务器和客户端是什么意思,tcp服务器和客户端是什么意思,0.9993403832022392,18.047867536287484,True,True,True,True,,TCP概念同义改写
+0.8,paraphrase_006,paraphrase,怎样实现一个线程安全的单例模式？,faq,faq,如何创建线程安全的单例对象,如何创建线程安全的单例对象,0.9999704755892173,19.33464870286852,True,True,True,True,,线程安全单例同义改写
+0.8,paraphrase_007,paraphrase,父进程是否一定会等子进程运行完再退出？,faq,faq,父进程会不会等待子进程结束才结束,父进程会不会等待子进程结束才结束,0.9830266783883819,16.572441529028048,True,True,True,True,,父子进程同义改写
+0.8,paraphrase_008,paraphrase,Python字符串能直接和数字比较大小吗？,faq,faq,字符串类型和数字类型怎么比较大小,字符串类型和数字类型怎么比较大小,0.9999944545507137,22.90025188133776,True,True,True,True,,类型比较同义改写
+0.8,paraphrase_009,paraphrase,怎么检测一个字符串里有没有特殊符号？,faq,rag,如何判断字符串中含有特殊字符,字符串类型和数字类型怎么比较大小,0.16012829684966062,7.1304803959501255,False,False,False,False,false_rejection,特殊字符同义改写
+0.8,paraphrase_010,paraphrase,列表推导式里单个条件和两个条件分别怎么写？,faq,faq,列表推导式单条件判断与2个条件判断使用,列表推导式单条件判断与2个条件判断使用,0.9999990933800267,26.844309634896728,True,True,True,True,,列表推导式同义改写
+0.8,paraphrase_011,paraphrase,创建Docker容器时可以使用哪些参数？,faq,faq,docker 创建容器的参数,docker 创建容器的参数,0.9999986549454889,22.876126312886107,True,True,True,True,,Docker参数同义改写
+0.8,paraphrase_012,paraphrase,怎样查看MySQL当前的全局变量？,faq,faq,MySQL 全局变量查询,MySQL 全局变量查询,0.9731502547311254,11.802058686278103,True,True,True,True,,MySQL查询同义改写
+0.8,paraphrase_013,paraphrase,Java里的常量与变量有什么不同？,faq,faq,Java中变量与常量的区别是什么?,Java中变量与常量的区别是什么?,0.9999301075454037,20.084843150292443,True,True,True,True,,Java基础同义改写
+0.8,paraphrase_014,paraphrase,数据库关联可能降低性能，为什么设计时还要拆分多张表？,faq,faq,"数据库,明明关联会降低查询性能，为什么还会分出这么多表","数据库,明明关联会降低查询性能，为什么还会分出这么多表",0.9999907749988073,20.742318930516998,True,True,True,True,,数据库设计同义改写
+0.8,paraphrase_015,paraphrase,PyCharm运行普通Python文件时总进入单元测试模式怎么办？,faq,faq,PyCharm只能以单元测试方式运行python代码怎么解决,PyCharm只能以单元测试方式运行python代码怎么解决,0.9395586005016329,13.698177482895959,True,True,True,True,,IDE问题同义改写
+0.8,hard_negative_001,hard_negative,你们的课程多少钱？,rag,rag,,"解锁后面的课程
+如何解锁后面的课程
+解锁后面的学科",0.7218308011510749,8.485023010737326,True,False,False,True,,已知易被FAQ误接收的课程咨询
+0.8,hard_negative_002,hard_negative,Java课程一共多少课时，学费是多少？,rag,rag,,"python中编码规范网址？
+pep8 规范哪里有
+老师python的规范的网站多少呢",0.7443887414521663,9.521389163032339,True,False,False,True,,课程业务信息，不属于技术FAQ
+0.8,hard_negative_003,hard_negative,Redis最新版本的商业授权价格是多少？,rag,rag,,redis 如何开启 远程访问？,0.22688112120494347,7.588830987853828,True,False,False,True,,包含Redis关键词但标准FAQ无答案
+0.8,hard_negative_004,hard_negative,Redis和Milvus哪个更适合做向量检索？,rag,rag,,redis端口和连接,0.5089286873779125,8.93656069203753,True,False,False,True,,跨技术方案比较
+0.8,hard_negative_005,hard_negative,Milvus的IVF_FLAT索引应该怎样设置nprobe？,rag,rag,,concurrent_log_handler 问题,0.1771231809680501,6.526272511948234,True,False,False,True,,当前FAQ语料外的Milvus问题
+0.8,hard_negative_006,hard_negative,BGE-M3生成的稠密向量是多少维？,rag,rag,,v-model是什么,0.14791474486077086,6.7956805129657205,True,False,False,True,,当前RAG项目知识问题
+0.8,hard_negative_007,hard_negative,DeepSeek API现在的收费标准是什么？,rag,rag,,Python中GC的垃圾回收算法是什么？,0.2217930638168343,8.154889849245881,True,False,False,True,,时效性外部信息
+0.8,hard_negative_008,hard_negative,这个知识库支持上传哪些文件格式？,rag,rag,,mysql不支持bool类型,0.3349782311121111,7.087657074719561,True,False,False,True,,项目知识问题
+0.8,hard_negative_009,hard_negative,Docker部署这个问答项目至少需要多少内存？,rag,rag,,Tomcat在docker里下载什么版本呢？,0.28142590979853527,7.1711998440339615,True,False,False,True,,包含Docker但标准FAQ无项目部署答案
+0.8,hard_negative_010,hard_negative,MySQL数据库的登录密码是什么？,rag,rag,,Python中GC的垃圾回收算法是什么？,0.13748154902204424,8.154889849245881,True,False,False,True,,包含MySQL但不应匹配普通FAQ
+0.8,hard_negative_011,hard_negative,课程老师今天几点开始直播？,rag,rag,,"解锁后面的课程
+如何解锁后面的课程
+解锁后面的学科",0.41959463951576276,7.061942585846078,True,False,False,True,,课程动态信息
+0.8,hard_negative_012,hard_negative,学习这个课程毕业后保证就业吗？,rag,rag,,"调整学习计划
+如何调整学习计划",0.31005761759307315,7.441533300199883,True,False,False,True,,课程承诺信息
+0.8,hard_negative_013,hard_negative,请总结RAG从文档切分到生成答案的完整流程,rag,rag,,激活码从哪里获得,0.49912257242560343,7.573650005498832,True,False,False,True,,RAG知识问题
+0.8,hard_negative_014,hard_negative,如何申请课程退款？,rag,rag,,"解锁后面的课程
+如何解锁后面的课程
+解锁后面的学科",0.7543195128579838,9.077317227601732,True,False,False,True,,课程政策问题
+0.8,hard_negative_015,hard_negative,Python和Java课程应该选哪一个？,rag,rag,,java代码运行显示数据库拒绝访问和jdk有关系吗？,0.4730535714661176,8.369234878923086,True,False,False,True,,包含Python和Java但需要咨询判断
+0.85,exact_001,exact,redis端口和连接,faq,faq,redis端口和连接,redis端口和连接,0.9999898396503487,19.528923988845122,True,True,True,True,,标准问题原句
+0.85,exact_002,exact,windows如何安装redis,faq,faq,windows如何安装redis,windows如何安装redis,0.9998178304411949,17.560250813608327,True,True,True,True,,标准问题原句
+0.85,exact_003,exact,linux下面查看端口占用,faq,faq,linux下面查看端口占用,linux下面查看端口占用,0.9999984738598092,27.329318821876665,True,True,True,True,,标准问题原句
+0.85,exact_004,exact,http中GET与POST请求区别,faq,faq,http中GET与POST请求区别,http中GET与POST请求区别,0.9999999999267326,33.110135883216095,True,True,True,True,,标准问题原句
+0.85,exact_005,exact,tcp服务器和客户端是什么意思,faq,faq,tcp服务器和客户端是什么意思,tcp服务器和客户端是什么意思,0.9999999958056474,30.765451339947816,True,True,True,True,,标准问题原句
+0.85,exact_006,exact,如何创建线程安全的单例对象,faq,faq,如何创建线程安全的单例对象,如何创建线程安全的单例对象,0.9999999998751019,30.958247196575346,True,True,True,True,,标准问题原句
+0.85,exact_007,exact,父进程会不会等待子进程结束才结束,faq,faq,父进程会不会等待子进程结束才结束,父进程会不会等待子进程结束才结束,1.0,55.4848839609247,True,True,True,True,,标准问题原句
+0.85,exact_008,exact,字符串类型和数字类型怎么比较大小,faq,faq,字符串类型和数字类型怎么比较大小,字符串类型和数字类型怎么比较大小,0.9999999999628182,38.38377472423805,True,True,True,True,,标准问题原句
+0.85,exact_009,exact,如何判断字符串中含有特殊字符,faq,faq,如何判断字符串中含有特殊字符,如何判断字符串中含有特殊字符,0.9999999942036906,27.98564160185841,True,True,True,True,,标准问题原句
+0.85,exact_010,exact,列表推导式单条件判断与2个条件判断使用,faq,faq,列表推导式单条件判断与2个条件判断使用,列表推导式单条件判断与2个条件判断使用,1.0,56.26305643243953,True,True,True,True,,标准问题原句
+0.85,exact_011,exact,docker 创建容器的参数,faq,faq,docker 创建容器的参数,docker 创建容器的参数,0.9999999244902348,24.062602425847928,True,True,True,True,,标准问题原句
+0.85,exact_012,exact,MySQL 全局变量查询,faq,faq,MySQL 全局变量查询,MySQL 全局变量查询,0.9999186342084497,17.63492974695424,True,True,True,True,,标准问题原句
+0.85,exact_013,exact,Java中变量与常量的区别是什么?,faq,faq,Java中变量与常量的区别是什么?,Java中变量与常量的区别是什么?,0.9999970777245158,31.23738395994077,True,True,True,True,,标准问题原句
+0.85,exact_014,exact,"数据库,明明关联会降低查询性能，为什么还会分出这么多表",faq,faq,"数据库,明明关联会降低查询性能，为什么还会分出这么多表","数据库,明明关联会降低查询性能，为什么还会分出这么多表",1.0,51.79776826919171,True,True,True,True,,标准问题原句
+0.85,exact_015,exact,PyCharm只能以单元测试方式运行python代码怎么解决,faq,faq,PyCharm只能以单元测试方式运行python代码怎么解决,PyCharm只能以单元测试方式运行python代码怎么解决,0.999999999999529,37.76611965210161,True,True,True,True,,标准问题原句
+0.85,paraphrase_001,paraphrase,Redis默认使用哪个端口，客户端怎样连接？,faq,faq,redis端口和连接,redis端口和连接,0.9946416414857859,15.707622819796384,True,True,True,True,,端口与连接同义改写
+0.85,paraphrase_002,paraphrase,Windows系统上怎么安装Redis？,faq,faq,windows如何安装redis,windows如何安装redis,0.9485918152208787,14.30114776259773,True,True,True,True,,操作系统与安装同义改写
+0.85,paraphrase_003,paraphrase,Linux中怎么查看是哪个程序占用了端口？,faq,faq,linux下面查看端口占用,linux下面查看端口占用,0.9997050588688393,22.065642300783185,True,True,True,True,,端口占用同义改写
+0.85,paraphrase_004,paraphrase,GET请求和POST请求有什么区别？,faq,faq,http中GET与POST请求区别,http中GET与POST请求区别,0.999999535424855,26.198367498021828,True,True,True,True,,HTTP问题同义改写
+0.85,paraphrase_005,paraphrase,TCP里的服务端和客户端分别代表什么？,faq,faq,tcp服务器和客户端是什么意思,tcp服务器和客户端是什么意思,0.9993403832022392,18.047867536287484,True,True,True,True,,TCP概念同义改写
+0.85,paraphrase_006,paraphrase,怎样实现一个线程安全的单例模式？,faq,faq,如何创建线程安全的单例对象,如何创建线程安全的单例对象,0.9999704755892173,19.33464870286852,True,True,True,True,,线程安全单例同义改写
+0.85,paraphrase_007,paraphrase,父进程是否一定会等子进程运行完再退出？,faq,faq,父进程会不会等待子进程结束才结束,父进程会不会等待子进程结束才结束,0.9830266783883819,16.572441529028048,True,True,True,True,,父子进程同义改写
+0.85,paraphrase_008,paraphrase,Python字符串能直接和数字比较大小吗？,faq,faq,字符串类型和数字类型怎么比较大小,字符串类型和数字类型怎么比较大小,0.9999944545507137,22.90025188133776,True,True,True,True,,类型比较同义改写
+0.85,paraphrase_009,paraphrase,怎么检测一个字符串里有没有特殊符号？,faq,rag,如何判断字符串中含有特殊字符,字符串类型和数字类型怎么比较大小,0.16012829684966062,7.1304803959501255,False,False,False,False,false_rejection,特殊字符同义改写
+0.85,paraphrase_010,paraphrase,列表推导式里单个条件和两个条件分别怎么写？,faq,faq,列表推导式单条件判断与2个条件判断使用,列表推导式单条件判断与2个条件判断使用,0.9999990933800267,26.844309634896728,True,True,True,True,,列表推导式同义改写
+0.85,paraphrase_011,paraphrase,创建Docker容器时可以使用哪些参数？,faq,faq,docker 创建容器的参数,docker 创建容器的参数,0.9999986549454889,22.876126312886107,True,True,True,True,,Docker参数同义改写
+0.85,paraphrase_012,paraphrase,怎样查看MySQL当前的全局变量？,faq,faq,MySQL 全局变量查询,MySQL 全局变量查询,0.9731502547311254,11.802058686278103,True,True,True,True,,MySQL查询同义改写
+0.85,paraphrase_013,paraphrase,Java里的常量与变量有什么不同？,faq,faq,Java中变量与常量的区别是什么?,Java中变量与常量的区别是什么?,0.9999301075454037,20.084843150292443,True,True,True,True,,Java基础同义改写
+0.85,paraphrase_014,paraphrase,数据库关联可能降低性能，为什么设计时还要拆分多张表？,faq,faq,"数据库,明明关联会降低查询性能，为什么还会分出这么多表","数据库,明明关联会降低查询性能，为什么还会分出这么多表",0.9999907749988073,20.742318930516998,True,True,True,True,,数据库设计同义改写
+0.85,paraphrase_015,paraphrase,PyCharm运行普通Python文件时总进入单元测试模式怎么办？,faq,faq,PyCharm只能以单元测试方式运行python代码怎么解决,PyCharm只能以单元测试方式运行python代码怎么解决,0.9395586005016329,13.698177482895959,True,True,True,True,,IDE问题同义改写
+0.85,hard_negative_001,hard_negative,你们的课程多少钱？,rag,rag,,"解锁后面的课程
+如何解锁后面的课程
+解锁后面的学科",0.7218308011510749,8.485023010737326,True,False,False,True,,已知易被FAQ误接收的课程咨询
+0.85,hard_negative_002,hard_negative,Java课程一共多少课时，学费是多少？,rag,rag,,"python中编码规范网址？
+pep8 规范哪里有
+老师python的规范的网站多少呢",0.7443887414521663,9.521389163032339,True,False,False,True,,课程业务信息，不属于技术FAQ
+0.85,hard_negative_003,hard_negative,Redis最新版本的商业授权价格是多少？,rag,rag,,redis 如何开启 远程访问？,0.22688112120494347,7.588830987853828,True,False,False,True,,包含Redis关键词但标准FAQ无答案
+0.85,hard_negative_004,hard_negative,Redis和Milvus哪个更适合做向量检索？,rag,rag,,redis端口和连接,0.5089286873779125,8.93656069203753,True,False,False,True,,跨技术方案比较
+0.85,hard_negative_005,hard_negative,Milvus的IVF_FLAT索引应该怎样设置nprobe？,rag,rag,,concurrent_log_handler 问题,0.1771231809680501,6.526272511948234,True,False,False,True,,当前FAQ语料外的Milvus问题
+0.85,hard_negative_006,hard_negative,BGE-M3生成的稠密向量是多少维？,rag,rag,,v-model是什么,0.14791474486077086,6.7956805129657205,True,False,False,True,,当前RAG项目知识问题
+0.85,hard_negative_007,hard_negative,DeepSeek API现在的收费标准是什么？,rag,rag,,Python中GC的垃圾回收算法是什么？,0.2217930638168343,8.154889849245881,True,False,False,True,,时效性外部信息
+0.85,hard_negative_008,hard_negative,这个知识库支持上传哪些文件格式？,rag,rag,,mysql不支持bool类型,0.3349782311121111,7.087657074719561,True,False,False,True,,项目知识问题
+0.85,hard_negative_009,hard_negative,Docker部署这个问答项目至少需要多少内存？,rag,rag,,Tomcat在docker里下载什么版本呢？,0.28142590979853527,7.1711998440339615,True,False,False,True,,包含Docker但标准FAQ无项目部署答案
+0.85,hard_negative_010,hard_negative,MySQL数据库的登录密码是什么？,rag,rag,,Python中GC的垃圾回收算法是什么？,0.13748154902204424,8.154889849245881,True,False,False,True,,包含MySQL但不应匹配普通FAQ
+0.85,hard_negative_011,hard_negative,课程老师今天几点开始直播？,rag,rag,,"解锁后面的课程
+如何解锁后面的课程
+解锁后面的学科",0.41959463951576276,7.061942585846078,True,False,False,True,,课程动态信息
+0.85,hard_negative_012,hard_negative,学习这个课程毕业后保证就业吗？,rag,rag,,"调整学习计划
+如何调整学习计划",0.31005761759307315,7.441533300199883,True,False,False,True,,课程承诺信息
+0.85,hard_negative_013,hard_negative,请总结RAG从文档切分到生成答案的完整流程,rag,rag,,激活码从哪里获得,0.49912257242560343,7.573650005498832,True,False,False,True,,RAG知识问题
+0.85,hard_negative_014,hard_negative,如何申请课程退款？,rag,rag,,"解锁后面的课程
+如何解锁后面的课程
+解锁后面的学科",0.7543195128579838,9.077317227601732,True,False,False,True,,课程政策问题
+0.85,hard_negative_015,hard_negative,Python和Java课程应该选哪一个？,rag,rag,,java代码运行显示数据库拒绝访问和jdk有关系吗？,0.4730535714661176,8.369234878923086,True,False,False,True,,包含Python和Java但需要咨询判断
+0.9,exact_001,exact,redis端口和连接,faq,faq,redis端口和连接,redis端口和连接,0.9999898396503487,19.528923988845122,True,True,True,True,,标准问题原句
+0.9,exact_002,exact,windows如何安装redis,faq,faq,windows如何安装redis,windows如何安装redis,0.9998178304411949,17.560250813608327,True,True,True,True,,标准问题原句
+0.9,exact_003,exact,linux下面查看端口占用,faq,faq,linux下面查看端口占用,linux下面查看端口占用,0.9999984738598092,27.329318821876665,True,True,True,True,,标准问题原句
+0.9,exact_004,exact,http中GET与POST请求区别,faq,faq,http中GET与POST请求区别,http中GET与POST请求区别,0.9999999999267326,33.110135883216095,True,True,True,True,,标准问题原句
+0.9,exact_005,exact,tcp服务器和客户端是什么意思,faq,faq,tcp服务器和客户端是什么意思,tcp服务器和客户端是什么意思,0.9999999958056474,30.765451339947816,True,True,True,True,,标准问题原句
+0.9,exact_006,exact,如何创建线程安全的单例对象,faq,faq,如何创建线程安全的单例对象,如何创建线程安全的单例对象,0.9999999998751019,30.958247196575346,True,True,True,True,,标准问题原句
+0.9,exact_007,exact,父进程会不会等待子进程结束才结束,faq,faq,父进程会不会等待子进程结束才结束,父进程会不会等待子进程结束才结束,1.0,55.4848839609247,True,True,True,True,,标准问题原句
+0.9,exact_008,exact,字符串类型和数字类型怎么比较大小,faq,faq,字符串类型和数字类型怎么比较大小,字符串类型和数字类型怎么比较大小,0.9999999999628182,38.38377472423805,True,True,True,True,,标准问题原句
+0.9,exact_009,exact,如何判断字符串中含有特殊字符,faq,faq,如何判断字符串中含有特殊字符,如何判断字符串中含有特殊字符,0.9999999942036906,27.98564160185841,True,True,True,True,,标准问题原句
+0.9,exact_010,exact,列表推导式单条件判断与2个条件判断使用,faq,faq,列表推导式单条件判断与2个条件判断使用,列表推导式单条件判断与2个条件判断使用,1.0,56.26305643243953,True,True,True,True,,标准问题原句
+0.9,exact_011,exact,docker 创建容器的参数,faq,faq,docker 创建容器的参数,docker 创建容器的参数,0.9999999244902348,24.062602425847928,True,True,True,True,,标准问题原句
+0.9,exact_012,exact,MySQL 全局变量查询,faq,faq,MySQL 全局变量查询,MySQL 全局变量查询,0.9999186342084497,17.63492974695424,True,True,True,True,,标准问题原句
+0.9,exact_013,exact,Java中变量与常量的区别是什么?,faq,faq,Java中变量与常量的区别是什么?,Java中变量与常量的区别是什么?,0.9999970777245158,31.23738395994077,True,True,True,True,,标准问题原句
+0.9,exact_014,exact,"数据库,明明关联会降低查询性能，为什么还会分出这么多表",faq,faq,"数据库,明明关联会降低查询性能，为什么还会分出这么多表","数据库,明明关联会降低查询性能，为什么还会分出这么多表",1.0,51.79776826919171,True,True,True,True,,标准问题原句
+0.9,exact_015,exact,PyCharm只能以单元测试方式运行python代码怎么解决,faq,faq,PyCharm只能以单元测试方式运行python代码怎么解决,PyCharm只能以单元测试方式运行python代码怎么解决,0.999999999999529,37.76611965210161,True,True,True,True,,标准问题原句
+0.9,paraphrase_001,paraphrase,Redis默认使用哪个端口，客户端怎样连接？,faq,faq,redis端口和连接,redis端口和连接,0.9946416414857859,15.707622819796384,True,True,True,True,,端口与连接同义改写
+0.9,paraphrase_002,paraphrase,Windows系统上怎么安装Redis？,faq,faq,windows如何安装redis,windows如何安装redis,0.9485918152208787,14.30114776259773,True,True,True,True,,操作系统与安装同义改写
+0.9,paraphrase_003,paraphrase,Linux中怎么查看是哪个程序占用了端口？,faq,faq,linux下面查看端口占用,linux下面查看端口占用,0.9997050588688393,22.065642300783185,True,True,True,True,,端口占用同义改写
+0.9,paraphrase_004,paraphrase,GET请求和POST请求有什么区别？,faq,faq,http中GET与POST请求区别,http中GET与POST请求区别,0.999999535424855,26.198367498021828,True,True,True,True,,HTTP问题同义改写
+0.9,paraphrase_005,paraphrase,TCP里的服务端和客户端分别代表什么？,faq,faq,tcp服务器和客户端是什么意思,tcp服务器和客户端是什么意思,0.9993403832022392,18.047867536287484,True,True,True,True,,TCP概念同义改写
+0.9,paraphrase_006,paraphrase,怎样实现一个线程安全的单例模式？,faq,faq,如何创建线程安全的单例对象,如何创建线程安全的单例对象,0.9999704755892173,19.33464870286852,True,True,True,True,,线程安全单例同义改写
+0.9,paraphrase_007,paraphrase,父进程是否一定会等子进程运行完再退出？,faq,faq,父进程会不会等待子进程结束才结束,父进程会不会等待子进程结束才结束,0.9830266783883819,16.572441529028048,True,True,True,True,,父子进程同义改写
+0.9,paraphrase_008,paraphrase,Python字符串能直接和数字比较大小吗？,faq,faq,字符串类型和数字类型怎么比较大小,字符串类型和数字类型怎么比较大小,0.9999944545507137,22.90025188133776,True,True,True,True,,类型比较同义改写
+0.9,paraphrase_009,paraphrase,怎么检测一个字符串里有没有特殊符号？,faq,rag,如何判断字符串中含有特殊字符,字符串类型和数字类型怎么比较大小,0.16012829684966062,7.1304803959501255,False,False,False,False,false_rejection,特殊字符同义改写
+0.9,paraphrase_010,paraphrase,列表推导式里单个条件和两个条件分别怎么写？,faq,faq,列表推导式单条件判断与2个条件判断使用,列表推导式单条件判断与2个条件判断使用,0.9999990933800267,26.844309634896728,True,True,True,True,,列表推导式同义改写
+0.9,paraphrase_011,paraphrase,创建Docker容器时可以使用哪些参数？,faq,faq,docker 创建容器的参数,docker 创建容器的参数,0.9999986549454889,22.876126312886107,True,True,True,True,,Docker参数同义改写
+0.9,paraphrase_012,paraphrase,怎样查看MySQL当前的全局变量？,faq,faq,MySQL 全局变量查询,MySQL 全局变量查询,0.9731502547311254,11.802058686278103,True,True,True,True,,MySQL查询同义改写
+0.9,paraphrase_013,paraphrase,Java里的常量与变量有什么不同？,faq,faq,Java中变量与常量的区别是什么?,Java中变量与常量的区别是什么?,0.9999301075454037,20.084843150292443,True,True,True,True,,Java基础同义改写
+0.9,paraphrase_014,paraphrase,数据库关联可能降低性能，为什么设计时还要拆分多张表？,faq,faq,"数据库,明明关联会降低查询性能，为什么还会分出这么多表","数据库,明明关联会降低查询性能，为什么还会分出这么多表",0.9999907749988073,20.742318930516998,True,True,True,True,,数据库设计同义改写
+0.9,paraphrase_015,paraphrase,PyCharm运行普通Python文件时总进入单元测试模式怎么办？,faq,faq,PyCharm只能以单元测试方式运行python代码怎么解决,PyCharm只能以单元测试方式运行python代码怎么解决,0.9395586005016329,13.698177482895959,True,True,True,True,,IDE问题同义改写
+0.9,hard_negative_001,hard_negative,你们的课程多少钱？,rag,rag,,"解锁后面的课程
+如何解锁后面的课程
+解锁后面的学科",0.7218308011510749,8.485023010737326,True,False,False,True,,已知易被FAQ误接收的课程咨询
+0.9,hard_negative_002,hard_negative,Java课程一共多少课时，学费是多少？,rag,rag,,"python中编码规范网址？
+pep8 规范哪里有
+老师python的规范的网站多少呢",0.7443887414521663,9.521389163032339,True,False,False,True,,课程业务信息，不属于技术FAQ
+0.9,hard_negative_003,hard_negative,Redis最新版本的商业授权价格是多少？,rag,rag,,redis 如何开启 远程访问？,0.22688112120494347,7.588830987853828,True,False,False,True,,包含Redis关键词但标准FAQ无答案
+0.9,hard_negative_004,hard_negative,Redis和Milvus哪个更适合做向量检索？,rag,rag,,redis端口和连接,0.5089286873779125,8.93656069203753,True,False,False,True,,跨技术方案比较
+0.9,hard_negative_005,hard_negative,Milvus的IVF_FLAT索引应该怎样设置nprobe？,rag,rag,,concurrent_log_handler 问题,0.1771231809680501,6.526272511948234,True,False,False,True,,当前FAQ语料外的Milvus问题
+0.9,hard_negative_006,hard_negative,BGE-M3生成的稠密向量是多少维？,rag,rag,,v-model是什么,0.14791474486077086,6.7956805129657205,True,False,False,True,,当前RAG项目知识问题
+0.9,hard_negative_007,hard_negative,DeepSeek API现在的收费标准是什么？,rag,rag,,Python中GC的垃圾回收算法是什么？,0.2217930638168343,8.154889849245881,True,False,False,True,,时效性外部信息
+0.9,hard_negative_008,hard_negative,这个知识库支持上传哪些文件格式？,rag,rag,,mysql不支持bool类型,0.3349782311121111,7.087657074719561,True,False,False,True,,项目知识问题
+0.9,hard_negative_009,hard_negative,Docker部署这个问答项目至少需要多少内存？,rag,rag,,Tomcat在docker里下载什么版本呢？,0.28142590979853527,7.1711998440339615,True,False,False,True,,包含Docker但标准FAQ无项目部署答案
+0.9,hard_negative_010,hard_negative,MySQL数据库的登录密码是什么？,rag,rag,,Python中GC的垃圾回收算法是什么？,0.13748154902204424,8.154889849245881,True,False,False,True,,包含MySQL但不应匹配普通FAQ
+0.9,hard_negative_011,hard_negative,课程老师今天几点开始直播？,rag,rag,,"解锁后面的课程
+如何解锁后面的课程
+解锁后面的学科",0.41959463951576276,7.061942585846078,True,False,False,True,,课程动态信息
+0.9,hard_negative_012,hard_negative,学习这个课程毕业后保证就业吗？,rag,rag,,"调整学习计划
+如何调整学习计划",0.31005761759307315,7.441533300199883,True,False,False,True,,课程承诺信息
+0.9,hard_negative_013,hard_negative,请总结RAG从文档切分到生成答案的完整流程,rag,rag,,激活码从哪里获得,0.49912257242560343,7.573650005498832,True,False,False,True,,RAG知识问题
+0.9,hard_negative_014,hard_negative,如何申请课程退款？,rag,rag,,"解锁后面的课程
+如何解锁后面的课程
+解锁后面的学科",0.7543195128579838,9.077317227601732,True,False,False,True,,课程政策问题
+0.9,hard_negative_015,hard_negative,Python和Java课程应该选哪一个？,rag,rag,,java代码运行显示数据库拒绝访问和jdk有关系吗？,0.4730535714661176,8.369234878923086,True,False,False,True,,包含Python和Java但需要咨询判断
+0.95,exact_001,exact,redis端口和连接,faq,faq,redis端口和连接,redis端口和连接,0.9999898396503487,19.528923988845122,True,True,True,True,,标准问题原句
+0.95,exact_002,exact,windows如何安装redis,faq,faq,windows如何安装redis,windows如何安装redis,0.9998178304411949,17.560250813608327,True,True,True,True,,标准问题原句
+0.95,exact_003,exact,linux下面查看端口占用,faq,faq,linux下面查看端口占用,linux下面查看端口占用,0.9999984738598092,27.329318821876665,True,True,True,True,,标准问题原句
+0.95,exact_004,exact,http中GET与POST请求区别,faq,faq,http中GET与POST请求区别,http中GET与POST请求区别,0.9999999999267326,33.110135883216095,True,True,True,True,,标准问题原句
+0.95,exact_005,exact,tcp服务器和客户端是什么意思,faq,faq,tcp服务器和客户端是什么意思,tcp服务器和客户端是什么意思,0.9999999958056474,30.765451339947816,True,True,True,True,,标准问题原句
+0.95,exact_006,exact,如何创建线程安全的单例对象,faq,faq,如何创建线程安全的单例对象,如何创建线程安全的单例对象,0.9999999998751019,30.958247196575346,True,True,True,True,,标准问题原句
+0.95,exact_007,exact,父进程会不会等待子进程结束才结束,faq,faq,父进程会不会等待子进程结束才结束,父进程会不会等待子进程结束才结束,1.0,55.4848839609247,True,True,True,True,,标准问题原句
+0.95,exact_008,exact,字符串类型和数字类型怎么比较大小,faq,faq,字符串类型和数字类型怎么比较大小,字符串类型和数字类型怎么比较大小,0.9999999999628182,38.38377472423805,True,True,True,True,,标准问题原句
+0.95,exact_009,exact,如何判断字符串中含有特殊字符,faq,faq,如何判断字符串中含有特殊字符,如何判断字符串中含有特殊字符,0.9999999942036906,27.98564160185841,True,True,True,True,,标准问题原句
+0.95,exact_010,exact,列表推导式单条件判断与2个条件判断使用,faq,faq,列表推导式单条件判断与2个条件判断使用,列表推导式单条件判断与2个条件判断使用,1.0,56.26305643243953,True,True,True,True,,标准问题原句
+0.95,exact_011,exact,docker 创建容器的参数,faq,faq,docker 创建容器的参数,docker 创建容器的参数,0.9999999244902348,24.062602425847928,True,True,True,True,,标准问题原句
+0.95,exact_012,exact,MySQL 全局变量查询,faq,faq,MySQL 全局变量查询,MySQL 全局变量查询,0.9999186342084497,17.63492974695424,True,True,True,True,,标准问题原句
+0.95,exact_013,exact,Java中变量与常量的区别是什么?,faq,faq,Java中变量与常量的区别是什么?,Java中变量与常量的区别是什么?,0.9999970777245158,31.23738395994077,True,True,True,True,,标准问题原句
+0.95,exact_014,exact,"数据库,明明关联会降低查询性能，为什么还会分出这么多表",faq,faq,"数据库,明明关联会降低查询性能，为什么还会分出这么多表","数据库,明明关联会降低查询性能，为什么还会分出这么多表",1.0,51.79776826919171,True,True,True,True,,标准问题原句
+0.95,exact_015,exact,PyCharm只能以单元测试方式运行python代码怎么解决,faq,faq,PyCharm只能以单元测试方式运行python代码怎么解决,PyCharm只能以单元测试方式运行python代码怎么解决,0.999999999999529,37.76611965210161,True,True,True,True,,标准问题原句
+0.95,paraphrase_001,paraphrase,Redis默认使用哪个端口，客户端怎样连接？,faq,faq,redis端口和连接,redis端口和连接,0.9946416414857859,15.707622819796384,True,True,True,True,,端口与连接同义改写
+0.95,paraphrase_002,paraphrase,Windows系统上怎么安装Redis？,faq,rag,windows如何安装redis,windows如何安装redis,0.9485918152208787,14.30114776259773,False,True,False,False,false_rejection,操作系统与安装同义改写
+0.95,paraphrase_003,paraphrase,Linux中怎么查看是哪个程序占用了端口？,faq,faq,linux下面查看端口占用,linux下面查看端口占用,0.9997050588688393,22.065642300783185,True,True,True,True,,端口占用同义改写
+0.95,paraphrase_004,paraphrase,GET请求和POST请求有什么区别？,faq,faq,http中GET与POST请求区别,http中GET与POST请求区别,0.999999535424855,26.198367498021828,True,True,True,True,,HTTP问题同义改写
+0.95,paraphrase_005,paraphrase,TCP里的服务端和客户端分别代表什么？,faq,faq,tcp服务器和客户端是什么意思,tcp服务器和客户端是什么意思,0.9993403832022392,18.047867536287484,True,True,True,True,,TCP概念同义改写
+0.95,paraphrase_006,paraphrase,怎样实现一个线程安全的单例模式？,faq,faq,如何创建线程安全的单例对象,如何创建线程安全的单例对象,0.9999704755892173,19.33464870286852,True,True,True,True,,线程安全单例同义改写
+0.95,paraphrase_007,paraphrase,父进程是否一定会等子进程运行完再退出？,faq,faq,父进程会不会等待子进程结束才结束,父进程会不会等待子进程结束才结束,0.9830266783883819,16.572441529028048,True,True,True,True,,父子进程同义改写
+0.95,paraphrase_008,paraphrase,Python字符串能直接和数字比较大小吗？,faq,faq,字符串类型和数字类型怎么比较大小,字符串类型和数字类型怎么比较大小,0.9999944545507137,22.90025188133776,True,True,True,True,,类型比较同义改写
+0.95,paraphrase_009,paraphrase,怎么检测一个字符串里有没有特殊符号？,faq,rag,如何判断字符串中含有特殊字符,字符串类型和数字类型怎么比较大小,0.16012829684966062,7.1304803959501255,False,False,False,False,false_rejection,特殊字符同义改写
+0.95,paraphrase_010,paraphrase,列表推导式里单个条件和两个条件分别怎么写？,faq,faq,列表推导式单条件判断与2个条件判断使用,列表推导式单条件判断与2个条件判断使用,0.9999990933800267,26.844309634896728,True,True,True,True,,列表推导式同义改写
+0.95,paraphrase_011,paraphrase,创建Docker容器时可以使用哪些参数？,faq,faq,docker 创建容器的参数,docker 创建容器的参数,0.9999986549454889,22.876126312886107,True,True,True,True,,Docker参数同义改写
+0.95,paraphrase_012,paraphrase,怎样查看MySQL当前的全局变量？,faq,faq,MySQL 全局变量查询,MySQL 全局变量查询,0.9731502547311254,11.802058686278103,True,True,True,True,,MySQL查询同义改写
+0.95,paraphrase_013,paraphrase,Java里的常量与变量有什么不同？,faq,faq,Java中变量与常量的区别是什么?,Java中变量与常量的区别是什么?,0.9999301075454037,20.084843150292443,True,True,True,True,,Java基础同义改写
+0.95,paraphrase_014,paraphrase,数据库关联可能降低性能，为什么设计时还要拆分多张表？,faq,faq,"数据库,明明关联会降低查询性能，为什么还会分出这么多表","数据库,明明关联会降低查询性能，为什么还会分出这么多表",0.9999907749988073,20.742318930516998,True,True,True,True,,数据库设计同义改写
+0.95,paraphrase_015,paraphrase,PyCharm运行普通Python文件时总进入单元测试模式怎么办？,faq,rag,PyCharm只能以单元测试方式运行python代码怎么解决,PyCharm只能以单元测试方式运行python代码怎么解决,0.9395586005016329,13.698177482895959,False,True,False,False,false_rejection,IDE问题同义改写
+0.95,hard_negative_001,hard_negative,你们的课程多少钱？,rag,rag,,"解锁后面的课程
+如何解锁后面的课程
+解锁后面的学科",0.7218308011510749,8.485023010737326,True,False,False,True,,已知易被FAQ误接收的课程咨询
+0.95,hard_negative_002,hard_negative,Java课程一共多少课时，学费是多少？,rag,rag,,"python中编码规范网址？
+pep8 规范哪里有
+老师python的规范的网站多少呢",0.7443887414521663,9.521389163032339,True,False,False,True,,课程业务信息，不属于技术FAQ
+0.95,hard_negative_003,hard_negative,Redis最新版本的商业授权价格是多少？,rag,rag,,redis 如何开启 远程访问？,0.22688112120494347,7.588830987853828,True,False,False,True,,包含Redis关键词但标准FAQ无答案
+0.95,hard_negative_004,hard_negative,Redis和Milvus哪个更适合做向量检索？,rag,rag,,redis端口和连接,0.5089286873779125,8.93656069203753,True,False,False,True,,跨技术方案比较
+0.95,hard_negative_005,hard_negative,Milvus的IVF_FLAT索引应该怎样设置nprobe？,rag,rag,,concurrent_log_handler 问题,0.1771231809680501,6.526272511948234,True,False,False,True,,当前FAQ语料外的Milvus问题
+0.95,hard_negative_006,hard_negative,BGE-M3生成的稠密向量是多少维？,rag,rag,,v-model是什么,0.14791474486077086,6.7956805129657205,True,False,False,True,,当前RAG项目知识问题
+0.95,hard_negative_007,hard_negative,DeepSeek API现在的收费标准是什么？,rag,rag,,Python中GC的垃圾回收算法是什么？,0.2217930638168343,8.154889849245881,True,False,False,True,,时效性外部信息
+0.95,hard_negative_008,hard_negative,这个知识库支持上传哪些文件格式？,rag,rag,,mysql不支持bool类型,0.3349782311121111,7.087657074719561,True,False,False,True,,项目知识问题
+0.95,hard_negative_009,hard_negative,Docker部署这个问答项目至少需要多少内存？,rag,rag,,Tomcat在docker里下载什么版本呢？,0.28142590979853527,7.1711998440339615,True,False,False,True,,包含Docker但标准FAQ无项目部署答案
+0.95,hard_negative_010,hard_negative,MySQL数据库的登录密码是什么？,rag,rag,,Python中GC的垃圾回收算法是什么？,0.13748154902204424,8.154889849245881,True,False,False,True,,包含MySQL但不应匹配普通FAQ
+0.95,hard_negative_011,hard_negative,课程老师今天几点开始直播？,rag,rag,,"解锁后面的课程
+如何解锁后面的课程
+解锁后面的学科",0.41959463951576276,7.061942585846078,True,False,False,True,,课程动态信息
+0.95,hard_negative_012,hard_negative,学习这个课程毕业后保证就业吗？,rag,rag,,"调整学习计划
+如何调整学习计划",0.31005761759307315,7.441533300199883,True,False,False,True,,课程承诺信息
+0.95,hard_negative_013,hard_negative,请总结RAG从文档切分到生成答案的完整流程,rag,rag,,激活码从哪里获得,0.49912257242560343,7.573650005498832,True,False,False,True,,RAG知识问题
+0.95,hard_negative_014,hard_negative,如何申请课程退款？,rag,rag,,"解锁后面的课程
+如何解锁后面的课程
+解锁后面的学科",0.7543195128579838,9.077317227601732,True,False,False,True,,课程政策问题
+0.95,hard_negative_015,hard_negative,Python和Java课程应该选哪一个？,rag,rag,,java代码运行显示数据库拒绝访问和jdk有关系吗？,0.4730535714661176,8.369234878923086,True,False,False,True,,包含Python和Java但需要咨询判断

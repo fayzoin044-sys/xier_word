@@ -1,0 +1,179 @@
+{
+  "generated_at": "2026-08-25T21:00:37-06:00",
+  "dataset": "${PROJECT_ROOT}\\evaluation\\faq\\data\\faq_golden.jsonl",
+  "faq_csv": "${PROJECT_ROOT}\\mysql_qa\\data\\JP学科知识问答.csv",
+  "summaries": [
+    {
+      "threshold": 0.8,
+      "total_cases": 45,
+      "faq_expected_cases": 30,
+      "rag_expected_cases": 15,
+      "overall_correct_count": 44,
+      "overall_accuracy": 0.9777777777777777,
+      "route_accuracy": 0.9777777777777777,
+      "top1_accuracy": 0.9666666666666667,
+      "accepted_answer_accuracy": 0.9666666666666667,
+      "accepted_faq_precision": 1.0,
+      "false_rejection_count": 1,
+      "false_rejection_rate": 0.03333333333333333,
+      "wrong_faq_match_count": 0,
+      "wrong_faq_match_rate": 0.0,
+      "hard_negative_rejection_count": 15,
+      "hard_negative_rejection_accuracy": 1.0,
+      "false_acceptance_count": 0,
+      "false_acceptance_rate": 0.0,
+      "case_types": {
+        "exact": {
+          "count": 15,
+          "overall_correct_count": 15,
+          "overall_accuracy": 1.0,
+          "average_softmax_top1_score": 0.9999814513432048
+        },
+        "hard_negative": {
+          "count": 15,
+          "overall_correct_count": 15,
+          "overall_accuracy": 1.0,
+          "average_softmax_top1_score": 0.39725959630819896
+        },
+        "paraphrase": {
+          "count": 15,
+          "overall_correct_count": 14,
+          "overall_accuracy": 0.9333333333333333,
+          "average_softmax_top1_score": 0.9332017217122037
+        }
+      },
+      "error_counts": {
+        "false_rejection": 1
+      }
+    },
+    {
+      "threshold": 0.85,
+      "total_cases": 45,
+      "faq_expected_cases": 30,
+      "rag_expected_cases": 15,
+      "overall_correct_count": 44,
+      "overall_accuracy": 0.9777777777777777,
+      "route_accuracy": 0.9777777777777777,
+      "top1_accuracy": 0.9666666666666667,
+      "accepted_answer_accuracy": 0.9666666666666667,
+      "accepted_faq_precision": 1.0,
+      "false_rejection_count": 1,
+      "false_rejection_rate": 0.03333333333333333,
+      "wrong_faq_match_count": 0,
+      "wrong_faq_match_rate": 0.0,
+      "hard_negative_rejection_count": 15,
+      "hard_negative_rejection_accuracy": 1.0,
+      "false_acceptance_count": 0,
+      "false_acceptance_rate": 0.0,
+      "case_types": {
+        "exact": {
+          "count": 15,
+          "overall_correct_count": 15,
+          "overall_accuracy": 1.0,
+          "average_softmax_top1_score": 0.9999814513432048
+        },
+        "hard_negative": {
+          "count": 15,
+          "overall_correct_count": 15,
+          "overall_accuracy": 1.0,
+          "average_softmax_top1_score": 0.39725959630819896
+        },
+        "paraphrase": {
+          "count": 15,
+          "overall_correct_count": 14,
+          "overall_accuracy": 0.9333333333333333,
+          "average_softmax_top1_score": 0.9332017217122037
+        }
+      },
+      "error_counts": {
+        "false_rejection": 1
+      }
+    },
+    {
+      "threshold": 0.9,
+      "total_cases": 45,
+      "faq_expected_cases": 30,
+      "rag_expected_cases": 15,
+      "overall_correct_count": 44,
+      "overall_accuracy": 0.9777777777777777,
+      "route_accuracy": 0.9777777777777777,
+      "top1_accuracy": 0.9666666666666667,
+      "accepted_answer_accuracy": 0.9666666666666667,
+      "accepted_faq_precision": 1.0,
+      "false_rejection_count": 1,
+      "false_rejection_rate": 0.03333333333333333,
+      "wrong_faq_match_count": 0,
+      "wrong_faq_match_rate": 0.0,
+      "hard_negative_rejection_count": 15,
+      "hard_negative_rejection_accuracy": 1.0,
+      "false_acceptance_count": 0,
+      "false_acceptance_rate": 0.0,
+      "case_types": {
+        "exact": {
+          "count": 15,
+          "overall_correct_count": 15,
+          "overall_accuracy": 1.0,
+          "average_softmax_top1_score": 0.9999814513432048
+        },
+        "hard_negative": {
+          "count": 15,
+          "overall_correct_count": 15,
+          "overall_accuracy": 1.0,
+          "average_softmax_top1_score": 0.39725959630819896
+        },
+        "paraphrase": {
+          "count": 15,
+          "overall_correct_count": 14,
+          "overall_accuracy": 0.9333333333333333,
+          "average_softmax_top1_score": 0.9332017217122037
+        }
+      },
+      "error_counts": {
+        "false_rejection": 1
+      }
+    },
+    {
+      "threshold": 0.95,
+      "total_cases": 45,
+      "faq_expected_cases": 30,
+      "rag_expected_cases": 15,
+      "overall_correct_count": 42,
+      "overall_accuracy": 0.9333333333333333,
+      "route_accuracy": 0.9333333333333333,
+      "top1_accuracy": 0.9666666666666667,
+      "accepted_answer_accuracy": 0.9,
+      "accepted_faq_precision": 1.0,
+      "false_rejection_count": 3,
+      "false_rejection_rate": 0.1,
+      "wrong_faq_match_count": 0,
+      "wrong_faq_match_rate": 0.0,
+      "hard_negative_rejection_count": 15,
+      "hard_negative_rejection_accuracy": 1.0,
+      "false_acceptance_count": 0,
+      "false_acceptance_rate": 0.0,
+      "case_types": {
+        "exact": {
+          "count": 15,
+          "overall_correct_count": 15,
+          "overall_accuracy": 1.0,
+          "average_softmax_top1_score": 0.9999814513432048
+        },
+        "hard_negative": {
+          "count": 15,
+          "overall_correct_count": 15,
+          "overall_accuracy": 1.0,
+          "average_softmax_top1_score": 0.39725959630819896
+        },
+        "paraphrase": {
+          "count": 15,
+          "overall_correct_count": 12,
+          "overall_accuracy": 0.8,
+          "average_softmax_top1_score": 0.9332017217122037
+        }
+      },
+      "error_counts": {
+        "false_rejection": 3
+      }
+    }
+  ]
+}

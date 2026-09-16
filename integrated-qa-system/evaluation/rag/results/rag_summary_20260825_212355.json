@@ -1,0 +1,3283 @@
+{
+  "settings": {
+    "mode": "offline_exact_ip_no_database",
+    "documents": "${PROJECT_ROOT}\\rag_qa\\data\\ai_data",
+    "golden": "${PROJECT_ROOT}\\evaluation\\rag\\data\\rag_retrieval_golden.jsonl",
+    "parent_count": 10,
+    "child_count": 35,
+    "parent_chunk_size": 1200,
+    "child_chunk_size": 300,
+    "chunk_overlap": 50,
+    "retrieval_k": 5,
+    "candidate_m": 2,
+    "dense_weight": 1.0,
+    "sparse_weight": 0.7,
+    "embedding_model": "${PROJECT_ROOT}\\rag_qa\\models\\bge-m3",
+    "reranker_model": "${PROJECT_ROOT}\\rag_qa\\models\\bge-reranker-large",
+    "device": "cpu",
+    "cache_hit": false,
+    "external_services_called": []
+  },
+  "summary": {
+    "positive_cases": 24,
+    "hard_negative_cases": 5,
+    "note": "生产检索无拒答阈值，hard negative 只记录上下文暴露。",
+    "strategies": {
+      "dense": {
+        "hit": 1.0,
+        "hit_at_1": 0.833333,
+        "mrr": 0.899306,
+        "id_precision": 0.361111,
+        "id_recall": 1.0,
+        "avg_latency_ms": 401.235,
+        "hard_negative_context_exposure_rate": 1.0
+      },
+      "sparse": {
+        "hit": 1.0,
+        "hit_at_1": 0.833333,
+        "mrr": 0.899306,
+        "id_precision": 0.35,
+        "id_recall": 1.0,
+        "avg_latency_ms": 401.235,
+        "hard_negative_context_exposure_rate": 1.0
+      },
+      "hybrid": {
+        "hit": 1.0,
+        "hit_at_1": 0.833333,
+        "mrr": 0.899306,
+        "id_precision": 0.361111,
+        "id_recall": 1.0,
+        "avg_latency_ms": 401.235,
+        "hard_negative_context_exposure_rate": 1.0
+      },
+      "hybrid_rerank": {
+        "hit": 1.0,
+        "hit_at_1": 0.958333,
+        "mrr": 0.979167,
+        "id_precision": 0.5625,
+        "id_recall": 1.0,
+        "avg_latency_ms": 5057.675,
+        "hard_negative_context_exposure_rate": 1.0
+      }
+    }
+  },
+  "cases": [
+    {
+      "case_id": "rag_pos_001",
+      "case_type": "direct",
+      "question": "什么是大型语言模型？",
+      "reference_parent_indexes": [
+        0
+      ],
+      "reference_parent_ids": [
+        "parent_d088778d1f03bab7fe56c9afaf2f57b4"
+      ],
+      "reference_answer": "大型语言模型是一类旨在理解和生成人类语言的人工智能模型。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            0,
+            4,
+            1,
+            9
+          ],
+          "scores": [
+            0.714478,
+            0.691852,
+            0.668285,
+            0.636877
+          ],
+          "latency_ms": 233.695
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5"
+          ],
+          "parent_indexes": [
+            0,
+            1,
+            4,
+            2
+          ],
+          "scores": [
+            0.224633,
+            0.1977,
+            0.197082,
+            0.177856
+          ],
+          "latency_ms": 233.695
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            0,
+            4,
+            1,
+            9
+          ],
+          "scores": [
+            1.096707,
+            1.08601,
+            1.074494,
+            0.680512
+          ],
+          "latency_ms": 233.695
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+          ],
+          "parent_indexes": [
+            0,
+            4
+          ],
+          "scores": [
+            0.996102,
+            0.984039
+          ],
+          "latency_ms": 5151.599
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_002",
+      "case_type": "paraphrase",
+      "question": "LLM 可以处理哪些自然语言任务？",
+      "reference_parent_indexes": [
+        0
+      ],
+      "reference_parent_ids": [
+        "parent_d088778d1f03bab7fe56c9afaf2f57b4"
+      ],
+      "reference_answer": "可处理文本分类、问答、翻译和对话等自然语言任务。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+          ],
+          "parent_indexes": [
+            0,
+            9,
+            1,
+            4
+          ],
+          "scores": [
+            0.66276,
+            0.577477,
+            0.576207,
+            0.558939
+          ],
+          "latency_ms": 233.912
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            0,
+            4,
+            1
+          ],
+          "scores": [
+            0.311553,
+            0.187221,
+            0.130608
+          ],
+          "latency_ms": 233.912
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            0,
+            4,
+            1,
+            9
+          ],
+          "scores": [
+            1.1036,
+            1.053475,
+            1.045331,
+            0.666697
+          ],
+          "latency_ms": 233.912
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            0,
+            9
+          ],
+          "scores": [
+            0.974742,
+            0.064117
+          ],
+          "latency_ms": 2263.297
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_003",
+      "case_type": "direct",
+      "question": "大型语言模型经历了哪些发展阶段？",
+      "reference_parent_indexes": [
+        0
+      ],
+      "reference_parent_ids": [
+        "parent_d088778d1f03bab7fe56c9afaf2f57b4"
+      ],
+      "reference_answer": "材料按早期语言模型、预训练语言模型以及面向对话和生成的大模型阶段介绍其发展。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            0,
+            4,
+            1,
+            9
+          ],
+          "scores": [
+            0.696723,
+            0.64343,
+            0.603559,
+            0.599015
+          ],
+          "latency_ms": 222.807
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            0,
+            1,
+            4,
+            9
+          ],
+          "scores": [
+            0.244666,
+            0.186395,
+            0.185897,
+            0.175996
+          ],
+          "latency_ms": 222.807
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            0,
+            4,
+            9,
+            1
+          ],
+          "scores": [
+            1.097164,
+            1.072945,
+            1.060608,
+            0.672852
+          ],
+          "latency_ms": 222.807
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            0,
+            1
+          ],
+          "scores": [
+            0.98584,
+            0.780645
+          ],
+          "latency_ms": 2314.026
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_004",
+      "case_type": "direct",
+      "question": "语言模型的标准定义是什么？",
+      "reference_parent_indexes": [
+        1
+      ],
+      "reference_parent_ids": [
+        "parent_cdaceb91ff16f147c0d9d7210a93f504"
+      ],
+      "reference_answer": "语言模型对词汇序列的生成概率进行建模。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            1,
+            0,
+            9
+          ],
+          "scores": [
+            0.709613,
+            0.668162,
+            0.662706
+          ],
+          "latency_ms": 209.488
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+          ],
+          "parent_indexes": [
+            1,
+            0,
+            9,
+            4
+          ],
+          "scores": [
+            0.273811,
+            0.219676,
+            0.197222,
+            0.194341
+          ],
+          "latency_ms": 209.488
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            1,
+            0,
+            9
+          ],
+          "scores": [
+            1.105995,
+            1.085679,
+            1.07968
+          ],
+          "latency_ms": 209.488
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4"
+          ],
+          "parent_indexes": [
+            1,
+            0
+          ],
+          "scores": [
+            0.991301,
+            0.512019
+          ],
+          "latency_ms": 2153.539
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_005",
+      "case_type": "paraphrase",
+      "question": "语言模型主要可以分成哪些类型？",
+      "reference_parent_indexes": [
+        1
+      ],
+      "reference_parent_ids": [
+        "parent_cdaceb91ff16f147c0d9d7210a93f504"
+      ],
+      "reference_answer": "材料介绍了规则、统计、神经网络以及预训练语言模型等类别。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4"
+          ],
+          "parent_indexes": [
+            1,
+            9,
+            0
+          ],
+          "scores": [
+            0.744457,
+            0.709018,
+            0.708104
+          ],
+          "latency_ms": 334.196
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5"
+          ],
+          "parent_indexes": [
+            0,
+            1,
+            4,
+            2
+          ],
+          "scores": [
+            0.20433,
+            0.193154,
+            0.191345,
+            0.173382
+          ],
+          "latency_ms": 334.196
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            0,
+            1,
+            9
+          ],
+          "scores": [
+            1.091035,
+            0.703701,
+            0.696318
+          ],
+          "latency_ms": 334.196
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            1,
+            9
+          ],
+          "scores": [
+            0.994502,
+            0.850391
+          ],
+          "latency_ms": 5000.507
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 0.0,
+          "mrr": 0.5,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 0.0,
+          "mrr": 0.5,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_006",
+      "case_type": "reasoning",
+      "question": "为什么句子的联合概率不能直接简单计算？",
+      "reference_parent_indexes": [
+        1,
+        2
+      ],
+      "reference_parent_ids": [
+        "parent_cdaceb91ff16f147c0d9d7210a93f504",
+        "parent_329b0bb26fa3499176de32d7aa8d8cc5"
+      ],
+      "reference_answer": "词序列组合空间很大且存在数据稀疏问题，因此通常引入马尔可夫假设和 N-gram 近似。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+          ],
+          "parent_indexes": [
+            1,
+            2,
+            5,
+            4
+          ],
+          "scores": [
+            0.593867,
+            0.585952,
+            0.580248,
+            0.580214
+          ],
+          "latency_ms": 422.967
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204"
+          ],
+          "parent_indexes": [
+            2,
+            1,
+            8
+          ],
+          "scores": [
+            0.220835,
+            0.218074,
+            0.142353
+          ],
+          "latency_ms": 422.967
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+          ],
+          "parent_indexes": [
+            1,
+            2,
+            5,
+            4
+          ],
+          "scores": [
+            1.058351,
+            0.668712,
+            0.667358,
+            0.667349
+          ],
+          "latency_ms": 422.967
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            2,
+            1
+          ],
+          "scores": [
+            0.207208,
+            0.130843
+          ],
+          "latency_ms": 6593.798
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.6666666666666666,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 1.0,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_007",
+      "case_type": "direct",
+      "question": "什么是马尔可夫假设？",
+      "reference_parent_indexes": [
+        2
+      ],
+      "reference_parent_ids": [
+        "parent_329b0bb26fa3499176de32d7aa8d8cc5"
+      ],
+      "reference_answer": "一个词出现的概率只与它前面有限数量的词有关。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            2,
+            1
+          ],
+          "scores": [
+            0.500211,
+            0.436099
+          ],
+          "latency_ms": 452.935
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4"
+          ],
+          "parent_indexes": [
+            2,
+            1,
+            6,
+            4,
+            0
+          ],
+          "scores": [
+            0.118921,
+            0.03603,
+            0.030625,
+            0.023291,
+            0.021096
+          ],
+          "latency_ms": 452.935
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            2,
+            1
+          ],
+          "scores": [
+            1.024011,
+            0.985863
+          ],
+          "latency_ms": 452.935
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            2,
+            1
+          ],
+          "scores": [
+            0.536048,
+            0.000876
+          ],
+          "latency_ms": 3552.387
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.2,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_008",
+      "case_type": "direct",
+      "question": "unigram、bigram 和 trigram 有什么区别？",
+      "reference_parent_indexes": [
+        2
+      ],
+      "reference_parent_ids": [
+        "parent_329b0bb26fa3499176de32d7aa8d8cc5"
+      ],
+      "reference_answer": "三者分别不依赖前词、依赖前一个词、依赖前两个词来估计当前词概率。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb",
+            "parent_9df26536d931e253259602b2330ac6e5"
+          ],
+          "parent_indexes": [
+            9,
+            2,
+            5,
+            3
+          ],
+          "scores": [
+            0.536255,
+            0.531953,
+            0.515514,
+            0.475362
+          ],
+          "latency_ms": 518.24
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5"
+          ],
+          "parent_indexes": [
+            9,
+            2
+          ],
+          "scores": [
+            0.17377,
+            0.120484
+          ],
+          "latency_ms": 518.24
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb",
+            "parent_9df26536d931e253259602b2330ac6e5"
+          ],
+          "parent_indexes": [
+            9,
+            2,
+            5,
+            3
+          ],
+          "scores": [
+            1.035498,
+            1.028622,
+            0.65151,
+            0.641248
+          ],
+          "latency_ms": 518.24
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            2,
+            9
+          ],
+          "scores": [
+            0.886638,
+            0.083094
+          ],
+          "latency_ms": 6362.045
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 0.0,
+          "mrr": 0.5,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 0.0,
+          "mrr": 0.5,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 0.0,
+          "mrr": 0.5,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_009",
+      "case_type": "paraphrase",
+      "question": "N-gram 语言模型有哪些优点和缺点？",
+      "reference_parent_indexes": [
+        2
+      ],
+      "reference_parent_ids": [
+        "parent_329b0bb26fa3499176de32d7aa8d8cc5"
+      ],
+      "reference_answer": "N-gram 简单、可解释且易实现，但会遇到数据稀疏、上下文受限和存储开销等问题。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            2,
+            3,
+            9,
+            1
+          ],
+          "scores": [
+            0.737257,
+            0.682128,
+            0.648285,
+            0.629713
+          ],
+          "latency_ms": 436.918
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            2,
+            3,
+            4,
+            9
+          ],
+          "scores": [
+            0.418673,
+            0.263159,
+            0.253533,
+            0.240017
+          ],
+          "latency_ms": 436.918
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            2,
+            3,
+            9,
+            1
+          ],
+          "scores": [
+            1.13941,
+            1.097886,
+            1.085569,
+            0.678884
+          ],
+          "latency_ms": 436.918
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_9df26536d931e253259602b2330ac6e5"
+          ],
+          "parent_indexes": [
+            2,
+            3
+          ],
+          "scores": [
+            0.999291,
+            0.988031
+          ],
+          "latency_ms": 6332.23
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_010",
+      "case_type": "direct",
+      "question": "神经网络语言模型由哪些层组成？",
+      "reference_parent_indexes": [
+        3
+      ],
+      "reference_parent_ids": [
+        "parent_9df26536d931e253259602b2330ac6e5"
+      ],
+      "reference_answer": "基本结构包含词向量输入、隐藏层和用于预测下一词概率的输出层。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            3,
+            0,
+            9,
+            1
+          ],
+          "scores": [
+            0.720125,
+            0.625694,
+            0.623042,
+            0.600478
+          ],
+          "latency_ms": 356.629
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4"
+          ],
+          "parent_indexes": [
+            3,
+            2,
+            9,
+            0
+          ],
+          "scores": [
+            0.201612,
+            0.175745,
+            0.17542,
+            0.156431
+          ],
+          "latency_ms": 356.629
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            3,
+            9,
+            0,
+            1
+          ],
+          "scores": [
+            1.092108,
+            1.066052,
+            0.677966,
+            0.672133
+          ],
+          "latency_ms": 356.629
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            3,
+            1
+          ],
+          "scores": [
+            0.984635,
+            0.507948
+          ],
+          "latency_ms": 6302.386
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_011",
+      "case_type": "reasoning",
+      "question": "相比 N-gram，神经语言模型好在哪里，又有什么代价？",
+      "reference_parent_indexes": [
+        3
+      ],
+      "reference_parent_ids": [
+        "parent_9df26536d931e253259602b2330ac6e5"
+      ],
+      "reference_answer": "它能通过分布式表示缓解稀疏性并学习更强泛化能力，但训练和推理计算成本更高。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            2,
+            3,
+            9,
+            1
+          ],
+          "scores": [
+            0.71085,
+            0.673501,
+            0.629066,
+            0.594085
+          ],
+          "latency_ms": 339.388
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            2,
+            9,
+            3,
+            1
+          ],
+          "scores": [
+            0.305488,
+            0.285763,
+            0.236565,
+            0.232848
+          ],
+          "latency_ms": 339.388
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            2,
+            9,
+            3,
+            1
+          ],
+          "scores": [
+            1.108714,
+            1.090756,
+            1.090427,
+            1.071607
+          ],
+          "latency_ms": 339.388
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5"
+          ],
+          "parent_indexes": [
+            3,
+            2
+          ],
+          "scores": [
+            0.795628,
+            0.621232
+          ],
+          "latency_ms": 6338.538
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 0.0,
+          "mrr": 0.5,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 0.0,
+          "mrr": 0.3333333333333333,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 0.0,
+          "mrr": 0.3333333333333333,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_012",
+      "case_type": "paraphrase",
+      "question": "Transformer 预训练语言模型的优势是什么？",
+      "reference_parent_indexes": [
+        3
+      ],
+      "reference_parent_ids": [
+        "parent_9df26536d931e253259602b2330ac6e5"
+      ],
+      "reference_answer": "Transformer 更擅长建模长距离依赖，并可通过大规模预训练迁移到多种下游任务。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4"
+          ],
+          "parent_indexes": [
+            3,
+            4,
+            0
+          ],
+          "scores": [
+            0.701091,
+            0.579877,
+            0.574321
+          ],
+          "latency_ms": 391.75
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+          ],
+          "parent_indexes": [
+            3,
+            0,
+            4
+          ],
+          "scores": [
+            0.325788,
+            0.277177,
+            0.196925
+          ],
+          "latency_ms": 391.75
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+          ],
+          "parent_indexes": [
+            3,
+            0,
+            4
+          ],
+          "scores": [
+            1.114808,
+            1.07619,
+            0.667269
+          ],
+          "latency_ms": 391.75
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+          ],
+          "parent_indexes": [
+            3,
+            4
+          ],
+          "scores": [
+            0.99792,
+            0.969738
+          ],
+          "latency_ms": 4990.9
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_013",
+      "case_type": "direct",
+      "question": "语言模型中的 Scaling Law 是什么意思？",
+      "reference_parent_indexes": [
+        4
+      ],
+      "reference_parent_ids": [
+        "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+      ],
+      "reference_answer": "材料所述 Scaling Law 指随着预训练模型参数规模提升，语言模型性能呈规律性提高。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            4,
+            1,
+            9
+          ],
+          "scores": [
+            0.642402,
+            0.568953,
+            0.55173
+          ],
+          "latency_ms": 443.858
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            4,
+            0,
+            1
+          ],
+          "scores": [
+            0.150836,
+            0.128226,
+            0.124354
+          ],
+          "latency_ms": 443.858
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            4,
+            1,
+            9
+          ],
+          "scores": [
+            1.065117,
+            1.042221,
+            0.660483
+          ],
+          "latency_ms": 443.858
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            4,
+            1
+          ],
+          "scores": [
+            0.915175,
+            0.074018
+          ],
+          "latency_ms": 5060.005
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_014",
+      "case_type": "fact",
+      "question": "GPT-3 有多少参数？",
+      "reference_parent_indexes": [
+        4
+      ],
+      "reference_parent_ids": [
+        "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+      ],
+      "reference_answer": "GPT-3 的参数量为 1750 亿。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb"
+          ],
+          "parent_indexes": [
+            4,
+            0,
+            3,
+            5
+          ],
+          "scores": [
+            0.648569,
+            0.494044,
+            0.470532,
+            0.43176
+          ],
+          "latency_ms": 470.224
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5"
+          ],
+          "parent_indexes": [
+            4,
+            0,
+            2
+          ],
+          "scores": [
+            0.234135,
+            0.178398,
+            0.070708
+          ],
+          "latency_ms": 470.224
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb"
+          ],
+          "parent_indexes": [
+            4,
+            0,
+            3,
+            5
+          ],
+          "scores": [
+            1.084392,
+            1.0354,
+            0.639992,
+            0.629737
+          ],
+          "latency_ms": 470.224
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4"
+          ],
+          "parent_indexes": [
+            4,
+            0
+          ],
+          "scores": [
+            0.97451,
+            0.296451
+          ],
+          "latency_ms": 6343.208
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_015",
+      "case_type": "paraphrase",
+      "question": "什么叫大模型的能力涌现？",
+      "reference_parent_indexes": [
+        4
+      ],
+      "reference_parent_ids": [
+        "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+      ],
+      "reference_answer": "当模型规模越过某个阈值后，会突然表现出小模型不具备或很弱的新能力。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_9df26536d931e253259602b2330ac6e5"
+          ],
+          "parent_indexes": [
+            4,
+            1,
+            0,
+            3
+          ],
+          "scores": [
+            0.723118,
+            0.53105,
+            0.518831,
+            0.508883
+          ],
+          "latency_ms": 398.806
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            4,
+            0,
+            1
+          ],
+          "scores": [
+            0.284029,
+            0.147917,
+            0.135341
+          ],
+          "latency_ms": 398.806
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_9df26536d931e253259602b2330ac6e5"
+          ],
+          "parent_indexes": [
+            4,
+            1,
+            0,
+            3
+          ],
+          "scores": [
+            1.110948,
+            1.035366,
+            1.035064,
+            0.649838
+          ],
+          "latency_ms": 398.806
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            4,
+            1
+          ],
+          "scores": [
+            0.818669,
+            0.272552
+          ],
+          "latency_ms": 6436.594
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_016",
+      "case_type": "direct",
+      "question": "BLEU 指标主要衡量什么？",
+      "reference_parent_indexes": [
+        4
+      ],
+      "reference_parent_ids": [
+        "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+      ],
+      "reference_answer": "BLEU 通过比较候选文本与参考文本的 N-gram 匹配程度衡量生成质量，更偏重准确率。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_0278d73908828c2c85532921cc5030f6",
+            "parent_57655b74a91b91b0697bb3274ef19b20"
+          ],
+          "parent_indexes": [
+            4,
+            7,
+            6
+          ],
+          "scores": [
+            0.650661,
+            0.61694,
+            0.593888
+          ],
+          "latency_ms": 360.53
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_0278d73908828c2c85532921cc5030f6",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204"
+          ],
+          "parent_indexes": [
+            4,
+            6,
+            7,
+            8
+          ],
+          "scores": [
+            0.215997,
+            0.123861,
+            0.08747,
+            0.086074
+          ],
+          "latency_ms": 360.53
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_0278d73908828c2c85532921cc5030f6",
+            "parent_57655b74a91b91b0697bb3274ef19b20"
+          ],
+          "parent_indexes": [
+            4,
+            7,
+            6
+          ],
+          "scores": [
+            1.081013,
+            1.045396,
+            1.040062
+          ],
+          "latency_ms": 360.53
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_57655b74a91b91b0697bb3274ef19b20"
+          ],
+          "parent_indexes": [
+            4,
+            6
+          ],
+          "scores": [
+            0.977872,
+            0.476255
+          ],
+          "latency_ms": 4764.74
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_017",
+      "case_type": "reasoning",
+      "question": "BLEU 为什么要限制重复词的匹配次数？",
+      "reference_parent_indexes": [
+        5
+      ],
+      "reference_parent_ids": [
+        "parent_3dca2b6a72e080d6b0053da1d46e18bb"
+      ],
+      "reference_answer": "为避免候选文本反复输出同一个命中词却获得虚高分数，需要使用参考文本中的最大出现次数进行截断。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_57655b74a91b91b0697bb3274ef19b20"
+          ],
+          "parent_indexes": [
+            5,
+            4,
+            6
+          ],
+          "scores": [
+            0.584714,
+            0.566249,
+            0.537155
+          ],
+          "latency_ms": 450.349
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204"
+          ],
+          "parent_indexes": [
+            5,
+            4,
+            8
+          ],
+          "scores": [
+            0.207981,
+            0.160835,
+            0.128379
+          ],
+          "latency_ms": 450.349
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_57655b74a91b91b0697bb3274ef19b20"
+          ],
+          "parent_indexes": [
+            5,
+            4,
+            6
+          ],
+          "scores": [
+            1.064109,
+            1.049536,
+            0.656904
+          ],
+          "latency_ms": 450.349
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb"
+          ],
+          "parent_indexes": [
+            4,
+            5
+          ],
+          "scores": [
+            0.074553,
+            0.053551
+          ],
+          "latency_ms": 4993.329
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 0.0,
+          "mrr": 0.5,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_018",
+      "case_type": "direct",
+      "question": "BLEU 的 2-gram、3-gram、4-gram 匹配是在做什么？",
+      "reference_parent_indexes": [
+        5
+      ],
+      "reference_parent_ids": [
+        "parent_3dca2b6a72e080d6b0053da1d46e18bb"
+      ],
+      "reference_answer": "它们分别统计连续 2、3、4 个词的片段在候选文本和参考文本中的匹配情况。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb"
+          ],
+          "parent_indexes": [
+            6,
+            4,
+            5
+          ],
+          "scores": [
+            0.661799,
+            0.574671,
+            0.562739
+          ],
+          "latency_ms": 501.091
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+          ],
+          "parent_indexes": [
+            5,
+            4
+          ],
+          "scores": [
+            0.176769,
+            0.161635
+          ],
+          "latency_ms": 501.091
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_57655b74a91b91b0697bb3274ef19b20"
+          ],
+          "parent_indexes": [
+            5,
+            4,
+            6
+          ],
+          "scores": [
+            1.052141,
+            1.051733,
+            0.686092
+          ],
+          "latency_ms": 501.091
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb",
+            "parent_57655b74a91b91b0697bb3274ef19b20"
+          ],
+          "parent_indexes": [
+            5,
+            6
+          ],
+          "scores": [
+            0.98176,
+            0.658623
+          ],
+          "latency_ms": 4964.825
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 0.0,
+          "mrr": 0.3333333333333333,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_019",
+      "case_type": "direct",
+      "question": "ROUGE 是什么指标？",
+      "reference_parent_indexes": [
+        6
+      ],
+      "reference_parent_ids": [
+        "parent_57655b74a91b91b0697bb3274ef19b20"
+      ],
+      "reference_answer": "ROUGE 是机器翻译、自动摘要和问答生成等任务中比较生成文本与参考答案的评估指标。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204"
+          ],
+          "parent_indexes": [
+            6,
+            8
+          ],
+          "scores": [
+            0.690882,
+            0.59124
+          ],
+          "latency_ms": 417.102
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_0278d73908828c2c85532921cc5030f6"
+          ],
+          "parent_indexes": [
+            6,
+            8,
+            7
+          ],
+          "scores": [
+            0.362998,
+            0.28473,
+            0.103947
+          ],
+          "latency_ms": 417.102
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204"
+          ],
+          "parent_indexes": [
+            6,
+            8
+          ],
+          "scores": [
+            1.12003,
+            1.08177
+          ],
+          "latency_ms": 417.102
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204"
+          ],
+          "parent_indexes": [
+            6,
+            8
+          ],
+          "scores": [
+            0.992445,
+            0.941735
+          ],
+          "latency_ms": 3591.254
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_020",
+      "case_type": "reasoning",
+      "question": "ROUGE 和 BLEU 的侧重点有什么不同？",
+      "reference_parent_indexes": [
+        6
+      ],
+      "reference_parent_ids": [
+        "parent_57655b74a91b91b0697bb3274ef19b20"
+      ],
+      "reference_answer": "ROUGE 更偏重召回率，BLEU 更偏重准确率。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_0278d73908828c2c85532921cc5030f6"
+          ],
+          "parent_indexes": [
+            6,
+            4,
+            7
+          ],
+          "scores": [
+            0.55245,
+            0.515227,
+            0.49976
+          ],
+          "latency_ms": 429.969
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+          ],
+          "parent_indexes": [
+            6,
+            8,
+            4
+          ],
+          "scores": [
+            0.226019,
+            0.167873,
+            0.121187
+          ],
+          "latency_ms": 429.969
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_0278d73908828c2c85532921cc5030f6"
+          ],
+          "parent_indexes": [
+            6,
+            4,
+            7
+          ],
+          "scores": [
+            1.060187,
+            1.028309,
+            0.647522
+          ],
+          "latency_ms": 429.969
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+          ],
+          "parent_indexes": [
+            6,
+            4
+          ],
+          "scores": [
+            0.961129,
+            0.106103
+          ],
+          "latency_ms": 4818.98
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_021",
+      "case_type": "direct",
+      "question": "ROUGE-1、ROUGE-2、ROUGE-L、ROUGE-S 分别属于什么？",
+      "reference_parent_indexes": [
+        6,
+        8
+      ],
+      "reference_parent_ids": [
+        "parent_57655b74a91b91b0697bb3274ef19b20",
+        "parent_9e2490aff59ab9caa0c2cae3e76c1204"
+      ],
+      "reference_answer": "它们是 ROUGE 的不同计算方式，分别从一元、二元、最长公共子序列和跳跃二元组等角度衡量匹配。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204"
+          ],
+          "parent_indexes": [
+            6,
+            8
+          ],
+          "scores": [
+            0.54318,
+            0.524565
+          ],
+          "latency_ms": 503.53
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            6,
+            8,
+            1
+          ],
+          "scores": [
+            0.252325,
+            0.232565,
+            0.048093
+          ],
+          "latency_ms": 503.53
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204"
+          ],
+          "parent_indexes": [
+            6,
+            8
+          ],
+          "scores": [
+            1.063461,
+            1.054692
+          ],
+          "latency_ms": 503.53
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_57655b74a91b91b0697bb3274ef19b20"
+          ],
+          "parent_indexes": [
+            8,
+            6
+          ],
+          "scores": [
+            0.904268,
+            0.57271
+          ],
+          "latency_ms": 3503.979
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 1.0,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.6666666666666666,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 1.0,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 1.0,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_022",
+      "case_type": "direct",
+      "question": "困惑度 PPL 用来衡量什么？",
+      "reference_parent_indexes": [
+        8
+      ],
+      "reference_parent_ids": [
+        "parent_9e2490aff59ab9caa0c2cae3e76c1204"
+      ],
+      "reference_answer": "PPL 用于衡量概率分布或概率模型预测样本的好坏。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+          ],
+          "parent_indexes": [
+            8,
+            9,
+            4
+          ],
+          "scores": [
+            0.69347,
+            0.569004,
+            0.479187
+          ],
+          "latency_ms": 413.247
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+          ],
+          "parent_indexes": [
+            8,
+            9,
+            4
+          ],
+          "scores": [
+            0.244074,
+            0.142472,
+            0.086612
+          ],
+          "latency_ms": 413.247
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+          ],
+          "parent_indexes": [
+            8,
+            9,
+            4
+          ],
+          "scores": [
+            1.096342,
+            1.042671,
+            1.01149
+          ],
+          "latency_ms": 413.247
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            8,
+            9
+          ],
+          "scores": [
+            0.985147,
+            0.026665
+          ],
+          "latency_ms": 4684.95
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.3333333333333333,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_023",
+      "case_type": "hard_paraphrase",
+      "question": "PPL 越大说明语言模型越好吗？",
+      "reference_parent_indexes": [
+        9
+      ],
+      "reference_parent_ids": [
+        "parent_c998db368181f9d05ba01d89e0794f0e"
+      ],
+      "reference_answer": "不是。句子概率越大通常表示模型越好，而困惑度越小越好。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            4,
+            8,
+            1,
+            9
+          ],
+          "scores": [
+            0.666458,
+            0.645003,
+            0.639532,
+            0.626839
+          ],
+          "latency_ms": 518.208
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+          ],
+          "parent_indexes": [
+            8,
+            1,
+            0,
+            9,
+            4
+          ],
+          "scores": [
+            0.221128,
+            0.201134,
+            0.191189,
+            0.18478,
+            0.17566
+          ],
+          "latency_ms": 518.208
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            8,
+            4,
+            1,
+            9
+          ],
+          "scores": [
+            1.080836,
+            1.075866,
+            1.075338,
+            1.068941
+          ],
+          "latency_ms": 518.208
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204"
+          ],
+          "parent_indexes": [
+            9,
+            8
+          ],
+          "scores": [
+            0.87312,
+            0.580289
+          ],
+          "latency_ms": 6455.034
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 0.0,
+          "mrr": 0.25,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 0.0,
+          "mrr": 0.25,
+          "id_precision": 0.2,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 0.0,
+          "mrr": 0.25,
+          "id_precision": 0.25,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.5,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_pos_024",
+      "case_type": "reasoning",
+      "question": "句子概率、模型质量和困惑度之间是什么关系？",
+      "reference_parent_indexes": [
+        8,
+        9
+      ],
+      "reference_parent_ids": [
+        "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+        "parent_c998db368181f9d05ba01d89e0794f0e"
+      ],
+      "reference_answer": "测试句子概率越大，模型通常越好；对应的困惑度越小。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            8,
+            9,
+            1
+          ],
+          "scores": [
+            0.652527,
+            0.639216,
+            0.627307
+          ],
+          "latency_ms": 441.956
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            8,
+            1,
+            9
+          ],
+          "scores": [
+            0.291595,
+            0.250018,
+            0.236177
+          ],
+          "latency_ms": 441.956
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_c998db368181f9d05ba01d89e0794f0e"
+          ],
+          "parent_indexes": [
+            8,
+            1,
+            9
+          ],
+          "scores": [
+            1.09725,
+            1.082924,
+            1.082718
+          ],
+          "latency_ms": 441.956
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204"
+          ],
+          "parent_indexes": [
+            9,
+            8
+          ],
+          "scores": [
+            0.99693,
+            0.513166
+          ],
+          "latency_ms": 5060.36
+        }
+      },
+      "metrics": {
+        "dense": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.6666666666666666,
+          "id_recall": 1.0
+        },
+        "sparse": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.6666666666666666,
+          "id_recall": 1.0
+        },
+        "hybrid": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 0.6666666666666666,
+          "id_recall": 1.0
+        },
+        "hybrid_rerank": {
+          "hit": 1.0,
+          "hit_at_1": 1.0,
+          "mrr": 1.0,
+          "id_precision": 1.0,
+          "id_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "rag_neg_001",
+      "case_type": "hard_negative",
+      "question": "这个项目的 Milvus nprobe 配置是多少？",
+      "reference_parent_indexes": [],
+      "reference_parent_ids": [],
+      "reference_answer": "知识库未提供该信息。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb",
+            "parent_9df26536d931e253259602b2330ac6e5"
+          ],
+          "parent_indexes": [
+            8,
+            4,
+            5,
+            3
+          ],
+          "scores": [
+            0.42507,
+            0.408291,
+            0.404769,
+            0.393693
+          ],
+          "latency_ms": 463.712
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb"
+          ],
+          "parent_indexes": [
+            6,
+            1,
+            5
+          ],
+          "scores": [
+            0.007818,
+            0.006025,
+            0.006022
+          ],
+          "latency_ms": 463.712
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb",
+            "parent_9df26536d931e253259602b2330ac6e5"
+          ],
+          "parent_indexes": [
+            8,
+            4,
+            5,
+            3
+          ],
+          "scores": [
+            0.627938,
+            0.623387,
+            0.622425,
+            0.619385
+          ],
+          "latency_ms": 463.712
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_9df26536d931e253259602b2330ac6e5"
+          ],
+          "parent_indexes": [
+            4,
+            3
+          ],
+          "scores": [
+            9e-05,
+            8.7e-05
+          ],
+          "latency_ms": 6298.292
+        }
+      },
+      "metrics": {}
+    },
+    {
+      "case_id": "rag_neg_002",
+      "case_type": "hard_negative",
+      "question": "BGE-M3 的稠密向量维度是多少？",
+      "reference_parent_indexes": [],
+      "reference_parent_ids": [],
+      "reference_answer": "知识库未提供该信息。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_9df26536d931e253259602b2330ac6e5"
+          ],
+          "parent_indexes": [
+            4,
+            6,
+            3
+          ],
+          "scores": [
+            0.442842,
+            0.427314,
+            0.370477
+          ],
+          "latency_ms": 430.167
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_9df26536d931e253259602b2330ac6e5"
+          ],
+          "parent_indexes": [
+            8,
+            6,
+            3
+          ],
+          "scores": [
+            0.1087,
+            0.080605,
+            0.056719
+          ],
+          "latency_ms": 430.167
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_57655b74a91b91b0697bb3274ef19b20"
+          ],
+          "parent_indexes": [
+            3,
+            4,
+            6
+          ],
+          "scores": [
+            0.97556,
+            0.632699,
+            0.628543
+          ],
+          "latency_ms": 430.167
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_57655b74a91b91b0697bb3274ef19b20"
+          ],
+          "parent_indexes": [
+            3,
+            6
+          ],
+          "scores": [
+            0.000285,
+            9.5e-05
+          ],
+          "latency_ms": 4975.617
+        }
+      },
+      "metrics": {}
+    },
+    {
+      "case_id": "rag_neg_003",
+      "case_type": "hard_negative",
+      "question": "RAG 父块和子块分别切多大？",
+      "reference_parent_indexes": [],
+      "reference_parent_ids": [],
+      "reference_answer": "知识库未提供该信息。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+          ],
+          "parent_indexes": [
+            6,
+            8,
+            4
+          ],
+          "scores": [
+            0.3727,
+            0.349396,
+            0.338648
+          ],
+          "latency_ms": 372.976
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_c998db368181f9d05ba01d89e0794f0e",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            4,
+            9,
+            1
+          ],
+          "scores": [
+            0.038644,
+            0.03115,
+            0.030835
+          ],
+          "latency_ms": 372.976
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204"
+          ],
+          "parent_indexes": [
+            4,
+            6,
+            8
+          ],
+          "scores": [
+            0.962543,
+            0.613558,
+            0.606996
+          ],
+          "latency_ms": 372.976
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_57655b74a91b91b0697bb3274ef19b20"
+          ],
+          "parent_indexes": [
+            8,
+            6
+          ],
+          "scores": [
+            9.3e-05,
+            9.1e-05
+          ],
+          "latency_ms": 4468.966
+        }
+      },
+      "metrics": {}
+    },
+    {
+      "case_id": "rag_neg_004",
+      "case_type": "hard_negative",
+      "question": "课程学费是多少钱？",
+      "reference_parent_indexes": [],
+      "reference_parent_ids": [],
+      "reference_answer": "知识库未提供该信息。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb",
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_57655b74a91b91b0697bb3274ef19b20"
+          ],
+          "parent_indexes": [
+            4,
+            5,
+            2,
+            6
+          ],
+          "scores": [
+            0.444482,
+            0.43619,
+            0.42765,
+            0.417036
+          ],
+          "latency_ms": 324.154
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504",
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5"
+          ],
+          "parent_indexes": [
+            6,
+            1,
+            2
+          ],
+          "scores": [
+            0.007256,
+            0.00404,
+            0.00373
+          ],
+          "latency_ms": 324.154
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb",
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5"
+          ],
+          "parent_indexes": [
+            6,
+            4,
+            5,
+            2
+          ],
+          "scores": [
+            0.977383,
+            0.633135,
+            0.630924,
+            0.628633
+          ],
+          "latency_ms": 324.154
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_57655b74a91b91b0697bb3274ef19b20"
+          ],
+          "parent_indexes": [
+            4,
+            6
+          ],
+          "scores": [
+            9.3e-05,
+            7.8e-05
+          ],
+          "latency_ms": 6228.082
+        }
+      },
+      "metrics": {}
+    },
+    {
+      "case_id": "rag_neg_005",
+      "case_type": "hard_negative",
+      "question": "DeepSeek API 当前每百万 token 的价格是多少？",
+      "reference_parent_indexes": [],
+      "reference_parent_ids": [],
+      "reference_answer": "知识库未提供该信息。",
+      "results": {
+        "dense": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_9df26536d931e253259602b2330ac6e5"
+          ],
+          "parent_indexes": [
+            4,
+            5,
+            8,
+            3
+          ],
+          "scores": [
+            0.445574,
+            0.412967,
+            0.384253,
+            0.373397
+          ],
+          "latency_ms": 543.015
+        },
+        "sparse": {
+          "parent_ids": [
+            "parent_329b0bb26fa3499176de32d7aa8d8cc5",
+            "parent_9df26536d931e253259602b2330ac6e5",
+            "parent_57655b74a91b91b0697bb3274ef19b20",
+            "parent_cdaceb91ff16f147c0d9d7210a93f504"
+          ],
+          "parent_indexes": [
+            2,
+            3,
+            6,
+            1
+          ],
+          "scores": [
+            0.021211,
+            0.019547,
+            0.006006,
+            0.002553
+          ],
+          "latency_ms": 543.015
+        },
+        "hybrid": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_3dca2b6a72e080d6b0053da1d46e18bb",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204",
+            "parent_9df26536d931e253259602b2330ac6e5"
+          ],
+          "parent_indexes": [
+            4,
+            5,
+            8,
+            3
+          ],
+          "scores": [
+            0.633425,
+            0.624661,
+            0.616775,
+            0.613753
+          ],
+          "latency_ms": 543.015
+        },
+        "hybrid_rerank": {
+          "parent_ids": [
+            "parent_00bb0aa4fdf3a245315f8622c3448b3f",
+            "parent_9e2490aff59ab9caa0c2cae3e76c1204"
+          ],
+          "parent_indexes": [
+            4,
+            8
+          ],
+          "scores": [
+            9.6e-05,
+            9.1e-05
+          ],
+          "latency_ms": 6669.102
+        }
+      },
+      "metrics": {}
+    }
+  ]
+}

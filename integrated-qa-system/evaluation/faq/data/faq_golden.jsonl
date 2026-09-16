@@ -1,0 +1,45 @@
+{"id":"exact_001","case_type":"exact","query":"redis端口和连接","expected_route":"faq","expected_standard_question":"redis端口和连接","notes":"标准问题原句"}
+{"id":"exact_002","case_type":"exact","query":"windows如何安装redis","expected_route":"faq","expected_standard_question":"windows如何安装redis","notes":"标准问题原句"}
+{"id":"exact_003","case_type":"exact","query":"linux下面查看端口占用","expected_route":"faq","expected_standard_question":"linux下面查看端口占用","notes":"标准问题原句"}
+{"id":"exact_004","case_type":"exact","query":"http中GET与POST请求区别","expected_route":"faq","expected_standard_question":"http中GET与POST请求区别","notes":"标准问题原句"}
+{"id":"exact_005","case_type":"exact","query":"tcp服务器和客户端是什么意思","expected_route":"faq","expected_standard_question":"tcp服务器和客户端是什么意思","notes":"标准问题原句"}
+{"id":"exact_006","case_type":"exact","query":"如何创建线程安全的单例对象","expected_route":"faq","expected_standard_question":"如何创建线程安全的单例对象","notes":"标准问题原句"}
+{"id":"exact_007","case_type":"exact","query":"父进程会不会等待子进程结束才结束","expected_route":"faq","expected_standard_question":"父进程会不会等待子进程结束才结束","notes":"标准问题原句"}
+{"id":"exact_008","case_type":"exact","query":"字符串类型和数字类型怎么比较大小","expected_route":"faq","expected_standard_question":"字符串类型和数字类型怎么比较大小","notes":"标准问题原句"}
+{"id":"exact_009","case_type":"exact","query":"如何判断字符串中含有特殊字符","expected_route":"faq","expected_standard_question":"如何判断字符串中含有特殊字符","notes":"标准问题原句"}
+{"id":"exact_010","case_type":"exact","query":"列表推导式单条件判断与2个条件判断使用","expected_route":"faq","expected_standard_question":"列表推导式单条件判断与2个条件判断使用","notes":"标准问题原句"}
+{"id":"exact_011","case_type":"exact","query":"docker 创建容器的参数","expected_route":"faq","expected_standard_question":"docker 创建容器的参数","notes":"标准问题原句"}
+{"id":"exact_012","case_type":"exact","query":"MySQL 全局变量查询","expected_route":"faq","expected_standard_question":"MySQL 全局变量查询","notes":"标准问题原句"}
+{"id":"exact_013","case_type":"exact","query":"Java中变量与常量的区别是什么?","expected_route":"faq","expected_standard_question":"Java中变量与常量的区别是什么?","notes":"标准问题原句"}
+{"id":"exact_014","case_type":"exact","query":"数据库,明明关联会降低查询性能，为什么还会分出这么多表","expected_route":"faq","expected_standard_question":"数据库,明明关联会降低查询性能，为什么还会分出这么多表","notes":"标准问题原句"}
+{"id":"exact_015","case_type":"exact","query":"PyCharm只能以单元测试方式运行python代码怎么解决","expected_route":"faq","expected_standard_question":"PyCharm只能以单元测试方式运行python代码怎么解决","notes":"标准问题原句"}
+{"id":"paraphrase_001","case_type":"paraphrase","query":"Redis默认使用哪个端口，客户端怎样连接？","expected_route":"faq","expected_standard_question":"redis端口和连接","notes":"端口与连接同义改写"}
+{"id":"paraphrase_002","case_type":"paraphrase","query":"Windows系统上怎么安装Redis？","expected_route":"faq","expected_standard_question":"windows如何安装redis","notes":"操作系统与安装同义改写"}
+{"id":"paraphrase_003","case_type":"paraphrase","query":"Linux中怎么查看是哪个程序占用了端口？","expected_route":"faq","expected_standard_question":"linux下面查看端口占用","notes":"端口占用同义改写"}
+{"id":"paraphrase_004","case_type":"paraphrase","query":"GET请求和POST请求有什么区别？","expected_route":"faq","expected_standard_question":"http中GET与POST请求区别","notes":"HTTP问题同义改写"}
+{"id":"paraphrase_005","case_type":"paraphrase","query":"TCP里的服务端和客户端分别代表什么？","expected_route":"faq","expected_standard_question":"tcp服务器和客户端是什么意思","notes":"TCP概念同义改写"}
+{"id":"paraphrase_006","case_type":"paraphrase","query":"怎样实现一个线程安全的单例模式？","expected_route":"faq","expected_standard_question":"如何创建线程安全的单例对象","notes":"线程安全单例同义改写"}
+{"id":"paraphrase_007","case_type":"paraphrase","query":"父进程是否一定会等子进程运行完再退出？","expected_route":"faq","expected_standard_question":"父进程会不会等待子进程结束才结束","notes":"父子进程同义改写"}
+{"id":"paraphrase_008","case_type":"paraphrase","query":"Python字符串能直接和数字比较大小吗？","expected_route":"faq","expected_standard_question":"字符串类型和数字类型怎么比较大小","notes":"类型比较同义改写"}
+{"id":"paraphrase_009","case_type":"paraphrase","query":"怎么检测一个字符串里有没有特殊符号？","expected_route":"faq","expected_standard_question":"如何判断字符串中含有特殊字符","notes":"特殊字符同义改写"}
+{"id":"paraphrase_010","case_type":"paraphrase","query":"列表推导式里单个条件和两个条件分别怎么写？","expected_route":"faq","expected_standard_question":"列表推导式单条件判断与2个条件判断使用","notes":"列表推导式同义改写"}
+{"id":"paraphrase_011","case_type":"paraphrase","query":"创建Docker容器时可以使用哪些参数？","expected_route":"faq","expected_standard_question":"docker 创建容器的参数","notes":"Docker参数同义改写"}
+{"id":"paraphrase_012","case_type":"paraphrase","query":"怎样查看MySQL当前的全局变量？","expected_route":"faq","expected_standard_question":"MySQL 全局变量查询","notes":"MySQL查询同义改写"}
+{"id":"paraphrase_013","case_type":"paraphrase","query":"Java里的常量与变量有什么不同？","expected_route":"faq","expected_standard_question":"Java中变量与常量的区别是什么?","notes":"Java基础同义改写"}
+{"id":"paraphrase_014","case_type":"paraphrase","query":"数据库关联可能降低性能，为什么设计时还要拆分多张表？","expected_route":"faq","expected_standard_question":"数据库,明明关联会降低查询性能，为什么还会分出这么多表","notes":"数据库设计同义改写"}
+{"id":"paraphrase_015","case_type":"paraphrase","query":"PyCharm运行普通Python文件时总进入单元测试模式怎么办？","expected_route":"faq","expected_standard_question":"PyCharm只能以单元测试方式运行python代码怎么解决","notes":"IDE问题同义改写"}
+{"id":"hard_negative_001","case_type":"hard_negative","query":"你们的课程多少钱","expected_route":"rag","expected_standard_question":null,"notes":"复现历史日志中被FAQ误接收并缓存的完全相同输入"}
+{"id":"hard_negative_002","case_type":"hard_negative","query":"Java课程一共多少课时，学费是多少？","expected_route":"rag","expected_standard_question":null,"notes":"课程业务信息，不属于技术FAQ"}
+{"id":"hard_negative_003","case_type":"hard_negative","query":"Redis最新版本的商业授权价格是多少？","expected_route":"rag","expected_standard_question":null,"notes":"包含Redis关键词但标准FAQ无答案"}
+{"id":"hard_negative_004","case_type":"hard_negative","query":"Redis和Milvus哪个更适合做向量检索？","expected_route":"rag","expected_standard_question":null,"notes":"跨技术方案比较"}
+{"id":"hard_negative_005","case_type":"hard_negative","query":"Milvus的IVF_FLAT索引应该怎样设置nprobe？","expected_route":"rag","expected_standard_question":null,"notes":"当前FAQ语料外的Milvus问题"}
+{"id":"hard_negative_006","case_type":"hard_negative","query":"BGE-M3生成的稠密向量是多少维？","expected_route":"rag","expected_standard_question":null,"notes":"当前RAG项目知识问题"}
+{"id":"hard_negative_007","case_type":"hard_negative","query":"DeepSeek API现在的收费标准是什么？","expected_route":"rag","expected_standard_question":null,"notes":"时效性外部信息"}
+{"id":"hard_negative_008","case_type":"hard_negative","query":"这个知识库支持上传哪些文件格式？","expected_route":"rag","expected_standard_question":null,"notes":"项目知识问题"}
+{"id":"hard_negative_009","case_type":"hard_negative","query":"Docker部署这个问答项目至少需要多少内存？","expected_route":"rag","expected_standard_question":null,"notes":"包含Docker但标准FAQ无项目部署答案"}
+{"id":"hard_negative_010","case_type":"hard_negative","query":"MySQL数据库的登录密码是什么？","expected_route":"rag","expected_standard_question":null,"notes":"包含MySQL但不应匹配普通FAQ"}
+{"id":"hard_negative_011","case_type":"hard_negative","query":"课程老师今天几点开始直播？","expected_route":"rag","expected_standard_question":null,"notes":"课程动态信息"}
+{"id":"hard_negative_012","case_type":"hard_negative","query":"学习这个课程毕业后保证就业吗？","expected_route":"rag","expected_standard_question":null,"notes":"课程承诺信息"}
+{"id":"hard_negative_013","case_type":"hard_negative","query":"请总结RAG从文档切分到生成答案的完整流程","expected_route":"rag","expected_standard_question":null,"notes":"RAG知识问题"}
+{"id":"hard_negative_014","case_type":"hard_negative","query":"如何申请课程退款？","expected_route":"rag","expected_standard_question":null,"notes":"课程政策问题"}
+{"id":"hard_negative_015","case_type":"hard_negative","query":"Python和Java课程应该选哪一个？","expected_route":"rag","expected_standard_question":null,"notes":"包含Python和Java但需要咨询判断"}

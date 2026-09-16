@@ -1,0 +1,26 @@
+# Versions recorded from the existing Python 3.10 environment; clean installation not revalidated.
+PyMySQL==1.2.0
+redis==8.0.1
+pandas==2.3.3
+jieba==0.42.1
+rank-bm25==0.2.2
+numpy==2.2.6
+scipy==1.15.3
+torch==2.12.1
+transformers==5.12.1
+scikit-learn==1.7.2
+tqdm==4.70.1
+pymilvus==3.0.0
+milvus-model==0.2.12
+sentence-transformers==5.6.0
+langchain-core==1.6.0
+langchain-community==0.4.2
+langchain-text-splitters==1.1.2
+openai==2.54.0
+PyMuPDF==1.28.0
+python-docx==1.2.0
+python-pptx==1.0.2
+Pillow==12.3.0
+opencv-python==5.0.0.93
+rapidocr-onnxruntime==1.4.4
+modelscope==1.38.1

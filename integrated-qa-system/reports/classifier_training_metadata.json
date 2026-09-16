@@ -1,0 +1,28 @@
+{
+  "labels": {
+    "通用知识": 0,
+    "专业咨询": 1
+  },
+  "base_model_path": "rag_qa/models/bert-base-chinese",
+  "data_file": "rag_qa/classify_data/model_generic_5000.json",
+  "max_samples": 500,
+  "validation_ratio": 0.2,
+  "batch_size": 8,
+  "epochs": 3,
+  "learning_rate": 5e-05,
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.1,
+  "warmup_steps": 15,
+  "max_grad_norm": 1.0,
+  "max_length": 128,
+  "random_seed": 42,
+  "best_metrics": {
+    "epoch": 2,
+    "train_loss": 0.03944979402178433,
+    "validation_loss": 0.06623987949345835,
+    "accuracy": 0.99,
+    "precision": 0.9888888888888889,
+    "recall": 0.9910714285714286,
+    "f1": 0.9898775179674055
+  }
+}

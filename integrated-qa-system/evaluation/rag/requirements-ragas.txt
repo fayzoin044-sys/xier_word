@@ -1,0 +1,7 @@
+# GPT 生成与 Ragas 评审的可复现依赖。
+# Ragas 0.4.3 对现代 langchain-community 的 VertexAI 导入存在已知问题，
+# evaluate_ragas_gpt.py 内含只针对未使用 VertexAI 场景的兼容垫片。
+ragas==0.4.3
+openai==2.54.0
+langchain-openai==1.6.0
+

@@ -1,0 +1,175 @@
+{
+  "settings": {
+    "retrieval_summary": "${PROJECT_ROOT}\\evaluation\\rag\\results\\rag_summary_20260825_212355.json",
+    "parent_manifest": "${PROJECT_ROOT}\\evaluation\\rag\\results\\parent_manifest_20260825_212355.json",
+    "api_provider": "openrouter",
+    "base_url": "https://openrouter.ai/api/v1",
+    "generation_model": "openai/gpt-4o-mini",
+    "judge_model": "openai/gpt-4o-mini",
+    "embedding_provider": "local",
+    "embedding_model": "bge-m3-local",
+    "metrics": [
+      "context_precision",
+      "context_recall",
+      "faithfulness",
+      "answer_relevancy",
+      "answer_correctness"
+    ],
+    "case_limit": 3,
+    "prompt_version": "context_only_zh_v1",
+    "ragas_version": "0.4.3",
+    "ragas_vertex_compatibility_used": true,
+    "ragas_telemetry_disabled": true,
+    "api_key_persisted": false,
+    "external_services_called": [
+      "openrouter API"
+    ]
+  },
+  "summary": {
+    "positive": {
+      "cases": 3,
+      "metrics": {
+        "context_precision": {
+          "mean": 1.0,
+          "valid": 3,
+          "failed_or_skipped": 0
+        },
+        "context_recall": {
+          "mean": 1.0,
+          "valid": 3,
+          "failed_or_skipped": 0
+        },
+        "faithfulness": {
+          "mean": 1.0,
+          "valid": 3,
+          "failed_or_skipped": 0
+        },
+        "answer_relevancy": {
+          "mean": 0.885365,
+          "valid": 3,
+          "failed_or_skipped": 0
+        },
+        "answer_correctness": {
+          "mean": 0.755738,
+          "valid": 3,
+          "failed_or_skipped": 0
+        }
+      },
+      "abstention_rate": 0.0
+    },
+    "hard_negative": {
+      "cases": 0,
+      "metrics": {
+        "context_precision": {
+          "mean": null,
+          "valid": 0,
+          "failed_or_skipped": 0
+        },
+        "context_recall": {
+          "mean": null,
+          "valid": 0,
+          "failed_or_skipped": 0
+        },
+        "faithfulness": {
+          "mean": null,
+          "valid": 0,
+          "failed_or_skipped": 0
+        },
+        "answer_relevancy": {
+          "mean": null,
+          "valid": 0,
+          "failed_or_skipped": 0
+        },
+        "answer_correctness": {
+          "mean": null,
+          "valid": 0,
+          "failed_or_skipped": 0
+        }
+      },
+      "abstention_rate": null
+    }
+  },
+  "cases": [
+    {
+      "case_id": "rag_pos_001",
+      "case_type": "direct",
+      "question": "什么是大型语言模型？",
+      "response": "大型语言模型（LLM）是一种人工智能模型，旨在理解和生成自然语言。它可以处理多种自然语言任务，如文本分类、问答、翻译和对话等。通常，大型语言模型是指包含数千亿或更多参数的模型，这些参数是在大量文本数据上训练的。典型的例子包括GPT-3、ChatGPT、PaLM、BLOOM和LLaMA等。",
+      "reference_answer": "大型语言模型是一类旨在理解和生成人类语言的人工智能模型。",
+      "retrieved_context_ids": [
+        "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+        "parent_00bb0aa4fdf3a245315f8622c3448b3f"
+      ],
+      "is_positive": true,
+      "abstained": false,
+      "generation_cache_hit": false,
+      "generation_usage": {
+        "input_tokens": 1372,
+        "output_tokens": 96,
+        "total_tokens": 1468
+      },
+      "scores": {
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8255482561380655,
+        "answer_correctness": 0.46083820584706314
+      },
+      "errors": {}
+    },
+    {
+      "case_id": "rag_pos_002",
+      "case_type": "paraphrase",
+      "question": "LLM 可以处理哪些自然语言任务？",
+      "response": "LLM可以处理多种自然语言任务，如文本分类、问答、翻译、对话等。",
+      "reference_answer": "可处理文本分类、问答、翻译和对话等自然语言任务。",
+      "retrieved_context_ids": [
+        "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+        "parent_c998db368181f9d05ba01d89e0794f0e"
+      ],
+      "is_positive": true,
+      "abstained": false,
+      "generation_cache_hit": false,
+      "generation_usage": {
+        "input_tokens": 850,
+        "output_tokens": 24,
+        "total_tokens": 874
+      },
+      "scores": {
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9527872845620982,
+        "answer_correctness": 0.8685617228263649
+      },
+      "errors": {}
+    },
+    {
+      "case_id": "rag_pos_003",
+      "case_type": "direct",
+      "question": "大型语言模型经历了哪些发展阶段？",
+      "response": "大型语言模型经历了三个发展阶段：\n\n1. **第一阶段**：设计一系列的自监督训练目标（如MLM、NSP等），设计新颖的模型架构（如Transformer），遵循预训练和微调的范式。典型代表是BERT、GPT、XLNet等。\n\n2. **第二阶段**：逐步扩大模型参数和训练语料规模，探索不同类型的架构。典型代表是BART、T5、GPT-3等。\n\n3. **第三阶段**：走向AIGC（人工智能生成内容）时代，模型参数规模步入千万亿，模型架构为自回归架构，强调与人类交互，典型代表是InstructionGPT、ChatGPT、Bard、GPT-4等。",
+      "reference_answer": "材料按早期语言模型、预训练语言模型以及面向对话和生成的大模型阶段介绍其发展。",
+      "retrieved_context_ids": [
+        "parent_d088778d1f03bab7fe56c9afaf2f57b4",
+        "parent_cdaceb91ff16f147c0d9d7210a93f504"
+      ],
+      "is_positive": true,
+      "abstained": false,
+      "generation_cache_hit": false,
+      "generation_usage": {
+        "input_tokens": 1383,
+        "output_tokens": 172,
+        "total_tokens": 1555
+      },
+      "scores": {
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8777609085706244,
+        "answer_correctness": 0.9378136016550657
+      },
+      "errors": {}
+    }
+  ]
+}

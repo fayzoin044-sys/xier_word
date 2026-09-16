@@ -1,0 +1,16 @@
+config.ini
+.env
+.env.*
+__pycache__/
+*.py[cod]
+.venv/
+logs/
+evaluation/**/cache/
+rag_qa/models/
+rag_qa/nlp_bert_document-segmentation_chinese-base/
+rag_qa/samples/
+rag_qa/data/
+*.log
+*.bin
+*.pt
+*.db

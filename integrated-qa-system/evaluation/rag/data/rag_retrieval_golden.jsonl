@@ -1,0 +1,29 @@
+{"case_id":"rag_pos_001","question":"什么是大型语言模型？","case_type":"direct","reference_parent_indexes":[0],"reference_answer":"大型语言模型是一类旨在理解和生成人类语言的人工智能模型。"}
+{"case_id":"rag_pos_002","question":"LLM 可以处理哪些自然语言任务？","case_type":"paraphrase","reference_parent_indexes":[0],"reference_answer":"可处理文本分类、问答、翻译和对话等自然语言任务。"}
+{"case_id":"rag_pos_003","question":"大型语言模型经历了哪些发展阶段？","case_type":"direct","reference_parent_indexes":[0],"reference_answer":"材料按早期语言模型、预训练语言模型以及面向对话和生成的大模型阶段介绍其发展。"}
+{"case_id":"rag_pos_004","question":"语言模型的标准定义是什么？","case_type":"direct","reference_parent_indexes":[1],"reference_answer":"语言模型对词汇序列的生成概率进行建模。"}
+{"case_id":"rag_pos_005","question":"语言模型主要可以分成哪些类型？","case_type":"paraphrase","reference_parent_indexes":[1],"reference_answer":"材料介绍了规则、统计、神经网络以及预训练语言模型等类别。"}
+{"case_id":"rag_pos_006","question":"为什么句子的联合概率不能直接简单计算？","case_type":"reasoning","reference_parent_indexes":[1,2],"reference_answer":"词序列组合空间很大且存在数据稀疏问题，因此通常引入马尔可夫假设和 N-gram 近似。"}
+{"case_id":"rag_pos_007","question":"什么是马尔可夫假设？","case_type":"direct","reference_parent_indexes":[2],"reference_answer":"一个词出现的概率只与它前面有限数量的词有关。"}
+{"case_id":"rag_pos_008","question":"unigram、bigram 和 trigram 有什么区别？","case_type":"direct","reference_parent_indexes":[2],"reference_answer":"三者分别不依赖前词、依赖前一个词、依赖前两个词来估计当前词概率。"}
+{"case_id":"rag_pos_009","question":"N-gram 语言模型有哪些优点和缺点？","case_type":"paraphrase","reference_parent_indexes":[2],"reference_answer":"N-gram 简单、可解释且易实现，但会遇到数据稀疏、上下文受限和存储开销等问题。"}
+{"case_id":"rag_pos_010","question":"神经网络语言模型由哪些层组成？","case_type":"direct","reference_parent_indexes":[3],"reference_answer":"基本结构包含词向量输入、隐藏层和用于预测下一词概率的输出层。"}
+{"case_id":"rag_pos_011","question":"相比 N-gram，神经语言模型好在哪里，又有什么代价？","case_type":"reasoning","reference_parent_indexes":[3],"reference_answer":"它能通过分布式表示缓解稀疏性并学习更强泛化能力，但训练和推理计算成本更高。"}
+{"case_id":"rag_pos_012","question":"Transformer 预训练语言模型的优势是什么？","case_type":"paraphrase","reference_parent_indexes":[3],"reference_answer":"Transformer 更擅长建模长距离依赖，并可通过大规模预训练迁移到多种下游任务。"}
+{"case_id":"rag_pos_013","question":"语言模型中的 Scaling Law 是什么意思？","case_type":"direct","reference_parent_indexes":[4],"reference_answer":"材料所述 Scaling Law 指随着预训练模型参数规模提升，语言模型性能呈规律性提高。"}
+{"case_id":"rag_pos_014","question":"GPT-3 有多少参数？","case_type":"fact","reference_parent_indexes":[4],"reference_answer":"GPT-3 的参数量为 1750 亿。"}
+{"case_id":"rag_pos_015","question":"什么叫大模型的能力涌现？","case_type":"paraphrase","reference_parent_indexes":[4],"reference_answer":"当模型规模越过某个阈值后，会突然表现出小模型不具备或很弱的新能力。"}
+{"case_id":"rag_pos_016","question":"BLEU 指标主要衡量什么？","case_type":"direct","reference_parent_indexes":[4],"reference_answer":"BLEU 通过比较候选文本与参考文本的 N-gram 匹配程度衡量生成质量，更偏重准确率。"}
+{"case_id":"rag_pos_017","question":"BLEU 为什么要限制重复词的匹配次数？","case_type":"reasoning","reference_parent_indexes":[5],"reference_answer":"为避免候选文本反复输出同一个命中词却获得虚高分数，需要使用参考文本中的最大出现次数进行截断。"}
+{"case_id":"rag_pos_018","question":"BLEU 的 2-gram、3-gram、4-gram 匹配是在做什么？","case_type":"direct","reference_parent_indexes":[5],"reference_answer":"它们分别统计连续 2、3、4 个词的片段在候选文本和参考文本中的匹配情况。"}
+{"case_id":"rag_pos_019","question":"ROUGE 是什么指标？","case_type":"direct","reference_parent_indexes":[6],"reference_answer":"ROUGE 是机器翻译、自动摘要和问答生成等任务中比较生成文本与参考答案的评估指标。"}
+{"case_id":"rag_pos_020","question":"ROUGE 和 BLEU 的侧重点有什么不同？","case_type":"reasoning","reference_parent_indexes":[6],"reference_answer":"ROUGE 更偏重召回率，BLEU 更偏重准确率。"}
+{"case_id":"rag_pos_021","question":"ROUGE-1、ROUGE-2、ROUGE-L、ROUGE-S 分别属于什么？","case_type":"direct","reference_parent_indexes":[6,8],"reference_answer":"它们是 ROUGE 的不同计算方式，分别从一元、二元、最长公共子序列和跳跃二元组等角度衡量匹配。"}
+{"case_id":"rag_pos_022","question":"困惑度 PPL 用来衡量什么？","case_type":"direct","reference_parent_indexes":[8],"reference_answer":"PPL 用于衡量概率分布或概率模型预测样本的好坏。"}
+{"case_id":"rag_pos_023","question":"PPL 越大说明语言模型越好吗？","case_type":"hard_paraphrase","reference_parent_indexes":[9],"reference_answer":"不是。句子概率越大通常表示模型越好，而困惑度越小越好。"}
+{"case_id":"rag_pos_024","question":"句子概率、模型质量和困惑度之间是什么关系？","case_type":"reasoning","reference_parent_indexes":[8,9],"reference_answer":"测试句子概率越大，模型通常越好；对应的困惑度越小。"}
+{"case_id":"rag_neg_001","question":"这个项目的 Milvus nprobe 配置是多少？","case_type":"hard_negative","reference_parent_indexes":[],"reference_answer":"知识库未提供该信息。"}
+{"case_id":"rag_neg_002","question":"BGE-M3 的稠密向量维度是多少？","case_type":"hard_negative","reference_parent_indexes":[],"reference_answer":"知识库未提供该信息。"}
+{"case_id":"rag_neg_003","question":"RAG 父块和子块分别切多大？","case_type":"hard_negative","reference_parent_indexes":[],"reference_answer":"知识库未提供该信息。"}
+{"case_id":"rag_neg_004","question":"课程学费是多少钱？","case_type":"hard_negative","reference_parent_indexes":[],"reference_answer":"知识库未提供该信息。"}
+{"case_id":"rag_neg_005","question":"DeepSeek API 当前每百万 token 的价格是多少？","case_type":"hard_negative","reference_parent_indexes":[],"reference_answer":"知识库未提供该信息。"}
