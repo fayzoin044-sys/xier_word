@@ -178,7 +178,7 @@ structured-result paths can be verified.
 
 The existing Security, Quality, Test, and Patch-only Fix Agents are exposed
 without changing their business or MCP implementations. The A2A transport layer reuses the
-validated SmartVoyage v2 `AgentResult`, `SpecialistAgentExecutor`, server factory,
+shared `AgentResult`, `SpecialistAgentExecutor`, server factory,
 and `A2AClient` design.
 
 ```powershell
@@ -295,15 +295,9 @@ python -m multi_agent_code_reviewer.validation.workflow_hitl
 ## Labelled evaluation
 
 `evaluation/` measures the complete review-and-fix system with three headline
-metrics: Precision, Recall, and case-level Fix Rate. Fourteen small labelled
-projects cover three clean negative cases plus Security, Quality, pure Pytest,
-single-file mixed, multi-file mixed, and `src/`-layout scenarios. Each
-`expected.json` is a human label; it is never sent to an Agent.
+metrics: Precision, Recall, and case-level Fix Rate. Labelled Python projects cover clean negative cases, Security, Quality, Pytest, mixed issues, and `src/`-layout scenarios. Each `expected.json` is a manual label and is never sent to an Agent.
 
-The 2026-08-24 full run contained 14 labelled diagnostics across 11 repair
-cases. It measured 100% Precision, 100% Recall, an 81.82% verified Fix Rate
-(9/11), and a PASS safety gate. See `evaluation/BENCHMARK.md` for the exact
-methodology, per-case outcomes, limitations, and resume-safe wording.
+The 2026-08-24 historical run measured 100% Precision, 100% Recall, an 81.82% verified Fix Rate, and a PASS safety gate. These results apply to the recorded evaluation set and configuration, not arbitrary repositories. See `evaluation/BENCHMARK.md` for methodology, limitations, and failure analysis.
 
 The runner discovers every case automatically, copies one project at a time to
 a `TemporaryDirectory`, runs the real A2A/LangGraph workflow, automatically
