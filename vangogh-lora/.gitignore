@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.cache/
+.env
+.env.*
+models/
+**/checkpoint-*/
+**/.ipynb_checkpoints/
+**/logs/
+*.log
+*.zip
+data/prepared/train/*.png
+data/prepared/val_style/
+data/prepared/eval_photos/
+data/prepared/test_photos/

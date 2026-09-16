@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/huggingface/diffusers",
+  "tag": "v0.35.1",
+  "source": "https://raw.githubusercontent.com/huggingface/diffusers/v0.35.1/examples/text_to_image/train_text_to_image_lora_sdxl.py",
+  "sha256": "e733e9cce32fbe1802dc61426d75f3ab12ff6e824e3f2ee8fa258a60650bdfeb",
+  "local_modifications": false,
+  "license": "Apache-2.0"
+}

@@ -1,0 +1,20 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "capability": [
+    12,
+    0
+  ],
+  "torch_cuda": "12.8",
+  "vram_gib": 31.35833740234375,
+  "free_disk_gib": 49.38326644897461,
+  "versions": {
+    "torch": "2.8.0+cu128",
+    "torchvision": "0.23.0+cu128",
+    "diffusers": "0.35.1",
+    "transformers": "4.55.4",
+    "peft": "0.17.1",
+    "accelerate": "1.10.1",
+    "datasets": "3.6.0"
+  },
+  "bf16_attention_backward": "passed"
+}

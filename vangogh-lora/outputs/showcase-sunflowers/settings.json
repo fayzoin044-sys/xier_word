@@ -1,0 +1,18 @@
+{
+  "input": "data/sunflowers.png",
+  "output": "outputs/showcase-sunflowers",
+  "lora": "outputs/vangogh-sdxl-v1",
+  "compare_base": true,
+  "model": "/root/autodl-tmp/models/sdxl-base",
+  "revision": null,
+  "prompt": "seven sunflowers in an ochre ceramic vase on a wooden table, a plain cream wall, a painting in the style of Vincent van Gogh",
+  "negative_prompt": "text, watermark, blurry, distorted",
+  "strength": 0.6,
+  "lora_scale": 1.0,
+  "guidance": 5.0,
+  "steps": 30,
+  "seed": 42,
+  "max_side": 512,
+  "limit": 0,
+  "cpu_offload": false
+}

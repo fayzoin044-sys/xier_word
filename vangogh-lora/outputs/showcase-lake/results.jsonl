@@ -1,0 +1,1 @@
+{"input": "data/lake.png", "input_sha256": "574ee8d77d8b1565fd1655ab10dbc224a9638acec2c8069e60e8bdad47376de7", "seed": 42, "size": [512, 512], "outputs": {"base": {"file": "0000_lake_base.png", "seconds": 1.306701538618654, "peak_allocated_gib": 7.402768135070801}, "lora": {"file": "0000_lake_lora.png", "seconds": 1.470110640861094, "peak_allocated_gib": 7.402768135070801}}}

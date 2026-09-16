@@ -1,0 +1,11 @@
+{
+  "imagefolder_rows": 358,
+  "columns": [
+    "image",
+    "text"
+  ],
+  "all_images_decode": true,
+  "captions_nonempty": true,
+  "train_val_style_disjoint": true,
+  "dev_test_photos_disjoint": true
+}

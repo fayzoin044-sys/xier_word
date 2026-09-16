@@ -1,0 +1,36 @@
+{
+  "archive_sha256": "362c3473e70be0944bda08d49d660eafdc2854df55d697835b8186d1d79caaff",
+  "seed": 42,
+  "source_counts": {
+    "trainA": 400,
+    "testA": 400,
+    "trainB": 6287,
+    "testB": 751
+  },
+  "unique_pixel_counts": {
+    "trainA": 398,
+    "testA": 398,
+    "trainB": 6278,
+    "testB": 750
+  },
+  "sizes": {
+    "256x256": 7838
+  },
+  "train_test_pixel_overlap": {
+    "A": 398,
+    "B": 0
+  },
+  "prepared_counts": {
+    "train": 358,
+    "val_style": 40,
+    "eval_photos": 24,
+    "test_photos": 750,
+    "test_style_independent": 0
+  },
+  "caption_mode": "style-only bootstrap; add reviewed content captions before quality experiments",
+  "notes": [
+    "Pixel hashes catch exact decoded duplicates, not all near-duplicates.",
+    "Original testA overlaps trainA; independent remainder is too small for reliable style metrics.",
+    "val_style is a held-out style reference, never a paired target for photos."
+  ]
+}

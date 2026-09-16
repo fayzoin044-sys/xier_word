@@ -1,0 +1,18 @@
+{
+  "input": "data/prepared/eval_photos",
+  "output": "outputs/smoke-check",
+  "lora": "outputs/smoke",
+  "compare_base": true,
+  "model": "/root/autodl-tmp/models/sdxl-base",
+  "revision": null,
+  "prompt": "a painting in the style of Vincent van Gogh",
+  "negative_prompt": "text, watermark, blurry, distorted",
+  "strength": 0.5,
+  "lora_scale": 0.8,
+  "guidance": 5.0,
+  "steps": 30,
+  "seed": 42,
+  "max_side": 512,
+  "limit": 1,
+  "cpu_offload": false
+}
